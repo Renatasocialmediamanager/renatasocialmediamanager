@@ -27,22 +27,23 @@
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            display: inline-block;
         }
 
         /* MAIN PHOTO SECTION */
         .main-content {
             display: flex;
-            flex-direction: column; /* This puts the text UNDER the photo */
-            align-items: center;    /* Centers the photo and text */
+            flex-direction: column;
+            align-items: center;
             padding: 40px 0;
             font-family: Arial, sans-serif;
         }
 
         .main-photo {
-            /* Your specific dimensions converted to pixels */
-            width: 1500px;  
+            width: 100%;
+            max-width: 1500px;  
             height: 455px;
-            object-fit: cover; /* Ensures the photo isn't stretched */
+            object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
@@ -59,7 +60,11 @@
         }
 
         /* DROPDOWN STYLING */
-        .dropdown { position: relative; }
+        .dropdown { 
+            position: relative; 
+            padding-bottom: 5px; 
+        }
+        
         .submenu {
             display: none;
             position: absolute;
@@ -71,28 +76,41 @@
             min-width: 160px;
             flex-direction: column;
             z-index: 100;
+            list-style: none;
         }
+        
         .dropdown:hover .submenu { display: flex; }
-        .submenu li { list-style: none; padding: 5px 15px; }
+        
+        .submenu li { padding: 0; }
+        
+        .submenu li a {
+            padding: 8px 15px;
+            font-weight: normal;
+            display: block;
+        }
+
+        .submenu li a:hover {
+            background-color: #f8f8f8;
+        }
     </style>
 </head>
 <body>
 
-<header role="banner">
+<header>
     <nav aria-label="Main Navigation">
         <div class="logo">
             <a href="index.html" style="font-size: 22px; letter-spacing: 1px;">RENATA OLIVER</a>
         </div>
         <ul class="main-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="style.html">Style</a></li>
+            <li><a href="./Style.html">Style</a></li>
             <li><a href="./Travel.html">Travel</a></li>
-            <li><a href="about me.html">About Me</a></li>
+            <li><a href="about-me.html">About Me</a></li>
             <li class="dropdown">
-                <a href="resume.html">Resume ▼</a>
+                <a href="javascript:void(0)" style="cursor: default;">Resume ▼</a>
                 <ul class="submenu">
                     <li><a href="./">Showcase</a></li>
-                    <li><a href="./project 3.jpg">Photoshop 2</a></li>
+                    <li><a href="./project-3.jpg">Photoshop 2</a></li>
                     <li><a href="./Magazine.jpg">Photoshop 3</a></li>
                     <li><a href="./girl.mp4">Animate 2</a></li>
                 </ul>
@@ -102,7 +120,7 @@
 </header>
 
 <main class="main-content">
-    <img src="./Screenshot 2026-03-08 at 3.52.png" alt="Renata Oliver Main Portfolio Photo" class="main-photo">
+    <img src="./bannerpicture.png" alt="Renata Oliver Main Portfolio Photo" class="main-photo">
     
     <div class="photo-caption">
         <h1>Digital Strategist & Content Creator</h1>
