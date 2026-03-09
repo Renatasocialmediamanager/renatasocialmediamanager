@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Renata Oliver | Navigation</title>
+    <style>
+        /* MAIN NAVIGATION LAYOUT */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav ul.main-menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* MAIN PHOTO SECTION */
+        .main-content {
+            display: flex;
+            flex-direction: column; /* This puts the text UNDER the photo */
+            align-items: center;    /* Centers the photo and text */
+            padding: 40px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-photo {
+            /* Your specific dimensions converted to pixels */
+            width: 1500px;  
+            height: 455px;
+            object-fit: cover; /* Ensures the photo isn't stretched */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .photo-caption {
+            margin-top: 20px;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .photo-caption h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* DROPDOWN STYLING */
+        .dropdown { position: relative; }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 10px 0;
+            min-width: 160px;
+            flex-direction: column;
+            z-index: 100;
+        }
+        .dropdown:hover .submenu { display: flex; }
+        .submenu li { list-style: none; padding: 5px 15px; }
+    </style>
+</head>
+<body>
+
+<header role="banner">
+    <nav aria-label="Main Navigation">
+        <div class="logo">
+            <a href="index.html" style="font-size: 22px; letter-spacing: 1px;">RENATA OLIVER</a>
+        </div>
+        <ul class="main-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="style.html">Style</a></li>
+            <li><a href="./Travel.html">Travel</a></li>
+            <li><a href="about me.html">About Me</a></li>
+            <li class="dropdown">
+                <a href="resume.html">Resume ▼</a>
+                <ul class="submenu">
+                    <li><a href="./">Showcase</a></li>
+                    <li><a href="./project 3.jpg">Photoshop 2</a></li>
+                    <li><a href="./Magazine.jpg">Photoshop 3</a></li>
+                    <li><a href="./girl.mp4">Animate 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+    <img src="./Screenshot 2026-03-08 at 3.52.png" alt="Renata Oliver Main Portfolio Photo" class="main-photo">
+    
+    <div class="photo-caption">
+        <h1>Digital Strategist & Content Creator</h1>
+        <p>Specializing in travel and makeup storytelling for brands worldwide.</p>
+    </div>
+</main>
+
+</body>
+</html>

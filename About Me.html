@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Renata Oliver</title>
+    <style>
+        /* 1. Navigation - Side-by-Side */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            font-family: Arial, sans-serif;
+            border-bottom: 1px solid #eee;
+            background-color: #fff;
+        }
+
+        .main-menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        /* Dropdown Logic */
+        .dropdown { position: relative; }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 10px 0;
+            min-width: 160px;
+            flex-direction: column;
+            z-index: 100;
+            list-style: none;
+        }
+        .dropdown:hover .submenu { display: flex; }
+        .submenu li a { 
+            padding: 8px 15px; 
+            text-transform: none; 
+            font-weight: normal; 
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .submenu li a:hover { background-color: #f8f8f8; }
+
+        /* 2. Content Layout - Smaller Profile Size */
+        .container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            padding: 50px 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-photo {
+            width: 350px;       
+            height: 350px;      
+            object-fit: cover;  
+            border-radius: 50%; 
+            border: 5px solid #f8f8f8;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .text-content {
+            max-width: 700px;
+            text-align: center;
+        }
+
+        h1 { font-size: 2.2rem; margin-bottom: 20px; color: #333; }
+        p { font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 15px; }
+        
+        .highlight { color: #000; font-weight: bold; }
+        .cta-text { font-style: italic; color: #333; margin-top: 25px; border-top: 1px solid #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: black; font-weight: bold; font-size: 20px;">RENATA OLIVER</a>
+        </div>
+        <ul class="main-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Style.html">Style</a></li>
+            <li><a href="Travel.html">Travel</a></li>
+            <li><a href="about me.html">About Me</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" style="cursor: default;">Resume ▼</a>
+                <ul class="submenu">
+                    <li><a href="./Mgazine.jpg">Showcase</a></li>
+                    <li><a href="./">Photoshop 2</a></li>
+                    <li><a href="./project 3.jpg">Photoshop 3</a></li>
+                    <li><a href="./girl.mp4">Animate 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <img src="./profile.PNG" alt="Renata Oliver Profile" class="main-photo">
+
+    <div class="text-content">
+        <h1>Welcome to my portfolio!</h1>
+        
+        <p>
+            I’m <span class="highlight">Renata</span>, a passionate and creative Social Media Manager with years of hands-on experience helping small businesses, entrepreneurs, and personal brands grow their presence online.
+        </p>
+        
+        <p>
+            From <span class="highlight">Instagram Reels</span> to <span class="highlight">TikTok trends</span> and <span class="highlight">Facebook strategies</span>—I'm your go-to girl. I believe social media should feel effortless, authentic, and effective.
+        </p>
+
+        <p>
+            Here, you’ll find my best work, the services I offer, glowing testimonials, and everything you need to know to decide if we’re a perfect fit.
+        </p>
+
+        <p class="cta-text">
+            So grab a coffee and scroll through—I’m excited to work with you!
+        </p>
+    </div>
+</main>
+
+</body>
+</html>
