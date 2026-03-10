@@ -2,21 +2,202 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel | Renata Oliver</title>
     
     <style>
+        /* 1. Navigation - Centered Minimalist */
         nav {
             display: flex;
             justify-content: center;
-            /* ... all your other CSS ... */
+            align-items: center;
+            padding: 25px 5%;
+            font-family: Arial, sans-serif;
+            border-bottom: 1px solid #eee;
+            background-color: #fff;
+        }
+
+        .main-menu {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+
+        .main-menu a:hover {
+            color: #888;
+        }
+
+        /* Dropdown Logic */
+        .dropdown { position: relative; }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            min-width: 180px;
+            flex-direction: column;
+            z-index: 100;
+            list-style: none;
+        }
+        .dropdown:hover .submenu { display: flex; }
+        .submenu li a { 
+            padding: 10px 20px; 
+            text-transform: none; 
+            font-weight: normal; 
+            text-align: center; 
+            display: block; 
+        }
+
+        /* 2. Content Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .main-header {
+            font-family: "Georgia", serif;
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .intro-text {
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            line-height: 1.8;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* 3. Photo Grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .grid-item {
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .grid-item p {
+            margin-top: 15px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 13px;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 1px solid #eee;
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+            color: #999;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>...</nav>
-    </header>
-    ...
+
+<header>
+    <nav aria-label="Main Navigation">
+        <ul class="main-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="style.html">Style</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="about-me.html">About Me</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" style="cursor: default;">Resume ▼</a>
+                <ul class="submenu">
+                    <li><a href="javascript:void(0)" style="cursor: default; font-weight: bold; color: #888;">Showcase</a></li>
+                    <li><a href="./project-4.jpg">Photoshop 2</a></li> 
+                    <li><a href="./project-3.jpg">Photoshop 3</a></li>
+                    <li><a href="girl.mp4">Animate 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="main-header">Travel</h1>
+    <p class="intro-text">
+        Exploring the world through a lens of strategy and style. 
+        With experience in over 140 countries, I capture the essence of every destination.
+    </p>
+
+    <div class="photo-grid">
+        <div class="grid-item">
+            <img src="./turkey.jpg" alt="Turkey">
+            <p>Istanbul, Turkey</p>
+        </div>
+        <div class="grid-item">
+            <img src="./thailand.jpg" alt="Thailand">
+            <p>Bangkok, Thailand</p>
+        </div>
+        <div class="grid-item">
+            <img src="./greece.jpg" alt="Greece">
+            <p>Santorini, Greece</p>
+        </div>
+        <div class="grid-item">
+            <img src="./punta-cana.jpg" alt="Dominican Republic">
+            <p>Punta Cana</p>
+        </div>
+        <div class="grid-item">
+            <img src="./paris.jpg" alt="France">
+            <p>Paris, France</p>
+        </div>
+        <div class="grid-item">
+            <img src="./india.jpg" alt="India">
+            <p>Jaipur, India</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026. ALL RIGHTS RESERVED.</p>
+</footer>
+
 </body>
 </html>
