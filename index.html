@@ -1,3 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renata Oliver | Portfolio</title>
+    <style>
+        /* 1. Navigation - Forced Centering */
+        nav {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            padding: 25px 5%;
+            font-family: Arial, sans-serif;
+            border-bottom: 1px solid #eee;
+            background-color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .main-menu {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .main-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+
+        .main-menu a:hover { color: #888; }
+
+        /* Dropdown Logic */
+        .dropdown { position: relative; }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            min-width: 160px;
+            flex-direction: column;
+            z-index: 100;
+            list-style: none;
+        }
+        .dropdown:hover .submenu { display: flex; }
+        .submenu li a { padding: 10px 20px; font-weight: normal; text-transform: none; display: block; text-align: center; }
+
+        /* 2. Header Name Style */
+        .main-header {
+            text-align: center;
+            padding: 70px 0 30px 0;
+            margin: 0;
+            font-family: "Georgia", serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 400;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            font-style: italic;
+        }
+
+        .main-photo {
+            width: 90%;
+            max-width: 1100px;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+
+        /* 3. Welcome Content */
+        .welcome-section {
+            max-width: 800px;
+            text-align: center;
+            margin: 60px auto;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 { font-size: 1.8rem; margin-bottom: 25px; color: #333; font-family: "Georgia", serif; text-transform: uppercase; }
+        p { font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 20px; }
+        .highlight { color: #000; font-weight: bold; }
+        
+        .btn-contact {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s ease;
+        }
+        .btn-contact:hover { background-color: #333; transform: translateY(-2px); }
+
+        /* 4. Footer & Social Icons */
+        footer { text-align: center; padding: 60px 20px; background-color: #fff; border-top: 1px solid #eee; margin-top: 50px; font-family: Arial, sans-serif; }
+        .social-icons { display: flex; justify-content: center; gap: 20px; margin-bottom: 25px; }
+        .social-icons img { width: 40px; height: 40px; border-radius: 50%; transition: 0.3s; }
+        .social-icons a:hover img { transform: scale(1.1); }
+    </style>
+</head>
+<body>
+
 <header>
     <nav aria-label="Main Navigation">
         <ul class="main-menu">
@@ -18,3 +137,28 @@
         </ul>
     </nav>
 </header>
+
+<main>
+    <h1 class="main-header">Renata Oliver</h1>
+    <img src="./bannerpicture.png" alt="Renata Oliver Portfolio Banner" class="main-photo">
+    <section class="welcome-section">
+        <h2>Digital Strategist & Content Creator</h2>
+        <p>I am a passionate Social Media Manager helping brands find their voice in a crowded online world.</p>
+        <p>From <span class="highlight">Instagram Reels</span> to <span class="highlight">TikTok trends</span>—I create content that performs.</p>
+        <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee;">
+            <p>Ready to elevate your brand?</p>
+            <a href="mailto:renataoliveiraofficial@hotmail.com" class="btn-contact">Work With Me</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100078193936641" target="_blank"><img src="./facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/renataoliveiraofficial" target="_blank"><img src="./instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@renataoliveiraofficial" target="_blank"><img src="./tiktok.png" alt="TikTok"></a>
+        <a href="https://www.pinterest.com/RenataxoliverNY" target="_blank"><img src="./pinterest.png" alt="Pinterest"></a>
+        <a href="mailto:renataoliveiraofficial@hotmail.com"><img src="./icons8-email-50.png" alt="Email"></a>
+    </div>
+    <p style="color: #999; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-top: 30px;">
+        &copy; 2026. ALL RIGHTS RESER
