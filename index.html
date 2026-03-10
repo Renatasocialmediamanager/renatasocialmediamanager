@@ -110,6 +110,70 @@
 </head>
 <body>
 
+<style>
+    /* 1. Navigation - Absolute Centering */
+    nav {
+        display: flex;
+        justify-content: center; /* Forces everything to the dead center */
+        align-items: center;
+        padding: 25px 5%;
+        font-family: Arial, sans-serif;
+        border-bottom: 1px solid #eee;
+        background-color: #fff;
+        width: 100%;
+    }
+
+    .main-menu {
+        display: flex;
+        list-style: none;
+        gap: 35px; /* Spacing between links */
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-menu a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: color 0.3s ease;
+    }
+
+    .main-menu a:hover {
+        color: #888;
+    }
+
+    /* Dropdown Logic */
+    .dropdown { position: relative; }
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        padding: 15px 0;
+        min-width: 180px;
+        flex-direction: column;
+        z-index: 100;
+        list-style: none;
+    }
+
+    .dropdown:hover .submenu { display: flex; }
+    
+    .submenu li a { 
+        padding: 10px 20px; 
+        font-weight: normal; 
+        text-transform: none; 
+        display: block; 
+        text-align: center;
+        letter-spacing: 0; /* Keeps dropdown text readable */
+    }
+</style>
+
 <header>
     <nav aria-label="Main Navigation">
         <ul class="main-menu">
