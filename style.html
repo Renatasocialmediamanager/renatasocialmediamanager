@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style | Renata Oliver</title>
     <style>
-        /* 1. Navigation - Centered Minimalist */
+        /* 1. Navigation - Perfectly Centered */
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: center; 
             align-items: center;
             padding: 25px 5%;
             font-family: Arial, sans-serif;
             border-bottom: 1px solid #eee;
             background-color: #fff;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .main-menu {
@@ -22,6 +24,7 @@
             gap: 35px;
             margin: 0;
             padding: 0;
+            justify-content: center;
         }
 
         .main-menu a {
@@ -31,6 +34,11 @@
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+
+        .main-menu a:hover {
+            color: #888;
         }
 
         /* Dropdown Logic */
@@ -42,39 +50,66 @@
             left: 50%;
             transform: translateX(-50%);
             background: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             padding: 15px 0;
-            min-width: 180px;
+            min-width: 160px;
             flex-direction: column;
             z-index: 100;
             list-style: none;
         }
         .dropdown:hover .submenu { display: flex; }
-        .submenu li a { padding: 10px 20px; text-transform: none; font-weight: normal; text-align: center; display: block; }
-
-        /* 2. Style Content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            font-family: Arial, sans-serif;
-            text-align: center;
+        .submenu li a { 
+            padding: 10px 20px; 
+            font-weight: normal; 
+            text-transform: none; 
+            display: block; 
+            text-align: center; 
         }
 
+        /* 2. Style Page Header */
         .main-header {
+            text-align: center;
+            padding: 70px 0 30px 0;
+            margin: 0;
             font-family: "Georgia", serif;
-            font-size: 3.5rem;
-            letter-spacing: 8px;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 400;
+            letter-spacing: 12px;
             text-transform: uppercase;
+            color: #1a1a1a;
             font-style: italic;
-            margin-bottom: 20px;
         }
 
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .intro-text {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* 3. Style Photo Grid */
         .style-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            margin-top: 20px;
+        }
+
+        .grid-item {
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
         }
 
         .grid-item img {
@@ -82,6 +117,7 @@
             height: 450px;
             object-fit: cover;
             border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .grid-item p {
@@ -89,7 +125,31 @@
             font-weight: bold;
             letter-spacing: 1px;
             text-transform: uppercase;
-            font-size: 12px;
+            font-size: 13px;
+        }
+
+        /* 4. Footer */
+        footer { 
+            text-align: center; 
+            padding: 60px 20px; 
+            background-color: #fff; 
+            border-top: 1px solid #eee; 
+            margin-top: 50px; 
+            font-family: Arial, sans-serif; 
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: 0.3s;
         }
     </style>
 </head>
@@ -99,8 +159,7 @@
     <nav aria-label="Main Navigation">
         <ul class="main-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="style.html">Style</a></li>
-            <li><a href="travel.html">Travel</a></li>
+            <li><a href="style.html">Style</a></li> <li><a href="travel.html">Travel</a></li>
             <li><a href="about-me.html">About Me</a></li>
             <li class="dropdown">
                 <a href="javascript:void(0)" style="cursor: default;">Resume ▼</a>
@@ -117,17 +176,38 @@
 
 <main class="container">
     <h1 class="main-header">Style & Beauty</h1>
-    <p>Aesthetic storytelling through fashion, makeup, and high-end visual strategy.</p>
+    <p class="intro-text">
+        Merging high-end visual storytelling with strategic digital growth. 
+        Explore my curated work in fashion, makeup artistry, and brand identity.
+    </p>
 
     <div class="style-grid">
-        <div class="grid-item"><img src="./comida.jpg" alt="Style 1"><p>Editorial Lookbook</p></div>
-        <div class="grid-item"><img src="./comida2.jpg" alt="Style 2"><p>Beauty Branding</p></div>
-        <div class="grid-item"><img src="./comida3.jpg" alt="Style 3"><p>Visual Identity</p></div>
+        <div class="grid-item">
+            <img src="./comida.jpg" alt="Style 1">
+            <p>Visual Strategy</p>
+        </div>
+        <div class="grid-item">
+            <img src="./comida2.jpg" alt="Style 2">
+            <p>Editorial Design</p>
+        </div>
+        <div class="grid-item">
+            <img src="./comida3.jpg" alt="Style 3">
+            <p>Aesthetic Branding</p>
+        </div>
     </div>
 </main>
 
-<footer style="text-align: center; padding: 40px; border-top: 1px solid #eee; margin-top: 50px; font-family: Arial;">
-    <p>&copy; 2026. ALL RIGHTS RESERVED.</p>
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100078193936641" target="_blank"><img src="./facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/renataoliveiraofficial" target="_blank"><img src="./instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@renataoliveiraofficial" target="_blank"><img src="./tiktok.png" alt="TikTok"></a>
+        <a href="https://www.pinterest.com/RenataxoliverNY" target="_blank"><img src="./pinterest.png" alt="Pinterest"></a>
+    </div>
+
+    <p style="color: #999; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-top: 30px;">
+        &copy; 2026. ALL RIGHTS RESERVED.
+    </p>
 </footer>
 
 </body>
