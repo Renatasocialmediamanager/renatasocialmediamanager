@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Georgia', serif; /* Using a serif font to emphasize typography */
+            font-family: 'Georgia', serif; 
             line-height: 1.8;
             color: #333;
             background-color: var(--bg-color);
@@ -25,7 +25,7 @@
             padding: 40px 20px;
         }
 
-        /* Sub Navigation for Pages 5 and 6 */
+        /* Sub Navigation */
         .sub-nav {
             background: #f4f4f4;
             padding: 15px;
@@ -42,9 +42,7 @@
             font-size: 0.9rem;
         }
 
-        .sub-nav a:hover {
-            color: #e67e22;
-        }
+        .sub-nav a:hover { color: #e67e22; }
 
         h1 { font-size: 2.5rem; text-align: center; margin-bottom: 10px; }
         
@@ -55,10 +53,7 @@
         }
 
         /* Definition List Styling */
-        dl {
-            background: #fff;
-            padding: 20px;
-        }
+        dl { background: #fff; padding: 20px; }
 
         dt {
             font-weight: bold;
@@ -68,23 +63,44 @@
             font-family: 'Helvetica', sans-serif;
         }
 
-        dd {
-            margin: 5px 0 10px 20px;
-            font-style: italic;
-            color: #555;
+        dd { margin: 5px 0 10px 20px; font-style: italic; color: #555; }
+
+        /* Navigation Buttons */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 60px 0;
         }
+
+        .btn {
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            transition: 0.3s;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .btn-home { background: #fff; color: #000; border: 1px solid #000; }
+        .btn-next { background: #000; color: #fff; }
+        
+        .btn:hover { opacity: 0.7; transform: translateY(-2px); }
     </style>
 </head>
 <body>
 
     <header style="text-align:center; padding: 20px;">
-        <a href="../index.html" style="text-decoration:none; color:#999;">&larr; Return to Home</a>
+        <a href="../index.html" style="text-decoration:none; color:#999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">&larr; Return to Home</a>
     </header>
 
     <nav class="sub-nav">
-        <span>4. Typography Overview</span> | 
-        <a href="./fonttypes.html">5. Font Types Article</a> | 
-        <a href="./typographyarticle.html">6. Typography Comparison</a>
+        <span style="font-weight: bold; color: #888;">4. Typography Overview</span> | 
+        <a href="fonttypes.html">5. Font Types Article</a> | 
+        <a href="typographyarticle.html">6. Typography Comparison</a>
     </nav>
 
     <div class="container">
@@ -111,27 +127,32 @@
                 <dd>Typefaces that do not have the small decorative strokes at the ends of characters (e.g., Arial).</dd>
 
                 <dt>5. Kerning</dt>
-                <dd>The process of adjusting the spacing between individual letter pairs to achieve a visually pleasing result.</dd>
+                <dd>The spacing between individual letter pairs.</dd>
 
                 <dt>6. Tracking</dt>
-                <dd>The uniform adjustment of spacing across a whole range of characters or a block of text.</dd>
+                <dd>The uniform adjustment of spacing across a whole range of characters.</dd>
 
-                <dt>7. Leading (Line Spacing)</dt>
-                <dd>The vertical distance between lines of text, measured from baseline to baseline.</dd>
+                <dt>7. Leading</dt>
+                <dd>The vertical distance between lines of text.</dd>
 
                 <dt>8. Hierarchy</dt>
-                <dd>The visual arrangement of text that guides the reader’s eye to the most important information first (using size, weight, and color).</dd>
+                <dd>Visual arrangement of text that guides the reader’s eye.</dd>
 
                 <dt>9. Baseline</dt>
                 <dd>The invisible line upon which most letters "sit."</dd>
 
                 <dt>10. X-Height</dt>
-                <dd>The height of lowercase letters, specifically the lowercase "x," which determines how "large" a font feels even at small point sizes.</dd>
+                <dd>The height of lowercase letters, specifically the lowercase "x."</dd>
             </dl>
         </section>
+
+        <div class="btn-group">
+            <a href="../index.html" class="btn btn-home">Back to Home</a>
+            <a href="fonttypes.html" class="btn btn-next">Next: Font Types &rarr;</a>
+        </div>
     </div>
 
-    <footer style="text-align:center; padding: 40px; color: #bbb;">
+    <footer style="text-align:center; padding: 40px; color: #bbb; border-top: 1px solid #eee;">
         <p>&copy; 2026 Renata Oliveira | Portfolio Project</p>
     </footer>
 

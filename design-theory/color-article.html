@@ -7,30 +7,59 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; font-family: 'Helvetica', sans-serif; }
-        .sub-nav { text-align: center; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-        .sub-nav a { margin: 0 15px; text-decoration: none; color: #4A634E; font-weight: bold; }
+        
+        /* Navigation Styles */
+        .sub-nav { text-align: center; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; background: #fdfdfd; }
+        .sub-nav a { margin: 0 15px; text-decoration: none; color: #4A634E; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
         
         .article-content { line-height: 1.8; color: #333; }
         .comparison-section { margin: 50px 0; display: flex; flex-direction: column; gap: 30px; }
         .web-screenshot { width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         
-        h1 { font-size: 2.5rem; text-align: center; color: #222; }
-        h2 { border-left: 5px solid #4A634E; padding-left: 15px; margin-top: 40px; }
-        .verdict { background: #f0f4f1; padding: 25px; border-radius: 8px; margin-top: 40px; }
+        h1 { font-size: 2.5rem; text-align: center; color: #222; font-family: "Georgia", serif; }
+        h2 { border-left: 5px solid #4A634E; padding-left: 15px; margin-top: 40px; font-family: "Georgia", serif; }
+        .verdict { background: #f0f4f1; padding: 25px; border-radius: 8px; margin-top: 40px; border: 1px solid #e0e6e1; }
+
+        /* Navigation Buttons */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 60px 0;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            transition: 0.3s;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .btn-home { background: #fff; color: #000; border: 1px solid #000; }
+        .btn-home:hover { background: #f4f4f4; transform: translateY(-2px); }
     </style>
 </head>
 <body>
 
+    <header style="text-align:center; padding: 20px;">
+        <a href="../index.html" style="text-decoration:none; color:#999; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;">&larr; Return to Home</a>
+    </header>
+
     <div class="container">
         <nav class="sub-nav">
-            <a href="color-overview.html">1. Overview</a> | 
-            <a href="color-themes.html">2. Color Themes</a> | 
-            <span>3. Color Article</span>
+            <a href="coloroverview.html">1. Overview</a> | 
+            <a href="colorthemes.html">2. Color Themes</a> | 
+            <span style="color: #888; font-weight: bold; text-transform: uppercase;">3. Color Article</span>
         </nav>
 
         <article class="article-content">
             <h1>The Psychology of Palette: A Tale of Two Websites</h1>
-            <p>By Renata Oliveira</p>
+            <p style="text-align:center;">By Renata Oliveira</p>
             
             <p>In web design, color is more than just decoration; it is a silent language that tells the user how to feel before they even read a single word. As a content creator, I analyze how brands use color theory to drive engagement. Today, we look at how two vastly different brands use color to define their identity.</p>
 
@@ -40,9 +69,9 @@
                     <p><strong>Link:</strong> <a href="https://www.tiffany.com" target="_blank">Tiffany.com</a></p>
                     <img src="./TIFFANY.png" alt="Tiffany and Co Website Screenshot" class="web-screenshot">
                     <p>
-                        Tiffany & Co. is perhaps the most famous example of <strong>Monochromatic</strong> branding. Their use of "Tiffany Blue" (No. 1837) creates an immediate sense of luxury, exclusivity, and calm. 
+                        Tiffany & Co. is perhaps the most famous example of <strong>Monochromatic</strong> branding. Their use of "Tiffany Blue" creates an immediate sense of luxury, exclusivity, and calm. 
                     </p>
-                    <p><strong>Why I Like It:</strong> The website uses vast amounts of white space (negative space) to let the signature blue pop. It feels expensive and uncluttered. It proves that you don't need a rainbow of colors to make a massive impact.</p>
+                    <p><strong>Why I Like It:</strong> The website uses vast amounts of white space to let the signature blue pop. It feels expensive and uncluttered. It proves that you don't need a rainbow of colors to make a massive impact.</p>
                 </section>
 
                 <section>
@@ -52,7 +81,7 @@
                     <p>
                         On the opposite end of the spectrum is LEGO. Their site utilizes a <strong>Triadic Color Scheme</strong> (Red, Yellow, and Blue). These are primary colors that evoke childhood, creativity, and high energy.
                     </p>
-                    <p><strong>Why It Works:</strong> While it could easily feel "messy," LEGO uses high-saturation colors to guide the eye toward "Buy Now" buttons and new product releases. It’s a masterclass in using color to create a playful environment that still feels professional and easy to navigate.</p>
+                    <p><strong>Why It Works:</strong> While it could easily feel "messy," LEGO uses high-saturation colors to guide the eye toward "Buy Now" buttons and new product releases. It’s a masterclass in using color to create a playful environment.</p>
                 </section>
             </div>
 
@@ -62,11 +91,15 @@
                     Color theory isn't about which colors are "better"—it's about <strong>alignment</strong>. Tiffany uses color to create a hushed, luxury experience, while LEGO uses it to create a loud, joyful one. When designing for social media or the web, the palette must always match the brand's voice.
                 </p>
             </section>
+
+            <div class="btn-group">
+                <a href="../index.html" class="btn btn-home">Back to Portfolio Home</a>
+            </div>
         </article>
     </div>
 
-    <footer style="text-align:center; padding: 40px;">
-        <p>&copy; 2026 Renata Oliveira Portfolio</p>
+    <footer style="text-align:center; padding: 40px; color: #999; border-top: 1px solid #eee;">
+        <p>&copy; 2026 Renata Oliveira | Portfolio Project</p>
     </footer>
 
 </body>
