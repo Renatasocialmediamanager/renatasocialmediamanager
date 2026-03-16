@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Theory Overview | Renata Oliver</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --accent-color: #4A634E; /* Your signature Sage Green */
+            --dark-text: #1a1a1a;
+            --light-bg: #fdfdfd;
+        }
+
+        body {
+            font-family: "Georgia", serif;
+            background-color: var(--light-bg);
+            margin: 0;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Sub-Navigation */
+        .sub-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #1a1a1a;
+            padding: 15px 0;
+            margin-bottom: 40px;
+        }
+
+        .sub-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .sub-nav a:hover { color: var(--accent-color); }
+
+        /* Glossary Styling */
+        .glossary-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        h1 { font-size: 3rem; text-align: center; margin-bottom: 10px; font-style: italic; }
+        
+        dt {
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-top: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        dd {
+            margin: 10px 0 20px 25px;
+            color: #555;
+            border-left: 2px solid #eee;
+            padding-left: 15px;
+        }
+
+        /* Navigation Buttons */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 60px 0;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        .btn-home { background: #fff; color: #000; border: 1px solid #000; }
+        .btn-next { background: #000; color: #fff; }
+        
+        .btn:hover { opacity: 0.7; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+
+    <nav class="sub-nav">
+        <a href="color-overview.html" style="color:var(--accent-color)">1. Overview</a>
+        <a href="color-themes.html">2. Themes</a>
+        <a href="color-article.html">3. Article</a>
+    </nav>
+
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 50px;">
+            <h1>Color Theory Overview</h1>
+            <p>Digital Strategy & Visual Communication</p>
+        </header>
+
+        <section class="glossary-card">
+            <p>Color theory is the art and science of color interaction. For a content creator, it is the foundation of building a brand that feels authentic and visually balanced.</p>
+            
+            <dl>
+                <dt>1. Hue</dt><dd>The pure spectrum color; the name of the color.</dd>
+                <dt>2. Saturation</dt><dd>The intensity or vividness of a color.</dd>
+                <dt>3. Value</dt><dd>The relative lightness or darkness of a color.</dd>
+                <dt>4. Tint</dt><dd>A color produced by adding white to a pure hue.</dd>
+                <dt>5. Shade</dt><dd>A color produced by adding black to a pure hue.</dd>
+                <dt>6. Tone</dt><dd>A color produced by adding gray to a pure hue.</dd>
+                <dt>7. Primary Colors</dt><dd>Red, Yellow, and Blue.</dd>
+                <dt>8. Secondary Colors</dt><dd>Green, Orange, and Purple.</dd>
+                <dt>9. Tertiary Colors</dt><dd>Mixed from primary and secondary colors (e.g., Blue-Green).</dd>
+                <dt>10. Color Wheel</dt><dd>A circular diagram showing the relationship between colors.</dd>
+                <dt>11. Complementary</dt><dd>Colors opposite each other on the wheel.</dd>
+                <dt>12. Analogous</dt><dd>Colors sitting next to each other on the wheel.</dd>
+                <dt>13. Monochromatic</dt><dd>Variations of a single hue.</dd>
+                <dt>14. Triadic</dt><dd>Three colors equally spaced on the wheel.</dd>
+                <dt>15. Split-Complementary</dt><dd>A base color plus the two colors adjacent to its complement.</dd>
+                <dt>16. Warm Colors</dt><dd>Colors like Red and Orange that evoke energy.</dd>
+                <dt>17. Cool Colors</dt><dd>Colors like Blue and Green that evoke calm.</dd>
+                <dt>18. Neutral Colors</dt><dd>White, Black, Gray, and Brown.</dd>
+                <dt>19. RGB</dt><dd>Digital color model (Red, Green, Blue).</dd>
+                <dt>20. CMYK</dt><dd>Print color model (Cyan, Magenta, Yellow, Black).</dd>
+            </dl>
+        </section>
+
+        <div class="btn-group">
+            <a href="../index.html" class="btn btn-home">Back to Home</a>
+            <a href="color-themes.html" class="btn btn-next">Next: Color Themes &rarr;</a>
+        </div>
+    </div>
+
+    <footer style="text-align:center; padding: 40px; color: #999; font-size: 11px; letter-spacing: 1px;">
+        &copy; 2026 RENATA OLIVER | ALL RIGHTS RESERVED.
+    </footer>
+
+</body>
+</html>
