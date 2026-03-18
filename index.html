@@ -5,34 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renata Oliver | Portfolio</title>
     <style>
-        /* 1. Critical Scroll Fixes */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
+        /* 1. Reset & Global Scroll Fix */
+        * { box-sizing: border-box; }
+        html, body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-            /* Ensures vertical scrolling is always enabled */
-            overflow-y: auto; 
-            overflow-x: hidden;
             width: 100%;
+            overflow-x: hidden; /* Prevents horizontal glitching */
+            overflow-y: auto;   /* Forces vertical scroll to work */
+            background-color: #fff;
+            font-family: Arial, sans-serif;
         }
 
-        /* 2. Navigation Styling */
+        /* 2. Navigation */
         nav {
             display: flex;
             justify-content: center; 
             align-items: center;
             padding: 25px 5%;
             border-bottom: 1px solid #eee;
-            background-color: #fff;
             position: relative;
-            z-index: 1000;
+            z-index: 2000; /* High z-index to stay on top */
+            background: #fff;
         }
 
         .main-menu {
@@ -51,13 +45,14 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         .main-menu a:hover, .dropdown:hover .menu-label { color: #888; }
 
+        /* 3. Dropdown Logic */
         .dropdown { position: relative; }
         
-        /* 3. Submenu - Fixed to prevent blocking the page */
         .submenu {
             display: none;
             position: absolute;
@@ -65,19 +60,17 @@
             left: 50%;
             transform: translateX(-50%);
             background: white;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             padding: 10px 0;
             min-width: 220px; 
             flex-direction: column;
-            z-index: 1001;
+            z-index: 3000;
             list-style: none;
             margin-top: 10px;
             border: 1px solid #eee;
-            /* Prevents the menu from blocking clicks when invisible */
-            pointer-events: none; 
+            pointer-events: none; /* Fixes scroll blocking when hidden */
         }
 
-        /* Only allow clicks when the menu is actually visible */
         .dropdown:hover .submenu { 
             display: flex; 
             pointer-events: auto; 
@@ -90,9 +83,10 @@
             display: block; 
             text-align: center;
             font-size: 13px;
+            color: #444;
         }
 
-        .submenu li a:hover { background-color: #f9f9f9; }
+        .submenu li a:hover { background-color: #f9f9f9; color: #000; }
 
         .submenu-header {
             display: block;
@@ -102,21 +96,16 @@
             font-size: 10px;
             text-transform: uppercase;
             text-align: center;
+            letter-spacing: 1px;
         }
 
-        /* 4. Content Layout */
-        main {
-            display: block;
-            width: 100%;
-            min-height: 100vh; /* Ensures there is always space to scroll */
-        }
-
+        /* 4. Page Content */
         .main-header {
             text-align: center;
             padding: 70px 20px 30px 20px;
             font-family: "Georgia", serif;
             font-size: clamp(2rem, 8vw, 4.5rem);
-            letter-spacing: 12px;
+            letter-spacing: 10px;
             text-transform: uppercase;
             font-style: italic;
         }
@@ -124,7 +113,7 @@
         .main-photo {
             width: 90%;
             max-width: 1100px;
-            height: auto; /* Changed from fixed 350px for better scrolling */
+            height: auto;
             display: block;
             margin: 0 auto;
             border-radius: 4px;
@@ -149,39 +138,29 @@
         }
 
         /* 5. Footer */
-        footer { 
-            text-align: center; 
-            padding: 60px 20px; 
-            border-top: 1px solid #eee; 
-            margin-top: 50px; 
-        }
-        
-        .social-icons { 
-            display: flex; 
-            justify-content: center; 
-            gap: 20px; 
-            margin-bottom: 25px; 
-        }
-        
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #eee; margin-top: 50px; }
+        .social-icons { display: flex; justify-content: center; gap: 20px; margin-bottom: 25px; }
         .social-icons img { width: 35px; height: 35px; }
     </style>
 </head>
 <body>
 
 <header>
-    <nav aria-label="Main Navigation">
+    <nav>
         <ul class="main-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="style.html">Style</a></li>
             <li><a href="travel.html">Travel</a></li>
             <li><a href="about-me.html">About Me</a></li>
             <li class="dropdown">
-                <span class="menu-label">Resume <span style="font-size: 10px; vertical-align: middle;">▼</span></span> 
+                <span class="menu-label">Resume <span style="font-size: 10px;">▼</span></span> 
                 <ul class="submenu">
-                    <li><a href="resume.html" style="font-weight: bold; color: #000; border-bottom: 1px solid #eee;">Full Resume</a></li>
+                    <li><a href="resume.html" style="font-weight: bold; border-bottom: 1px solid #eee;">Full Resume</a></li>
+                    
                     <li class="submenu-header">Design Theory</li>
                     <li><a href="design-theory/color-overview.html">Color Theory</a></li>
                     <li><a href="design-theory/typographyoverview.html">Typography</a></li>
+                    
                     <li class="submenu-header" style="border-top: 1px solid #eee; margin-top: 5px;">Showcase</li>
                     <li><a href="pizza1.jpg" target="_blank">Photoshop 1</a></li> 
                     <li><a href="design-theory/Artboard 1.png" target="_blank">Photoshop 2</a></li> 
@@ -195,22 +174,22 @@
 
 <main>
     <h1 class="main-header">Renata Oliver</h1>
-    <img src="./bannerpicture.png" alt="Portfolio Banner" class="main-photo">
+    <img src="./bannerpicture.png" alt="Banner" class="main-photo">
     <section class="welcome-section">
         <h2>Digital Strategist & Content Creator</h2>
-        <p>I am a passionate Social Media Manager helping brands find their voice.</p>
+        <p>Helping brands find their voice in a crowded online world.</p>
         <a href="mailto:renataoliveiraofficial@hotmail.com" class="btn-contact">Work With Me</a>
     </section>
 </main>
 
 <footer>
     <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100078193936641" target="_blank"><img src="./facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/renataoliveiraofficial" target="_blank"><img src="./instagram.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@renataoliveiraofficial" target="_blank"><img src="./tiktok.png" alt="TikTok"></a>
-        <a href="https://www.pinterest.com/RenataxoliverNY" target="_blank"><img src="./pinterest.png" alt="Pinterest"></a>
+        <a href="#"><img src="./facebook.png" alt="FB"></a>
+        <a href="#"><img src="./instagram.png" alt="IG"></a>
+        <a href="#"><img src="./tiktok.png" alt="TT"></a>
+        <a href="#"><img src="./pinterest.png" alt="PT"></a>
     </div>
-    <p style="color: #999; font-size: 11px; margin-top: 30px;">&copy; 2026. ALL RIGHTS RESERVED.</p>
+    <p style="color: #999; font-size: 11px; margin-top: 20px;">&copy; 2026. ALL RIGHTS RESERVED.</p>
 </footer>
 
 </body>
