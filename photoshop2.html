@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Renata Oliver</title>
+    <title>Photoshop Showcase 2 | Renata Oliver</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* local adjustments to center this specific project */
+        .project-media {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: block;
+            margin: 0 auto 30px auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,7 +31,7 @@
             <li class="dropdown">
                 <span class="menu-label">Portfolio ▼</span> 
                 <ul class="submenu">
-                    <li><a href="resume.html" style="font-weight: bold; border-bottom: 1px solid #eee;">Full Resume</a></li>
+                    <li><a href="resume.html">Full Resume</a></li>
                     <li class="submenu-header">Showcase</li>
                     <li><a href="photoshop1.html">Photoshop 1</a></li>
                     <li><a href="photoshop2.html">Photoshop 2</a></li>
@@ -33,28 +45,30 @@
                 <ul class="submenu">
                     <li><a href="design-theory/color-overview.html">Color Overview</a></li>
                     <li><a href="design-theory/color-themes.html">Color Themes</a></li>
-                    <li><a href="design-theory/color-article.html">Color Article</a></li>
-                    <li class="submenu-header" style="border-top: 1px solid #eee; margin-top: 5px;">Typography</li>
                     <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
-                    <li><a href="design-theory/font-article.html">Font Types Article</a></li>
-                    <li><a href="design-theory/typography-article.html">Typography Article</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 </header>
 
-<main class="resume-wrapper" style="text-align: center;">
-    <h1 class="main-header">About Me</h1>
+<main class="project-container">
+    <h1 class="main-header">Brand Positioning & Social Media Strategy</h1>
     
-    <img src="./profile.PNG" alt="Renata Oliver" style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 40px;">
-
-    <section class="welcome-section">
-        <h2 style="font-family: 'Georgia', serif; font-style: italic; font-size: 2.5rem; letter-spacing: 4px; text-transform: uppercase;">Welcome to Renata Oliver Portfolio!</h2>
-        <p class="exp-desc" style="max-width: 800px; margin: 30px auto;">
-            I’m <strong>Renata</strong>, a passionate and creative Social Media Manager with years of hands-on experience helping brands find their unique voice.
-        </p>
-    </section>
+    <img src="project-4.jpg" alt="Photoshop Branding Project" class="project-media">
+    
+    <div class="project-desc">
+        <h2 style="font-family: Georgia, serif; text-transform: uppercase; font-size: 1.1rem; margin-bottom: 15px;">Project Overview</h2>
+        <p>This project was developed in <strong>Adobe Photoshop</strong> to create a unified marketing visual. The primary focus was on establishing brand positioning through a cohesive aesthetic.</p>
+        <p style="margin-top: 15px;">Key design technicalities addressed included:</p>
+        <ul style="margin: 15px 0 0 20px; line-height: 1.8;">
+            <li><strong>Compositional Balance:</strong> Strategic placement of elements (video feeds, floating icons) to guide the viewer’s eye.</li>
+            <li><strong>Typography Hierarchy:</strong> Using clear font choices and scale to differentiate service titles from agency descriptions.</li>
+            <li><strong>Selective Color Grading:</strong> Applying a consistent color palette to integrate diverse visual elements seamlessly.</li>
+        </ul>
+    </div>
+    
+    <a href="index.html" style="display: inline-block; margin-top: 40px; text-decoration: none; color: #888; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">← Return to Home Page</a>
 </main>
 
 <footer>
