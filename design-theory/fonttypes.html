@@ -4,126 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Four Pillars of Font Types | Renata Oliveira</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Montserrat:wght@400;700&family=Dancing+Script&family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&family=Dancing+Script&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../sitewide.css">
+    
     <style>
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        .sub-nav { text-align: center; margin-bottom: 30px; }
-        .sub-nav a { margin: 0 10px; text-decoration: none; color: #2c3e50; font-weight: bold; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 40px; color: #333; line-height: 1.8; }
+        
+        /* Navigation Styles */
+        .sub-nav { text-align: center; margin-bottom: 50px; border-bottom: 1px solid #eee; padding: 20px 0; }
+        .sub-nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; }
         
         .font-category { 
             margin: 40px 0; 
-            padding: 30px; 
-            border: 1px solid #eee; 
-            border-radius: 12px;
-            background-color: #fdfdfd;
+            padding: 40px; 
+            background: #fff; 
+            border-radius: 4px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+            border-left: 5px solid #D470A2;
         }
 
         /* Sample Styles */
-        .sample-serif { font-family: 'Playfair Display', serif; font-size: 2.5rem; }
-        .sample-sans { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; }
-        .sample-script { font-family: 'Dancing Script', cursive; font-size: 2.5rem; }
-        .sample-mono { font-family: 'Source Code Pro', monospace; font-size: 1.8rem; }
+        .sample-serif { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin: 10px 0; color: #1a1a1a; }
+        .sample-sans { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; font-weight: 700; margin: 10px 0; color: #1a1a1a; letter-spacing: -1px; }
+        .sample-script { font-family: 'Dancing Script', cursive; font-size: 2.8rem; margin: 10px 0; color: #1a1a1a; }
+        .sample-mono { font-family: 'Source Code Pro', monospace; font-size: 2.2rem; margin: 10px 0; color: #1a1a1a; }
 
         .download-btn {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
+            margin-top: 20px;
+            padding: 12px 25px;
             background-color: #333;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-        .download-btn:hover { background-color: #555; }
-        
-        h1 { text-align: center; font-family: 'Montserrat', sans-serif; }
-        h2 { color: #2c3e50; }
-
-        /* Navigation Buttons */
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 60px 0;
-        }
-
-        .btn {
-            padding: 15px 35px;
-            text-decoration: none;
+            border-radius: 4px;
+            font-size: 10px;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 12px;
+            letter-spacing: 1px;
             transition: 0.3s;
-            border-radius: 4px;
-            display: inline-block;
         }
+        .download-btn:hover { background-color: #D470A2; transform: translateY(-2px); }
+        
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; text-align: center; margin-bottom: 10px; color: #222; }
+        h2 { font-family: 'Montserrat', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 3px; color: #D470A2; margin-bottom: 5px; }
 
-        .btn-home { background: #fff; color: #000; border: 1px solid #000; }
-        .btn-next { background: #000; color: #fff; }
-        .btn:hover { opacity: 0.7; transform: translateY(-2px); }
+        .author-tag { text-align: center; font-family: 'Mrs Saint Delafield', cursive; font-size: 42px; color: #D470A2; margin-bottom: 5px; }
+
+        /* Navigation Buttons */
+        .btn-group { display: flex; justify-content: center; gap: 20px; margin: 80px 0; }
+        .btn { padding: 16px 35px; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; transition: 0.3s; border-radius: 4px; display: inline-block; }
+        .btn-home { background: transparent; color: #333; border: 1px solid #333; }
+        .btn-next { background: #D470A2; color: #fff; box-shadow: 0 4px 15px rgba(212, 112, 162, 0.3); }
+        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
     </style>
 </head>
 <body>
 
+    <header class="site-header">
+        <h1 class="pink-brand-name" style="color: #1a1a1a; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: 10px; text-transform: uppercase; padding: 40px 0; font-size: 38px;">Renata Oliveira</h1>
+    </header>
+
+    <nav class="sub-nav">
+        <a href="typographyoverview.html">4. Overview</a> | 
+        <span style="color: #D470A2; font-weight: bold; text-transform: uppercase; font-size: 11px; margin: 0 15px; letter-spacing: 1px;">5. Font Types Article</span> | 
+        <a href="typographyarticle.html">6. Comparison</a>
+    </nav>
+
     <div class="container">
-        <div style="text-align:center; padding: 20px;">
-            <a href="../index.html" style="text-decoration:none; color:#999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">&larr; Return to Home</a>
-        </div>
+        <header style="margin-bottom: 60px;">
+            <h1>Choosing the Right Voice</h1>
+            <p class="author-tag">By Renata Oliveira</p>
+            <p style="text-align:center; text-transform: uppercase; letter-spacing: 4px; font-size: 11px; color: #888;">A Social Media Manager's Guide to Font Types</p>
+        </header>
 
-        <nav class="sub-nav">
-            <a href="typographyoverview.html">4. Typography Overview</a> | 
-            <span style="color: #888;">5. Font Types Article</span> | 
-            <a href="typographyarticle.html">6. Typography Comparison</a>
-        </nav>
-
-        <h1>Choosing the Right Voice: A Guide to Font Types</h1>
-        <p style="text-align:center;">By Renata Oliveira</p>
-
-        <p>In social media management, a font isn't just a letter; it's an emotion. Choosing the wrong font type can confuse your audience and dilute your brand message. Here are the four primary categories of fonts and when to use them.</p>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 50px auto; color: #666;">In social media management, a font isn't just a letter; it's an emotion. Choosing the wrong font type can confuse your audience and dilute your brand message. Here are the four primary categories.</p>
 
         <div class="font-category">
-            <h2>1. Serif Fonts</h2>
+            <h2>01. Serif Fonts</h2>
             <p class="sample-serif">The Classic Elegance</p>
-            <p><strong>Description:</strong> Serif fonts feature small "feet" or strokes at the ends of the letters. They are associated with tradition, reliability, and high-end luxury.</p>
+            <p><strong>Description:</strong> Serif fonts feature small decorative strokes at the ends of the letters. They are associated with tradition, reliability, and high-end luxury.</p>
             <p><strong>Best for:</strong> Editorial content, law firms, or luxury fashion brands (like Tiffany & Co.).</p>
-            <a href="https://fonts.google.com/specimen/Playfair+Display" target="_blank" class="download-btn">Download Playfair Display</a>
+            <a href="https://fonts.google.com/specimen/Playfair+Display" target="_blank" class="download-btn">View Playfair Display</a>
         </div>
 
-        <div class="font-category">
-            <h2>2. Sans Serif Fonts</h2>
+        <div class="font-category" style="border-left-color: #333;">
+            <h2 style="color: #333;">02. Sans Serif Fonts</h2>
             <p class="sample-sans">Modern & Clean</p>
-            <p><strong>Description:</strong> "Sans" means "without" in French. These fonts lack the small feet, offering a clean, minimalist, and approachable look.</p>
+            <p><strong>Description:</strong> "Sans" means "without." These fonts lack decorative feet, offering a clean, minimalist, and approachable look.</p>
             <p><strong>Best for:</strong> Tech companies, modern startups, and mobile-first social media content.</p>
-            <a href="https://fonts.google.com/specimen/Montserrat" target="_blank" class="download-btn">Download Montserrat</a>
+            <a href="https://fonts.google.com/specimen/Montserrat" target="_blank" class="download-btn">View Montserrat</a>
         </div>
 
         <div class="font-category">
-            <h2>3. Script Fonts</h2>
+            <h2>03. Script Fonts</h2>
             <p class="sample-script">Personal & Artistic</p>
             <p><strong>Description:</strong> These fonts mimic human handwriting or calligraphy. They add a personal, feminine, or creative touch to a design.</p>
-            <p><strong>Best for:</strong> Wedding invitations, beauty brands, or "lifestyle" influencer content.</p>
-            <a href="https://fonts.google.com/specimen/Dancing+Script" target="_blank" class="download-btn">Download Dancing Script</a>
+            <p><strong>Best for:</strong> Logos, beauty brands, or "lifestyle" influencer content.</p>
+            <a href="https://fonts.google.com/specimen/Dancing+Script" target="_blank" class="download-btn">View Dancing Script</a>
         </div>
 
-        <div class="font-category">
-            <h2>4. Monospaced Fonts</h2>
+        <div class="font-category" style="border-left-color: #333;">
+            <h2 style="color: #333;">04. Monospaced Fonts</h2>
             <p class="sample-mono">Technical & Precise</p>
-            <p><strong>Description:</strong> In these fonts, every character takes up the exact same amount of horizontal space. This creates a "typewriter" or "coding" aesthetic.</p>
-            <p><strong>Best for:</strong> Displaying code, technical documentation, or creating a retro/tech vibe.</p>
-            <a href="https://fonts.google.com/specimen/Source+Code+Pro" target="_blank" class="download-btn">Download Source Code Pro</a>
+            <p><strong>Description:</strong> Every character takes up the exact same amount of horizontal space. This creates a "typewriter" or "coding" aesthetic.</p>
+            <p><strong>Best for:</strong> Displaying code, technical documentation, or retro-tech aesthetics.</p>
+            <a href="https://fonts.google.com/specimen/Source+Code+Pro" target="_blank" class="download-btn">View Source Code Pro</a>
         </div>
 
         <div class="btn-group">
             <a href="../index.html" class="btn btn-home">Back to Home</a>
-            <a href="typographyarticle.html" class="btn btn-next">Next: Typography Comparison &rarr;</a>
+            <a href="typographyarticle.html" class="btn btn-next">Next: Comparison &rarr;</a>
         </div>
 
     </div>
 
-    <footer style="text-align:center; padding: 40px; color: #999; border-top: 1px solid #eee;">
-        <p>&copy; 2026 Renata Oliveira Portfolio</p>
+    <footer style="text-align: center; padding: 80px 40px; color: #bbb; border-top: 1px solid #eee; margin-top: 100px;">
+        <p style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase;">&copy; 2026 RENATA OLIVER &bull; DESIGN THEORY</p>
     </footer>
 
 </body>

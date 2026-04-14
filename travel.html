@@ -3,74 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel | Renata Oliver</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Travel & Lifestyle | Renata Oliveira</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="sitewide.css">
+    
+    <style>
+        .travel-container { max-width: 1100px; margin: 60px auto; padding: 0 40px; }
+        .travel-header { text-align: center; margin-bottom: 60px; }
+        .travel-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #222; margin-bottom: 10px; }
+        .travel-header p { color: #D470A2; text-transform: uppercase; letter-spacing: 4px; font-size: 13px; font-weight: bold; }
+        
+        .travel-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            margin-top: 40px; 
+        }
+        
+        .destination-card { 
+            position: relative; 
+            border-radius: 4px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            transition: 0.4s ease;
+        }
+        
+        .destination-card:hover { transform: scale(1.02); }
+        .destination-card img { width: 100%; height: 400px; object-fit: cover; display: block; }
+        
+        .card-label { 
+            position: absolute; 
+            bottom: 20px; 
+            left: 20px; 
+            color: white; 
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+        }
+
+        .intro-quote { 
+            text-align: center; 
+            max-width: 800px; 
+            margin: 0 auto 50px; 
+            font-style: italic; 
+            color: #666; 
+            line-height: 2; 
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <nav aria-label="Main Navigation">
-        <ul class="main-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="style.html">Style</a></li>
-            <li><a href="travel.html">Travel</a></li>
-            <li><a href="about-me.html">About Me</a></li>
-            
-            <li class="dropdown">
-                <span class="menu-label">Portfolio ▼</span> 
-                <ul class="submenu">
-                    <li><a href="resume.html" style="font-weight: bold; border-bottom: 1px solid #eee;">Full Resume</a></li>
-                    <li class="submenu-header">Showcase</li>
-                    <li><a href="photoshop1.html">Photoshop 1</a></li> 
-                    <li><a href="photoshop2.html">Photoshop 2</a></li> 
-                    <li><a href="photoshop3.html">Photoshop 3</a></li>
-                    <li><a href="animate.html">Animate Video</a></li>
-                </ul>
-            </li>
+    <header class="site-header">
+        <h1 class="site-title" style="color: #D470A2; font-family: 'Playfair Display', serif; text-align: center; letter-spacing: 10px; text-transform: uppercase; padding: 40px 0;">Renata Oliveira</h1>
+    </header>
 
-            <li class="dropdown">
-                <span class="menu-label">Design Theory ▼</span>
-                <ul class="submenu">
-                    <li><a href="design-theory/color-overview.html">Color Overview</a></li>
-                    <li><a href="design-theory/color-themes.html">Color Themes</a></li>
-                    <li><a href="design-theory/color-article.html">Color Article</a></li>
-                    <li class="submenu-header" style="border-top: 1px solid #eee; margin-top: 5px;">Typography</li>
-                    <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
-                    <li><a href="design-theory/font-article.html">Font Types Article</a></li>
-                    <li><a href="design-theory/typography-article.html">Typography Article</a></li>
-                </ul>
-            </li>
+    <nav class="site-nav">
+        <ul class="main-menu" style="list-style: none; display: flex; justify-content: center; gap: 40px; margin: 0; padding: 15px 0; border-bottom: 1px solid #eee;">
+            <li><a href="index.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #333;">Home</a></li>
+            <li><a href="style.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #333;">Style</a></li>
+            <li><a href="travel.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #D470A2;">Travel</a></li>
+            <li><a href="about-me.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #333;">About Me</a></li>
         </ul>
     </nav>
-</header>
 
-<main class="travel-container">
-    <h1 class="main-header">Travel & Lifestyle</h1>
-    
-    <p class="intro-text">
-        I don’t just create content that looks beautiful; I build assets that perform with purpose. 
-        Every project here is a result of intentional strategy and a million-follower perspective. 
-    </p>
+    <main class="travel-container">
+        <div class="travel-header">
+            <h1>Travel & Lifestyle</h1>
+            <p>140 Countries & Counting</p>
+        </div>
 
-    <div class="photo-grid">
-        <div class="travel-item"><img src="./turkey.jpg" alt="Istanbul"><p>Istanbul</p></div>
-        <div class="travel-item"><img src="./thailand.jpg" alt="Thailand"><p>Food & Culture</p></div>
-        <div class="travel-item"><img src="./greece.jpg" alt="Greece"><p>Destinations</p></div>
-        <div class="travel-item"><img src="./india.jpg" alt="India"><p>Aesthetics</p></div>
-        <div class="travel-item"><img src="./punta-cana.jpg" alt="Punta Cana"><p>Lifestyle</p></div>
-        <div class="travel-item"><img src="./paris.jpg" alt="Paris"><p>Travel Strategy</p></div>
-    </div>
-</main>
+        <p class="intro-quote">
+            "I don’t just create content that looks beautiful; I build assets that perform with purpose. Every project here is a result of intentional strategy and a million-follower perspective."
+        </p>
 
-<footer>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100078193936641" target="_blank"><img src="./facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/renataoliveiraofficial" target="_blank"><img src="./instagram.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@renataoliveiraofficial" target="_blank"><img src="./tiktok.png" alt="TikTok"></a>
-        <a href="https://www.pinterest.com/RenataxoliverNY" target="_blank"><img src="./pinterest.png" alt="Pinterest"></a>
-    </div>
-    <p style="text-align: center; margin-top: 20px;">&copy; 2026 RENATA OLIVER. ALL RIGHTS RESERVED.</p>
-</footer>
+        <div class="travel-grid">
+            <div class="destination-card">
+                <img src="greece.jpg" alt="Greece Travel">
+                <div class="card-label">Santorini, Greece</div>
+            </div>
+
+            <div class="destination-card">
+                <img src="thailand.jpg" alt="Thailand Travel">
+                <div class="card-label">Bangkok, Thailand</div>
+            </div>
+
+            <div class="destination-card">
+                <img src="turkey.jpg" alt="Turkey Travel">
+                <div class="card-label">Istanbul, Turkey</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 80px;">
+            <a href="index.html" class="btn" style="padding: 15px 40px; border: 1px solid #333; text-decoration: none; color: #333; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: bold; border-radius: 4px;">Back to Home</a>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 80px 40px; color: #bbb; border-top: 1px solid #f2f2f2; margin-top: 100px;">
+        <p style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase;">&copy; 2026 RENATA OLIVER &bull; GLOBAL EXPLORER</p>
+    </footer>
 
 </body>
 </html>

@@ -10,211 +10,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <style>
-        /* --- GLOBAL STYLES --- */
-        * { box-sizing: border-box; }
-        body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; color: #333; background-color: #fff; line-height: 1.8; overflow-x: hidden; }
-        a { text-decoration: none; color: inherit; transition: 0.3s ease; cursor: pointer; }
-        a:hover { opacity: 0.7; }
-
-        /* --- NAVIGATION --- */
-        .site-header { padding: 40px 0 20px; text-align: center; border-bottom: 1px solid #f2f2f2; }
-        .site-title { font-family: 'Playfair Display', serif; font-size: 38px; letter-spacing: 10px; text-transform: uppercase; margin: 0; font-weight: 400; }
-        .back-nav { padding: 15px 0; text-align: center; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid #f2f2f2; background: #fafafa; }
-
-        /* --- CONTENT CONTAINER --- */
-        .container { max-width: 850px; margin: 60px auto; padding: 0 40px; }
-        
-        .sub-nav { text-align: center; margin-bottom: 50px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-        .sub-nav a { margin: 0 15px; text-decoration: none; color: #4A634E; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-
-        h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; color: #222; margin-bottom: 10px; }
-        .author-tag { text-align: center; font-family: 'Mrs Saint Delafield', cursive; font-size: 35px; color: #cdc1b4; margin-bottom: 40px; }
-        
-        .intro-p { text-align: center; color: #666; line-height: 2; margin-bottom: 50px; font-size: 15px; }
-
-        /* --- THEME SECTION STYLING (MATCHES COLOR THEMES) --- */
-        .theme-section { margin-bottom: 70px; }
-        
-        h2 { font-family: 'Playfair Display', serif; border-left: 5px solid #4A634E; padding-left: 15px; margin-top: 50px; color: #222; font-size: 1.8rem; }
-
-        .theme-box { 
-            width: 100%; 
-            border: 1px solid #ddd; 
-            border-radius: 4px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-            overflow: hidden; 
-            margin: 25px 0;
-        }
-
-        .theme-box img { width: 100%; display: block; }
-
-        .analysis-box { background: #faf7f5; padding: 25px; border-radius: 4px; border: 1px solid #f2e9e1; line-height: 1.8; color: #333; }
-        .tag { display: inline-block; background: #4A634E; color: white; padding: 2px 10px; border-radius: 3px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; }
-
-        .verdict-box { 
-            background: #f4f4f4; 
-            padding: 40px; 
-            border-radius: 4px; 
-            margin-top: 60px; 
-            border: 1px solid #eee; 
-            text-align: center;
-        }
-        .verdict-box h3 { font-family: 'Playfair Display', serif; letter-spacing: 2px; text-transform: uppercase; font-size: 1.2rem; margin-bottom: 15px; }
-
-        /* --- BUTTONS --- */
-        .btn-group { display: flex; justify-content: center; gap: 20px; margin: 60px 0; }
-        .btn { padding: 15px 40px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; transition: 0.3s; border-radius: 4px; display: inline-block; }
-        .btn-home { background: #fff; color: #333; border: 1px solid #333; }
-        .btn-home:hover { background: #333; color: #fff; transform: translateY(-2px); }
-
-        /* --- REFINED MINIMALIST FOOTER --- */
-        .fun-footer { 
-            background-color: #fff; 
-            border-top: 1px solid #eee; 
-            padding: 80px 0 40px; 
-            margin-top: 100px; 
-        }
-        
-        .footer-content { 
-            text-align: center; 
-            max-width: 800px; 
-            margin: 0 auto; 
-        }
-        
-        .footer-tagline { 
-            font-family: 'Mrs Saint Delafield', cursive; 
-            font-size: 42px; 
-            color: #cdc1b4; 
-            margin-bottom: 20px; 
-        }
-        
-        .footer-nav { 
-            margin: 30px 0; 
-            display: flex; 
-            justify-content: center; 
-            gap: 35px; 
-        }
-        
-        .footer-nav a { 
-            font-size: 11px; 
-            letter-spacing: 2px; 
-            text-transform: uppercase; 
-            color: #333; 
-            font-weight: 700; 
-            text-decoration: none;
-        }
-        
-        .footer-socials { 
-            display: flex; 
-            justify-content: center; 
-            gap: 15px; 
-            margin-bottom: 45px; 
-        }
-        
-        .footer-socials a { 
-            width: 42px; 
-            height: 42px; 
-            background: #faf7f5; 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            color: #333; 
-            font-size: 16px;
-            transition: 0.3s; 
-            text-decoration: none;
-        }
-        
-        .footer-socials a:hover { 
-            background: #333; 
-            color: #fff; 
-            transform: translateY(-5px); 
-        }
-        
-        .copyright { 
-            font-size: 9px; 
-            color: #999; 
-            letter-spacing: 2px; 
-            text-transform: uppercase; 
-            font-weight: 400;
-        }
-    </style>
+    <link rel="stylesheet" href="../sitewide.css">
+    <link rel="stylesheet" href="../color-and-type.css">
 </head>
 <body>
 
     <header class="site-header">
-        <h1 class="site-title">Renata Oliveira</h1>
+        <h1 class="pink-brand-name">Renata Oliveira</h1>
     </header>
     
-    <nav class="back-nav">
-        <a href="../index.html"><i class="fas fa-chevron-left" style="font-size: 8px;"></i> Return to Portfolio Home</a>
+    <nav class="sub-nav" style="text-align: center; margin-bottom: 50px; padding: 20px 0; border-bottom: 1px solid #eee;">
+        <a href="./color-overview.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">1. OVERVIEW</a> | 
+        <a href="./color-themes.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">2. THEMES</a> | 
+        <span style="color: #D470A2; font-weight: bold; text-transform: uppercase; font-size: 11px; margin-left: 15px; letter-spacing: 1px;">3. ARTICLE</span>
     </nav>
 
-    <div class="container">
-        <nav class="sub-nav">
-            <a href="./color-overview.html">1. Overview</a> | 
-            <a href="./color-themes.html">2. Color Themes</a> | 
-            <span style="color: #bbb; font-weight: bold; text-transform: uppercase;">3. Color Article</span>
-        </nav>
+    <div class="container" style="max-width: 850px; margin: 60px auto; padding: 0 40px;">
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; text-align: center; color: #222; margin-bottom: 10px;">The Psychology of Palette</h1>
+        
+        <p class="author-tag" style="text-align: center; font-family: 'Mrs Saint Delafield', cursive; font-size: 42px; color: #D470A2; margin-bottom: 40px;">By Renata Oliveira</p>
 
-        <h1>The Psychology of Palette</h1>
-        <p class="author-tag">By Renata Oliveira</p>
-
-        <p class="intro-p">In web design, color is more than just decoration; it is a silent language that tells the user how to feel before they even read a single word. Today, we look at how two brands use color theory to define their identity.</p>
+        <p class="intro-p" style="text-align: center; max-width: 700px; margin: 0 auto 50px auto; color: #666; line-height: 2; font-size: 15px;">
+            In web design, color is more than just decoration; it is a silent language that tells the user how to feel before they even read a single word. Today, we look at how two global brands use color theory to define their identity.
+        </p>
 
         <section class="theme-section">
-            <h2>1. Tiffany & Co: Signature Hue</h2>
-            <div class="theme-box">
-                <img src="./TIFFANY.png" alt="Tiffany and Co Website Screenshot">
+            <h2 style="font-family: 'Playfair Display', serif; border-left: 5px solid #D470A2; padding-left: 15px; margin-top: 50px; color: #222; font-size: 1.8rem;">1. Tiffany & Co: Signature Hue</h2>
+            <div class="theme-box" style="width: 100%; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; margin: 25px 0;">
+                <img src="./TIFFANY.png" alt="Tiffany and Co Website Screenshot" style="width: 100%; display: block;">
             </div>
-            <div class="analysis-box">
-                <span class="tag">Monochromatic Luxury</span>
+            <div class="analysis-box" style="background: #faf7f5; padding: 25px; border-radius: 4px; border: 1px solid #f2e9e1; line-height: 1.8; color: #333;">
+                <span class="tag" style="display: inline-block; background: #D470A2; color: #fff; padding: 4px 12px; border-radius: 3px; font-size: 10px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">Monochromatic Luxury</span>
                 <p>Tiffany & Co. uses "Tiffany Blue" to create an immediate sense of luxury and calm. By using vast amounts of white space to let the signature blue pop, they prove that a single hue can define an entire global brand.</p>
             </div>
         </section>
 
-        <section class="theme-section">
-            <h2>2. LEGO: The Triadic Energy</h2>
-            <div class="theme-box">
-                <img src="./LEGO.png" alt="LEGO Website Screenshot">
+        <section class="theme-section" style="margin-top: 60px;">
+            <h2 style="font-family: 'Playfair Display', serif; border-left: 5px solid #D470A2; padding-left: 15px; margin-top: 50px; color: #222; font-size: 1.8rem;">2. LEGO: The Triadic Energy</h2>
+            <div class="theme-box" style="width: 100%; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; margin: 25px 0;">
+                <img src="./LEGO.png" alt="LEGO Website Screenshot" style="width: 100%; display: block;">
             </div>
-            <div class="analysis-box">
-                <span class="tag">High Saturation Play</span>
+            <div class="analysis-box" style="background: #faf7f5; padding: 25px; border-radius: 4px; border: 1px solid #f2e9e1; line-height: 1.8; color: #333;">
+                <span class="tag" style="display: inline-block; background: #D470A2; color: #fff; padding: 4px 12px; border-radius: 3px; font-size: 10px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">High Saturation Play</span>
                 <p>LEGO utilizes a Triadic Color Scheme (Red, Yellow, and Blue) to evoke childhood creativity and high energy. These primary colors guide the eye toward action, making it a masterclass in using color for engagement.</p>
             </div>
         </section>
 
-        <section class="verdict-box">
-            <h3>The Verdict</h3>
-            <p style="margin-bottom: 0; font-size: 15px; color: #555;">Color theory isn't about which colors are "better"—it's about alignment. The palette must always match the brand's unique voice to be effective.</p>
-        </section>
-
-        <div class="btn-group">
-            <a href="../index.html" class="btn btn-home">Back to Portfolio Home</a>
+        <div class="btn-group" style="display: flex; justify-content: center; margin-top: 80px;">
+            <a href="../index.html" class="btn btn-home" style="padding: 15px 40px; border: 1px solid #333; text-decoration: none; color: #333; text-transform: uppercase; font-size: 11px; letter-spacing: 2px; font-weight: bold; border-radius: 4px;">Return to Portfolio</a>
         </div>
     </div>
 
-    <footer class="fun-footer">
-        <div class="footer-content">
-            <div class="footer-tagline">Follow the Journey</div>
-            
-            <div class="footer-nav">
-                <a href="../index.html">Home</a>
-                <a href="../about-me.html">About</a>
-                <a href="../travel.html">Destinations</a>
-                <a href="mailto:renataoliveiraofficial@hotmail.com">Contact</a>
-            </div>
-
-            <div class="footer-socials">
-                <a href="https://www.instagram.com/renataoliveiraofficial" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@renataoliveiraofficial" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.pinterest.com/RenataxoliverNY" target="_blank"><i class="fab fa-pinterest"></i></a>
-                <a href="mailto:renataoliveiraofficial@hotmail.com"><i class="far fa-envelope"></i></a>
-            </div>
-
-            <p class="copyright">&copy; 2026 Renata Oliver &bull; Made with Love &bull; Chappaqua, NY</p>
-        </div>
+    <footer style="margin-top: 100px; padding: 80px 0; border-top: 1px solid #eee; text-align: center;">
+        <p style="font-size: 10px; color: #999; text-transform: uppercase; letter-spacing: 2px;">&copy; 2026 RENATA OLIVER &bull; DESIGN THEORY PROJECT</p>
     </footer>
 
 </body>

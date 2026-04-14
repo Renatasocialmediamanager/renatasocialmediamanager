@@ -3,79 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Style | Renata Oliver</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Style & Beauty | Renata Oliveira</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="sitewide.css">
+    
+    <style>
+        /* Specific layout for the style gallery */
+        .style-container { max-width: 1000px; margin: 60px auto; padding: 0 40px; }
+        .style-header { text-align: center; margin-bottom: 50px; }
+        .style-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #222; }
+        .style-header p { color: #888; text-transform: uppercase; letter-spacing: 3px; font-size: 13px; margin-top: 10px; }
+        
+        .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+        .gallery-item { border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
+        .gallery-item:hover { transform: translateY(-5px); }
+        .gallery-item img { width: 100%; display: block; }
+        
+        .intro-text { text-align: center; max-width: 700px; margin: 0 auto 40px; line-height: 1.8; color: #555; }
+    </style>
 </head>
 <body>
 
-<header>
-    <nav aria-label="Main Navigation">
-        <ul class="main-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="style.html">Style</a></li> 
-            <li><a href="travel.html">Travel</a></li>
-            <li><a href="about-me.html">About Me</a></li>
-            
-            <li class="dropdown">
-                <span class="menu-label">Portfolio ▼</span> 
-                <ul class="submenu">
-                    <li><a href="resume.html" style="font-weight: bold; border-bottom: 1px solid #eee;">Full Resume</a></li>
-                    <li class="submenu-header">Showcase</li>
-                    <li><a href="photoshop1.html">Photoshop 1</a></li> 
-                    <li><a href="photoshop2.html">Photoshop 2</a></li> 
-                    <li><a href="photoshop3.html">Photoshop 3</a></li>
-                    <li><a href="animate.html">Animate Video</a></li>
-                </ul>
-            </li>
+    <header class="site-header">
+        <h1 class="site-title" style="color: #D470A2; font-family: 'Playfair Display', serif; text-align: center; letter-spacing: 10px; text-transform: uppercase; padding: 40px 0;">Renata Oliveira</h1>
+    </header>
 
-            <li class="dropdown">
-                <span class="menu-label">Design Theory ▼</span>
-                <ul class="submenu">
-                    <li><a href="design-theory/color-overview.html">Color Overview</a></li>
-                    <li><a href="design-theory/color-themes.html">Color Themes</a></li>
-                    <li><a href="design-theory/color-article.html">Color Article</a></li>
-                    <li class="submenu-header" style="border-top: 1px solid #eee; margin-top: 5px;">Typography</li>
-                    <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
-                    <li><a href="design-theory/font-article.html">Font Types Article</a></li>
-                    <li><a href="design-theory/typography-article.html">Typography Article</a></li>
-                </ul>
-            </li>
+    <nav class="site-nav">
+        <ul class="main-menu" style="list-style: none; display: flex; justify-content: center; gap: 40px; margin: 0; padding: 15px 0; border-bottom: 1px solid #eee;">
+            <li><a href="index.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #333;">Home</a></li>
+            <li><a href="style.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #D470A2;">Style</a></li>
+            <li><a href="travel.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #333;">Travel</a></li>
+            <li><a href="about-me.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #333;">About Me</a></li>
         </ul>
     </nav>
-</header>
 
-<main class="container">
-    <h1 class="main-header">Style & Beauty</h1>
-    <p class="intro-text">
-        Merging high-end visual storytelling with strategic digital growth. 
-        Explore my curated work in fashion, makeup artistry, and brand identity.
-    </p>
+    <main class="style-container">
+        <div class="style-header">
+            <h1>Style & Beauty</h1>
+            <p>A Curated Aesthetic</p>
+        </div>
 
-    <div class="style-grid">
-        <div class="grid-item">
-            <img src="./comida.jpg" alt="Style 1">
-            <p>Visual Strategy</p>
-        </div>
-        <div class="grid-item">
-            <img src="./comida2.jpg" alt="Style 2">
-            <p>Editorial Design</p>
-        </div>
-        <div class="grid-item">
-            <img src="./comida3.jpg" alt="Style 3">
-            <p>Aesthetic Branding</p>
-        </div>
-    </div>
-</main>
+        <p class="intro-text">
+            Merging high-end visual storytelling with strategic digital growth. Explore my curated work in fashion, makeup artistry, and brand identity.
+        </p>
 
-<footer>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100078193936641" target="_blank"><img src="./facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/renataoliveiraofficial" target="_blank"><img src="./instagram.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@renataoliveiraofficial" target="_blank"><img src="./tiktok.png" alt="TikTok"></a>
-        <a href="https://www.pinterest.com/RenataxoliverNY" target="_blank"><img src="./pinterest.png" alt="Pinterest"></a>
-    </div>
-    <p style="color: #999; font-size: 11px; text-align: center; margin-top: 20px;">&copy; 2026 RENATA OLIVER. ALL RIGHTS RESERVED.</p>
-</footer>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="Magazine.jpg" alt="Fashion Editorial">
+            </div>
+            <div class="gallery-item">
+                <img src="pizza1.jpg" alt="Commercial Food Design">
+            </div>
+            </div>
+
+        <div style="text-align: center; margin-top: 80px;">
+            <a href="index.html" style="padding: 15px 40px; border: 1px solid #333; text-decoration: none; color: #333; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: bold; border-radius: 4px;">Back to Home</a>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 80px 40px; color: #bbb; border-top: 1px solid #f2f2f2; margin-top: 100px;">
+        <p style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase;">&copy; 2026 RENATA OLIVER &bull; STYLE PORTFOLIO</p>
+    </footer>
 
 </body>
 </html>
