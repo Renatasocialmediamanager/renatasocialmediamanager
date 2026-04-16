@@ -7,7 +7,60 @@
     
     <link rel="stylesheet" href="sitewide.css">
     
-    <link rel="stylesheet" href="showcase.css">
+    <style>
+        /* FIX FOR MENU OVERLAP */
+        header { position: relative; z-index: 9999; }
+        .main-menu { position: relative; z-index: 10000; }
+        .submenu { z-index: 10001; }
+
+        /* SECONDARY NAVIGATION (Pink Bar) */
+        .secondary-nav {
+            background-color: #fff0f6; 
+            padding: 20px 0;
+            border-bottom: 1px solid #f8d7da;
+            text-align: center;
+            position: relative;
+            z-index: 1; 
+        }
+        .sub-project-menu {
+            list-style: none; display: flex; justify-content: center; gap: 50px;
+            margin: 0; padding: 0;
+        }
+        .sub-project-menu li a {
+            text-decoration: none; color: #444; font-size: 11px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 2px;
+            padding-bottom: 8px;
+        }
+        .sub-project-menu li a.active {
+            color: #d11c5c; border-bottom: 2px solid #d11c5c;
+        }
+
+        /* PROJECT STYLING */
+        .project-container {
+            max-width: 900px; margin: 80px auto; padding: 0 20px; text-align: center;
+        }
+        .main-header {
+            font-family: 'Playfair Display', 'Georgia', serif; 
+            font-weight: 700; font-size: 3.2rem; margin-bottom: 5px; color: #1a1a1a;
+        }
+        .sub-header {
+            font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+            color: #d11c5c; margin-bottom: 60px; font-weight: 600;
+        }
+        .project-image {
+            width: 100%; max-width: 850px; height: auto; display: block;
+            margin: 0 auto 50px auto; box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+        }
+        .project-desc {
+            max-width: 650px; margin: 0 auto; text-align: left;
+            line-height: 2.1; color: #555; font-size: 15px;
+        }
+        .back-btn {
+            display: inline-block; margin-top: 80px; padding: 18px 50px;
+            border: 1px solid #1a1a1a; text-decoration: none; color: #1a1a1a;
+            text-transform: uppercase; font-size: 11px; letter-spacing: 3px;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,56 +72,42 @@
             <li><a href="travel.html">Travel</a></li>
             <li><a href="about-me.html">About Me</a></li>
             <li class="dropdown">
-                <span class="menu-label">Portfolio ▼</span> 
+                <a href="#" class="menu-label">Portfolio ▼</a> 
                 <ul class="submenu">
                     <li><a href="resume.html">Full Resume</a></li>
-                    <li class="submenu-header">Showcase</li>
                     <li><a href="photoshop1.html">Photoshop 1</a></li>
                     <li><a href="photoshop2.html">Photoshop 2</a></li>
                     <li><a href="photoshop3.html">Photoshop 3</a></li>
-                    <li><a href="animate.html">Animate Video</a></li>
                 </ul>
             </li>
             <li class="dropdown">
-                <span class="menu-label">Design Theory ▼</span>
+                <a href="#" class="menu-label" style="color: #d11c5c;">Design Theory ▼</a>
                 <ul class="submenu">
                     <li><a href="design-theory/color-overview.html">Color Overview</a></li>
-                    <li><a href="design-theory/color-themes.html">Color Themes</a></li>
-                    <li><a href="design-theory/color-article.html">Color Article</a></li>
-                    <li class="submenu-header" style="border-top: 1px solid #eee; margin-top: 5px;">Typography</li>
                     <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
-                    <li><a href="design-theory/font-article.html">Font Types Article</a></li>
-                    <li><a href="design-theory/typography-article.html">Typography Article</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 </header>
 
-<main class="project-container">
-    <h1 class="main-header">Brand Identity & Visual Design</h1>
-    
-    <img src="project-3.jpg" alt="Photoshop Project 3" class="project-image">
-    
-    <div class="project-desc">
-        <h2 style="font-family: Georgia, serif; text-transform: uppercase; font-size: 1.1rem; margin-bottom: 15px;">Project Overview</h2>
-        <p>This project focused on creating a cohesive brand identity that reflects modern digital aesthetics. Using <strong>Adobe Photoshop</strong>, I developed a visual system that balances elegance with strategic clarity, ensuring the brand's message is communicated effectively across all digital platforms.</p>
-    </div>
-    
-    <div style="margin-top: 50px;">
-        <a href="index.html" style="padding: 15px 30px; border: 1px solid #333; text-decoration: none; color: #333; text-transform: uppercase; font-size: 11px; letter-spacing: 2px; font-weight: bold;">Back to Home</a>
-    </div>
-</main>
+<nav class="secondary-nav">
+    <ul class="sub-project-menu">
+        <li><a href="photoshop1.html">Photoshop 1</a></li>
+        <li><a href="photoshop2.html">Photoshop 2</a></li>
+        <li><a href="photoshop3.html" class="active">Photoshop 3</a></li>
+    </ul>
+</nav>
 
-<footer>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100078193936641" target="_blank"><img src="./facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/renataoliveiraofficial" target="_blank"><img src="./instagram.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@renataoliveiraofficial" target="_blank"><img src="./tiktok.png" alt="TikTok"></a>
-        <a href="https://www.pinterest.com/RenataxoliverNY" target="_blank"><img src="./pinterest.png" alt="Pinterest"></a>
+<main class="project-container">
+    <h1 class="main-header">Brand Identity</h1>
+    <p class="sub-header">VISUAL DESIGN & DIGITAL AESTHETICS</p>
+    <img src="project-3.jpg" alt="Identity Project" class="project-image">
+    <div class="project-desc">
+        <p>This project highlights the importance of visual clarity and elegance. Developed in <strong>Adobe Photoshop</strong>, I created a scalable identity system that maintains a high-end feel across all digital touchpoints.</p>
     </div>
-    <p style="text-align: center; margin-top: 20px;">&copy; 2026 RENATA OLIVER. ALL RIGHTS RESERVED.</p>
-</footer>
+    <a href="index.html" class="back-btn">Back to Portfolio</a>
+</main>
 
 </body>
 </html>

@@ -7,7 +7,77 @@
     
     <link rel="stylesheet" href="sitewide.css">
     
-    <link rel="stylesheet" href="showcase.css">
+    <style>
+        /* FIX FOR MENU OVERLAP */
+        header {
+            position: relative;
+            z-index: 9999; 
+        }
+        .main-menu { position: relative; z-index: 10000; }
+        .submenu { z-index: 10001; }
+
+        /* SECONDARY NAVIGATION (Pink Bar) */
+        .secondary-nav {
+            background-color: #fff0f6; 
+            padding: 20px 0;
+            border-bottom: 1px solid #f8d7da;
+            text-align: center;
+            position: relative;
+            z-index: 1; 
+        }
+        .sub-project-menu {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 0;
+            padding: 0;
+        }
+        .sub-project-menu li a {
+            text-decoration: none;
+            color: #444;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            padding-bottom: 8px;
+        }
+        .sub-project-menu li a:hover { color: #d11c5c; }
+        .sub-project-menu li a.active {
+            color: #d11c5c;
+            border-bottom: 2px solid #d11c5c;
+        }
+
+        /* PROJECT STYLING */
+        .project-container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .main-header {
+            font-family: 'Playfair Display', 'Georgia', serif; 
+            font-weight: 700; font-size: 3.2rem; margin-bottom: 5px; color: #1a1a1a;
+        }
+        .sub-header {
+            font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+            color: #d11c5c; margin-bottom: 60px; font-weight: 600;
+        }
+        .project-image {
+            width: 100%; max-width: 850px; height: auto; display: block;
+            margin: 0 auto 50px auto; box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+        }
+        .project-desc {
+            max-width: 650px; margin: 0 auto; text-align: left;
+            line-height: 2.1; color: #555; font-size: 15px;
+        }
+        .back-btn {
+            display: inline-block; margin-top: 80px; padding: 18px 50px;
+            border: 1px solid #1a1a1a; text-decoration: none; color: #1a1a1a;
+            text-transform: uppercase; font-size: 11px; letter-spacing: 3px;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,63 +88,43 @@
             <li><a href="style.html">Style</a></li>
             <li><a href="travel.html">Travel</a></li>
             <li><a href="about-me.html">About Me</a></li>
-            
             <li class="dropdown">
-                <span class="menu-label">Portfolio ▼</span> 
+                <a href="#" class="menu-label">Portfolio ▼</a> 
                 <ul class="submenu">
                     <li><a href="resume.html">Full Resume</a></li>
-                    <li class="submenu-header">Showcase</li>
                     <li><a href="photoshop1.html">Photoshop 1</a></li>
                     <li><a href="photoshop2.html">Photoshop 2</a></li>
                     <li><a href="photoshop3.html">Photoshop 3</a></li>
-                    <li><a href="animate.html">Animate Video</a></li>
                 </ul>
             </li>
-
             <li class="dropdown">
-                <span class="menu-label">Design Theory ▼</span>
+                <a href="#" class="menu-label" style="color: #d11c5c;">Design Theory ▼</a>
                 <ul class="submenu">
                     <li><a href="design-theory/color-overview.html">Color Overview</a></li>
-                    <li><a href="design-theory/color-themes.html">Color Themes</a></li>
-                    <li><a href="design-theory/color-article.html">Color Article</a></li>
-                    <li class="submenu-header" style="border-top: 1px solid #eee; margin-top: 5px;">Typography</li>
                     <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
-                    <li><a href="design-theory/font-article.html">Font Types Article</a></li>
-                    <li><a href="design-theory/typography-article.html">Typography Article</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 </header>
 
-<main class="project-container">
-    <h1 class="main-header">Brand Positioning & Social Media Strategy</h1>
-    
-    <img src="project-4.jpg" alt="Photoshop Branding Project" class="project-image">
-    
-    <div class="project-desc">
-        <h2 style="font-family: Georgia, serif; text-transform: uppercase; font-size: 1.1rem; margin-bottom: 15px;">Project Overview</h2>
-        <p>This project was developed in <strong>Adobe Photoshop</strong> to create a unified marketing visual. The primary focus was on establishing brand positioning through a cohesive aesthetic.</p>
-        <p style="margin-top: 15px;">Key design technicalities addressed included:</p>
-        <ul style="margin: 15px 0 0 20px; line-height: 1.8;">
-            <li><strong>Compositional Balance:</strong> Strategic placement of elements (video feeds, floating icons) to guide the viewer’s eye.</li>
-            <li><strong>Typography Hierarchy:</strong> Using clear font choices and scale to differentiate service titles from agency descriptions.</li>
-            <li><strong>Selective Color Grading:</strong> Applying a consistent color palette to integrate diverse visual elements seamlessly.</li>
-        </ul>
-    </div>
-    
-    <a href="index.html" style="display: inline-block; margin-top: 40px; text-decoration: none; color: #888; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">← Return to Home Page</a>
-</main>
+<nav class="secondary-nav">
+    <ul class="sub-project-menu">
+        <li><a href="photoshop1.html">Photoshop 1</a></li>
+        <li><a href="photoshop2.html" class="active">Photoshop 2</a></li>
+        <li><a href="photoshop3.html">Photoshop 3</a></li>
+    </ul>
+</nav>
 
-<footer>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100078193936641" target="_blank"><img src="./facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/renataoliveiraofficial" target="_blank"><img src="./instagram.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@renataoliveiraofficial" target="_blank"><img src="./tiktok.png" alt="TikTok"></a>
-        <a href="https://www.pinterest.com/RenataxoliverNY" target="_blank"><img src="./pinterest.png" alt="Pinterest"></a>
+<main class="project-container">
+    <h1 class="main-header">Brand Positioning</h1>
+    <p class="sub-header">SOCIAL MEDIA & STRATEGIC DESIGN</p>
+    <img src="project-4.jpg" alt="Branding Project" class="project-image">
+    <div class="project-desc">
+        <p>This project was developed in <strong>Adobe Photoshop</strong> to create a unified marketing visual. The focus was on establishing brand authority through compositional balance and selective color grading.</p>
     </div>
-    <p style="text-align: center; margin-top: 20px;">&copy; 2026 RENATA OLIVER. ALL RIGHTS RESERVED.</p>
-</footer>
+    <a href="index.html" class="back-btn">Back to Portfolio</a>
+</main>
 
 </body>
 </html>
