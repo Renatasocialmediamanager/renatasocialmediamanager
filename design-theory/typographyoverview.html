@@ -4,45 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typography Overview | Renata Oliveira</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../sitewide.css">
+    <link rel="stylesheet" href="color-and-type.css">
+
+    <style>
+        /* Backup Styles to fix the "strange" look immediately */
+        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 40px; }
+        .sub-nav { text-align: center; margin-bottom: 50px; border-bottom: 1px solid #eee; padding: 20px 0; }
+        .sub-nav a, .sub-nav span { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; }
+        
+        .project-header { text-align: center; margin-top: 40px; margin-bottom: 50px; }
+        .project-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #222; margin-bottom: 10px; }
+        .brand-sub-header { text-transform: uppercase; letter-spacing: 5px; font-size: 11px; color: #D470A2; font-weight: 600; }
+
+        .analysis-box { background: white; padding: 50px; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border-top: 5px solid #D470A2; margin-bottom: 60px; text-align: left; }
+        .intro-p { margin-bottom: 40px; font-size: 15px; color: #666; line-height: 2; text-align: center; }
+        
+        dt { font-weight: bold; color: #D470A2; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
+        dd { margin: 10px 0 25px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; }
+
+        .btn-next { display: inline-block; padding: 16px 35px; background: #D470A2; color: #fff; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: bold; border-radius: 4px; }
+    </style>
 </head>
 <body>
-    <header class="site-header">
-        <h1 class="pink-brand-name" style="color: #1a1a1a; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: 10px; text-transform: uppercase; padding: 40px 0; font-size: 38px;">Renata Oliveira</h1>
+
+    <header class="site-header" style="text-align: center; padding: 40px 0;">
+        <h1 class="pink-brand-name" style="font-family: 'Playfair Display', serif; letter-spacing: 10px; text-transform: uppercase; color: #1a1a1a; font-size: 38px; margin: 0;">Renata Oliveira</h1>
     </header>
 
-    <nav class="sub-nav" style="text-align: center; margin-bottom: 50px; border-bottom: 1px solid #eee; padding: 20px 0;">
-        <span style="color: #D470A2; font-weight: bold; text-transform: uppercase; font-size: 11px; margin: 0 15px; letter-spacing: 1px;">4. Overview</span> | 
-        <a href="fonttypes.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">5. Font Types Article</a> | 
-        <a href="typographyarticle.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">6. Comparison</a>
+    <nav class="sub-nav">
+        <span style="color: #D470A2;">4. Overview</span> | 
+        <a href="fonttypes.html">5. Font Types Article</a> | 
+        <a href="typographyarticle.html">6. Comparison</a>
     </nav>
 
-    <div class="container" style="max-width: 850px; margin: 0 auto; padding: 0 40px;">
-        <header style="text-align: center; margin-bottom: 50px;">
-            <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #222; margin-bottom: 10px;">The Art of Typography</h1>
-            <p style="text-transform: uppercase; letter-spacing: 5px; font-size: 11px; color: #D470A2; font-weight: 600;">The Silent Voice of Branding</p>
+    <div class="container">
+        <header class="project-header">
+            <h1>The Art of Typography</h1>
+            <p class="brand-sub-header">The Silent Voice of Branding</p>
         </header>
 
-        <section style="background: white; padding: 50px; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border-top: 5px solid #D470A2; margin-bottom: 60px;">
-            <p style="margin-bottom: 40px; font-size: 15px; color: #666; line-height: 2; text-align: center;">
-                Typography is the art of arranging type to make language legible and visually appealing. In digital branding, it is a critical tool for establishing hierarchy and personality.
+        <section class="analysis-box">
+            <p class="intro-p">
+                Typography is the technique of arranging type to make language legible and visually appealing. It is a critical tool for establishing a brand’s hierarchy and personality.
             </p>
-            <dl style="line-height: 1.8;">
-                <dt style="font-weight: bold; color: #D470A2; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px;">01. Typeface</dt>
-                <dd style="margin: 10px 0 25px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444;">The creative design of the letters (e.g., Playfair Display).</dd>
-                <dt style="font-weight: bold; color: #D470A2; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px;">02. Font</dt>
-                <dd style="margin: 10px 0 25px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444;">The specific style or size of that typeface (e.g., Bold, 12pt).</dd>
-                <dt style="font-weight: bold; color: #D470A2; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px;">03. Leading</dt>
-                <dd style="margin: 10px 0 25px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444;">The vertical distance between lines of text.</dd>
+            
+            <dl>
+                <dt>01. Typeface</dt>
+                <dd>The creative design of the letters (e.g., Playfair Display).</dd>
+                
+                <dt>02. Font</dt>
+                <dd>The specific style or size of that typeface (e.g., Bold, 12pt).</dd>
+                
+                <dt>03. Serif</dt>
+                <dd>Small decorative "feet" at the ends of character lines.</dd>
+                
+                <dt>04. Sans Serif</dt>
+                <dd>Clean typefaces without decorative strokes.</dd>
             </dl>
         </section>
 
         <div style="text-align: center; margin-bottom: 80px;">
-            <a href="fonttypes.html" style="padding: 16px 35px; background: #D470A2; color: #fff; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: bold; border-radius: 4px;">Next: Font Types &rarr;</a>
+            <a href="fonttypes.html" class="btn-next">Next: Font Types &rarr;</a>
         </div>
     </div>
+
+    <footer style="text-align: center; padding: 60px 0; color: #bbb; font-size: 10px; letter-spacing: 2px; border-top: 1px solid #eee;">
+        <p>&copy; 2026 RENATA OLIVER &bull; DESIGN THEORY</p>
+    </footer>
+
 </body>
 </html>

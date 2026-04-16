@@ -3,58 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typography Overview | Renata Oliveira</title>
+    <title>Color Overview | Renata Oliveira</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="../sitewide.css">
+    <link rel="stylesheet" href="color-and-type.css">
+
+    <style>
+        /* BRAND HEADER: DARK & BOLD */
+        .site-header { text-align: center; padding: 40px 0; margin: 0; }
+        .site-header h1 {
+            color: #000000 !important; 
+            font-family: 'Playfair Display', serif !important;
+            letter-spacing: 10px !important;
+            text-transform: uppercase !important;
+            font-size: 38px !important;
+            font-weight: 700 !important; 
+            margin: 0 !important;
+            line-height: 1.2 !important;
+        }
+
+        /* PAGE LAYOUT */
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: #ffffff; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 40px; }
+        
+        /* SUB-NAV FIX */
+        .sub-nav { text-align: center; margin-bottom: 50px; border-bottom: 1px solid #eee; padding: 20px 0; }
+        .sub-nav a, .sub-nav span { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; }
+        .active-link { color: #D470A2 !important; }
+
+        /* CONTENT STYLING */
+        .project-header { text-align: center; margin-top: 40px; margin-bottom: 50px; }
+        .project-header h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #222; margin-bottom: 10px; }
+        .brand-sub-header { color: #D470A2; text-transform: uppercase; letter-spacing: 5px; font-size: 11px; font-weight: 600; }
+
+        /* THE ANALYSIS BOX */
+        .analysis-box { 
+            background: #ffffff; 
+            padding: 50px; 
+            border-radius: 4px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03); 
+            border-top: 5px solid #D470A2; 
+            margin-bottom: 60px; 
+            text-align: left; 
+        }
+        .intro-p { margin-bottom: 40px; font-size: 15px; color: #666; line-height: 2; text-align: center; }
+        
+        dt { font-weight: bold; color: #D470A2; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
+        dd { margin: 10px 0 25px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; }
+
+        .btn-next { 
+            display: inline-block; 
+            padding: 16px 35px; 
+            background: #D470A2; 
+            color: #fff; 
+            text-decoration: none; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            font-size: 10px; 
+            font-weight: bold; 
+            border-radius: 4px; 
+        }
+    </style>
 </head>
 <body>
 
     <header class="site-header">
-        <h1 class="pink-brand-name">Renata Oliveira</h1>
+        <h1>Renata Oliveira</h1>
     </header>
 
-    <nav class="sub-nav" style="text-align: center; margin-bottom: 50px; border-bottom: 1px solid #eee; padding: 20px 0;">
-        <span style="color: #D470A2; font-weight: bold; text-transform: uppercase; font-size: 11px; margin: 0 15px; letter-spacing: 1px;">4. Overview</span> | 
-        
-        <a href="font-article.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">5. Font Types Article</a> | 
-        
-        <a href="typography-article.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">6. Comparison</a>
+    <nav class="sub-nav">
+        <span class="active-link">1. Overview</span> | 
+        <a href="color-themes.html">2. Color Themes</a> | 
+        <a href="color-article.html">3. Color Article</a>
     </nav>
 
-    <div class="container" style="max-width: 850px; margin: 0 auto; padding: 0 40px;">
-        <header style="text-align: center; margin-bottom: 50px;">
-            <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #222; margin-bottom: 10px;">The Art of Typography</h1>
-            <p style="text-transform: uppercase; letter-spacing: 5px; font-size: 11px; color: #D470A2; font-weight: 600;">The Silent Voice of Branding</p>
+    <div class="container">
+        <header class="project-header">
+            <h2>The Power of Color</h2>
+            <p class="brand-sub-header">Strategic Visual Psychology</p>
         </header>
 
-        <section class="glossary-card" style="background: white; padding: 50px; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border-top: 5px solid #D470A2; margin-bottom: 60px;">
-            <dl style="line-height: 1.8;">
-                <dt style="font-weight: bold; color: #D470A2; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px;">01. Typeface</dt>
-                <dd style="margin: 10px 0 25px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444;">The creative design of the letters (e.g., Helvetica or Playfair Display).</dd>
+        <section class="analysis-box">
+            <p class="intro-p">
+                Color is more than just an aesthetic choice; it is a psychological tool used to evoke emotion and drive user behavior. In my branding work, I use color to establish trust, energy, and luxury.
+            </p>
+            
+            <dl>
+                <dt>Hue</dt>
+                <dd>The actual color or name of the family (e.g., Red, Blue).</dd>
                 
-                <dt style="font-weight: bold; color: #D470A2; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px;">02. Font</dt>
-                <dd style="margin: 10px 0 25px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444;">The specific style or size of that typeface (e.g., Playfair Display Bold, 12pt).</dd>
+                <dt>Saturation</dt>
+                <dd>The intensity or purity of a color. High saturation is vivid; low is muted.</dd>
                 
-                <dt style="font-weight: bold; color: #D470A2; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px;">03. Serif</dt>
-                <dd style="margin: 10px 0 25px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444;">The small decorative "feet" at the ends of character lines.</dd>
+                <dt>Value</dt>
+                <dd>The lightness or darkness of a color (tints and shades).</dd>
                 
-                <dt style="font-weight: bold; color: #D470A2; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px;">04. Sans Serif</dt>
-                <dd style="margin: 10px 0 25px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444;">Modern typefaces that do not have decorative strokes (e.g., Montserrat).</dd>
+                <dt>Monochromatic</dt>
+                <dd>A scheme using different values of a single hue for a sophisticated look.</dd>
             </dl>
         </section>
 
-        <div class="btn-group" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 80px;">
-            <a href="../index.html" style="padding: 16px 35px; border: 1px solid #333; text-decoration: none; color: #333; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: bold; border-radius: 4px;">Home</a>
-            <a href="font-article.html" style="padding: 16px 35px; background: #D470A2; color: #fff; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: bold; border-radius: 4px;">Next: Font Types &rarr;</a>
+        <div style="text-align: center; margin-bottom: 80px;">
+            <a href="color-themes.html" class="btn-next">Next: Color Themes &rarr;</a>
         </div>
     </div>
 
-    <footer style="text-align: center; padding: 80px 40px; color: #999; border-top: 1px solid #eee; margin-top: 100px;">
-        <p style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase;">&copy; 2026 RENATA OLIVER &bull; DESIGN THEORY</p>
+    <footer style="text-align: center; padding: 60px 0; color: #bbb; font-size: 10px; letter-spacing: 2px; border-top: 1px solid #eee;">
+        &copy; 2026 RENATA OLIVER &bull; DESIGN THEORY
     </footer>
 
 </body>

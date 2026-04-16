@@ -7,38 +7,83 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="sitewide.css">
-    
+    <link rel="stylesheet" href="showcase.css">
+
     <style>
-        /* Specific layout for the style gallery */
-        .style-container { max-width: 1000px; margin: 60px auto; padding: 0 40px; }
-        .style-header { text-align: center; margin-bottom: 50px; }
-        .style-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #222; }
-        .style-header p { color: #888; text-transform: uppercase; letter-spacing: 3px; font-size: 13px; margin-top: 10px; }
+        /* Forces the Header name to be Black/Elegant */
+        .site-header h1 {
+            color: #1a1a1a !important; 
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            padding: 40px 0;
+            margin: 0;
+        }
+
+        .style-container { max-width: 1200px; margin: 40px auto; padding: 0 40px; }
         
-        .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
-        .gallery-item { border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
-        .gallery-item:hover { transform: translateY(-5px); }
-        .gallery-item img { width: 100%; display: block; }
-        
-        .intro-text { text-align: center; max-width: 700px; margin: 0 auto 40px; line-height: 1.8; color: #555; }
+        .style-header { text-align: center; margin-bottom: 60px; }
+        .style-header h1 { font-family: 'Playfair Display', serif; font-size: 4rem; color: #222; margin-bottom: 10px; }
+        .style-header p { color: #D470A2; text-transform: uppercase; letter-spacing: 6px; font-size: 12px; font-weight: bold; }
+
+        .intro-text { 
+            text-align: center; 
+            max-width: 800px; 
+            margin: 0 auto 60px; 
+            color: #666; 
+            line-height: 1.8; 
+            font-size: 16px;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            background: #ffffff; /* Clean white background for contain mode */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 20px; /* Adds space inside the frame */
+        }
+
+        /* FIX: SHOW ENTIRE PICTURE */
+        .portfolio-item img {
+            width: 100%;
+            height: 650px; /* Increased height for your tall flyers */
+            object-fit: contain; /* THE FIX: Shows the WHOLE picture without cutting anything off */
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.02);
+        }
+
+        .main-menu { list-style: none; display: flex; justify-content: center; gap: 30px; padding: 0; }
+        .main-menu a { text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 2px; color: #333; }
     </style>
 </head>
 <body>
 
     <header class="site-header">
-        <h1 class="site-title" style="color: #D470A2; font-family: 'Playfair Display', serif; text-align: center; letter-spacing: 10px; text-transform: uppercase; padding: 40px 0;">Renata Oliveira</h1>
+        <h1>Renata Oliveira</h1>
     </header>
 
     <nav class="site-nav">
-        <ul class="main-menu" style="list-style: none; display: flex; justify-content: center; gap: 40px; margin: 0; padding: 15px 0; border-bottom: 1px solid #eee;">
-            <li><a href="index.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #333;">Home</a></li>
-            <li><a href="style.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #D470A2;">Style</a></li>
-            <li><a href="travel.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #333;">Travel</a></li>
-            <li><a href="about-me.html" style="text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #333;">About Me</a></li>
+        <ul class="main-menu" style="border-bottom: 1px solid #eee; padding-bottom: 20px;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="style.html" style="color: #D470A2;">Style</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="about-me.html">About Me</a></li>
         </ul>
     </nav>
 
@@ -52,22 +97,18 @@
             Merging high-end visual storytelling with strategic digital growth. Explore my curated work in fashion, makeup artistry, and brand identity.
         </p>
 
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="Magazine.jpg" alt="Fashion Editorial">
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="./Magazine.jpg" alt="Social Media Manager Profile">
             </div>
-            <div class="gallery-item">
-                <img src="pizza1.jpg" alt="Commercial Food Design">
+            <div class="portfolio-item">
+                <img src="./pizza1.jpg" alt="Craft Pizza & Beer Flyer">
             </div>
-            </div>
-
-        <div style="text-align: center; margin-top: 80px;">
-            <a href="index.html" style="padding: 15px 40px; border: 1px solid #333; text-decoration: none; color: #333; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: bold; border-radius: 4px;">Back to Home</a>
         </div>
     </main>
 
-    <footer style="text-align: center; padding: 80px 40px; color: #bbb; border-top: 1px solid #f2f2f2; margin-top: 100px;">
-        <p style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase;">&copy; 2026 RENATA OLIVER &bull; STYLE PORTFOLIO</p>
+    <footer style="text-align: center; padding: 80px 0; color: #bbb; font-size: 10px; letter-spacing: 2px; border-top: 1px solid #eee; margin-top: 60px;">
+        <p>&copy; 2026 RENATA OLIVER &bull; STYLE & BEAUTY</p>
     </footer>
 
 </body>
