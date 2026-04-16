@@ -3,66 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Theory Article | Renata Oliveira</title>
+    <title>Color Article | Renata Oliveira</title>
     
+    <link rel="stylesheet" href="../sitewide.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../sitewide.css">
-    <link rel="stylesheet" href="../color-and-type.css">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #ffffff; margin: 0; color: #1a1a1a; }
+        
+        .container { max-width: 800px; margin: 60px auto; padding: 0 40px; line-height: 1.8; }
+
+        /* --- UNIFIED LOCAL NAV --- */
+        .local-nav { 
+            text-align: center !important; 
+            padding: 30px 0; 
+            background: #fdf2f6; 
+            margin-bottom: 50px; 
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+        .local-nav a, .local-nav span { 
+            text-decoration: none; 
+            color: #333; 
+            margin: 0 20px; 
+            font-size: 11px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            display: inline-block;
+        }
+        .active-link { 
+            color: #D470A2 !important; 
+            border-bottom: 2px solid #D470A2;
+            padding-bottom: 5px;
+        }
+
+        /* ARTICLE STYLING */
+        h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; text-align: center; margin-bottom: 40px; line-height: 1.2; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-top: 40px; color: #D470A2; }
+        p { margin-bottom: 25px; font-size: 16px; color: #444; }
+        
+        .highlight-box {
+            background: #fdf2f6;
+            padding: 30px;
+            border-left: 4px solid #D470A2;
+            margin: 40px 0;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
 
     <header class="site-header">
         <h1 class="pink-brand-name">Renata Oliveira</h1>
     </header>
-    
-    <nav class="sub-nav" style="text-align: center; margin-bottom: 50px; padding: 20px 0; border-bottom: 1px solid #eee;">
-        <a href="./color-overview.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">1. OVERVIEW</a> | 
-        <a href="./color-themes.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">2. THEMES</a> | 
-        <span style="color: #D470A2; font-weight: bold; text-transform: uppercase; font-size: 11px; margin-left: 15px; letter-spacing: 1px;">3. ARTICLE</span>
+
+    <nav>
+        <ul class="main-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../style.html">Style</a></li>
+            <li><a href="../travel.html">Travel</a></li>
+            <li><a href="../about-me.html">About Me</a></li>
+            <li class="dropdown">
+                <span class="menu-label">Portfolio ▼</span> 
+                <ul class="submenu">
+                    <li><a href="../resume.html">Full Resume</a></li>
+                    <li class="submenu-header">Showcase</li>
+                    <li><a href="../photoshop1.html">Photoshop 1</a></li>
+                    <li><a href="../photoshop2.html">Photoshop 2</a></li>
+                    <li><a href="../photoshop3.html">Photoshop 3</a></li>
+                    <li><a href="../animate.html">Animate Video</a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
 
-    <div class="container" style="max-width: 850px; margin: 60px auto; padding: 0 40px;">
-        <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; text-align: center; color: #222; margin-bottom: 10px;">The Psychology of Palette</h1>
-        
-        <p class="author-tag" style="text-align: center; font-family: 'Mrs Saint Delafield', cursive; font-size: 42px; color: #D470A2; margin-bottom: 40px;">By Renata Oliveira</p>
-
-        <p class="intro-p" style="text-align: center; max-width: 700px; margin: 0 auto 50px auto; color: #666; line-height: 2; font-size: 15px;">
-            In web design, color is more than just decoration; it is a silent language that tells the user how to feel before they even read a single word. Today, we look at how two global brands use color theory to define their identity.
-        </p>
-
-        <section class="theme-section">
-            <h2 style="font-family: 'Playfair Display', serif; border-left: 5px solid #D470A2; padding-left: 15px; margin-top: 50px; color: #222; font-size: 1.8rem;">1. Tiffany & Co: Signature Hue</h2>
-            <div class="theme-box" style="width: 100%; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; margin: 25px 0;">
-                <img src="./TIFFANY.png" alt="Tiffany and Co Website Screenshot" style="width: 100%; display: block;">
-            </div>
-            <div class="analysis-box" style="background: #faf7f5; padding: 25px; border-radius: 4px; border: 1px solid #f2e9e1; line-height: 1.8; color: #333;">
-                <span class="tag" style="display: inline-block; background: #D470A2; color: #fff; padding: 4px 12px; border-radius: 3px; font-size: 10px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">Monochromatic Luxury</span>
-                <p>Tiffany & Co. uses "Tiffany Blue" to create an immediate sense of luxury and calm. By using vast amounts of white space to let the signature blue pop, they prove that a single hue can define an entire global brand.</p>
-            </div>
-        </section>
-
-        <section class="theme-section" style="margin-top: 60px;">
-            <h2 style="font-family: 'Playfair Display', serif; border-left: 5px solid #D470A2; padding-left: 15px; margin-top: 50px; color: #222; font-size: 1.8rem;">2. LEGO: The Triadic Energy</h2>
-            <div class="theme-box" style="width: 100%; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; margin: 25px 0;">
-                <img src="./LEGO.png" alt="LEGO Website Screenshot" style="width: 100%; display: block;">
-            </div>
-            <div class="analysis-box" style="background: #faf7f5; padding: 25px; border-radius: 4px; border: 1px solid #f2e9e1; line-height: 1.8; color: #333;">
-                <span class="tag" style="display: inline-block; background: #D470A2; color: #fff; padding: 4px 12px; border-radius: 3px; font-size: 10px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">High Saturation Play</span>
-                <p>LEGO utilizes a Triadic Color Scheme (Red, Yellow, and Blue) to evoke childhood creativity and high energy. These primary colors guide the eye toward action, making it a masterclass in using color for engagement.</p>
-            </div>
-        </section>
-
-        <div class="btn-group" style="display: flex; justify-content: center; margin-top: 80px;">
-            <a href="../index.html" class="btn btn-home" style="padding: 15px 40px; border: 1px solid #333; text-decoration: none; color: #333; text-transform: uppercase; font-size: 11px; letter-spacing: 2px; font-weight: bold; border-radius: 4px;">Return to Portfolio</a>
-        </div>
+    <div class="local-nav">
+        <a href="color-overview.html">1. Overview</a>
+        <a href="color-themes.html">2. Color Themes</a>
+        <span class="active-link">3. Color Article</span>
     </div>
 
-    <footer style="margin-top: 100px; padding: 80px 0; border-top: 1px solid #eee; text-align: center;">
-        <p style="font-size: 10px; color: #999; text-transform: uppercase; letter-spacing: 2px;">&copy; 2026 RENATA OLIVER &bull; DESIGN THEORY PROJECT</p>
+    <main class="container">
+        <h2>Psychology of Brand Color</h2>
+        
+        <p>In the world of high-end beauty and luxury travel, color is the primary driver of emotional connection. It is the first thing a user notices and the last thing they remember. As a professional makeup artist and digital creator, I view color palettes not just as decoration, but as a strategic language.</p>
+
+        <div class="highlight-box">
+            "Color does not just describe a product; it dictates how the audience feels about the brand's authority and quality."
+        </div>
+
+        <h3>The Luxury of Neutrals</h3>
+        <p>In my branding, I utilize "Editorial Taupe" and "Soft Alabaster." These low-saturation hues are synonymous with high-fashion and minimalism. They allow photography—whether it's a makeup close-up or a stunning skyline in Dubai—to take center stage without visual clutter.</p>
+
+        <h3>The Power of Pink</h3>
+        <p>My signature accent, <strong>#D470A2</strong>, is used sparingly. In color psychology, this shade of pink balances the energy of red with the purity of white. It suggests modern femininity, playfulness, and approachability, which is essential for building a community of over 1 million followers.</p>
+
+        <h3>Visual Consistency</h3>
+        <p>By maintaining a strict color hierarchy across my portfolio, I establish "Brand Recognition." Whether a follower sees my content on Pinterest, Instagram, or this website, the cohesive color story ensures they immediately recognize the Renata Oliveira aesthetic.</p>
+    </main>
+
+    <footer style="text-align: center; padding: 60px 0; color: #bbb; font-size: 10px; letter-spacing: 2px;">
+        &copy; 2026 RENATA OLIVER &bull; DESIGN THEORY
     </footer>
 
 </body>

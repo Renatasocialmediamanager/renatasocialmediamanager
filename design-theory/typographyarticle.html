@@ -3,98 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typography Comparison | Renata Oliveira</title>
+    <title>Font Types Article | Renata Oliveira</title>
     
+    <link rel="stylesheet" href="sitewide.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../sitewide.css">
-    
     <style>
-        .container { max-width: 850px; margin: 0 auto; padding: 0 40px; color: #333; line-height: 1.8; }
-        
-        /* Local overrides for the Article layout */
-        h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; line-height: 1.2; text-align: center; margin-bottom: 10px; color: #222; }
-        h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-top: 50px; border-left: 5px solid #D470A2; padding-left: 15px; color: #222; margin-bottom: 25px; }
-        
-        .screenshot-box { margin: 25px 0; text-align: center; }
-        .web-img { width: 100%; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #eee; }
-        
-        .analysis-box { background: #faf7f5; padding: 35px; border-radius: 4px; margin-top: 15px; }
-        .tag { display: inline-block; background: #D470A2; color: white; padding: 4px 12px; border-radius: 3px; font-size: 10px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        body { font-family: 'Montserrat', sans-serif; background-color: #ffffff; margin: 0; color: #1a1a1a; }
+        .container { max-width: 800px; margin: 60px auto; padding: 0 40px; line-height: 1.8; }
 
-        .author-tag { text-align: center; font-family: 'Mrs Saint Delafield', cursive; font-size: 42px; color: #D470A2; margin-bottom: 5px; }
-        .sub-header-text { text-align:center; text-transform: uppercase; letter-spacing: 4px; font-size: 11px; color: #888; margin-bottom: 40px; }
+        /* --- UNIFIED LOCAL NAV --- */
+        .local-nav { 
+            text-align: center !important; 
+            padding: 30px 0; 
+            background: #fdf2f6; 
+            margin-bottom: 50px; 
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+        .local-nav a, .local-nav span { 
+            text-decoration: none; 
+            color: #333; 
+            margin: 0 20px; 
+            font-size: 11px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            display: inline-block;
+        }
+        .active-link { 
+            color: #D470A2 !important; 
+            border-bottom: 2px solid #D470A2;
+            padding-bottom: 5px;
+        }
 
-        .btn-group { display: flex; justify-content: center; margin: 80px 0; }
-        .btn-home { padding: 16px 40px; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; border-radius: 4px; border: 1px solid #333; color: #333; transition: 0.3s; }
-        .btn-home:hover { background: #f9f9f9; transform: translateY(-2px); }
+        /* ARTICLE STYLING */
+        h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; text-align: center; margin-bottom: 40px; line-height: 1.2; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-top: 40px; color: #D470A2; }
+        p { margin-bottom: 25px; font-size: 16px; color: #444; }
+        
+        .highlight-box {
+            background: #fdf2f6;
+            padding: 30px;
+            border-left: 4px solid #D470A2;
+            margin: 40px 0;
+            font-style: italic;
+        }
+
+        .btn-next { 
+            display: inline-block; padding: 18px 40px; background: #D470A2; color: #fff; 
+            text-decoration: none; text-transform: uppercase; font-size: 10px; font-weight: bold; 
+            border-radius: 4px; margin-top: 40px; transition: 0.3s;
+        }
     </style>
 </head>
 <body>
 
     <header class="site-header">
-        <h1 class="pink-brand-name" style="color: #1a1a1a; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: 10px; text-transform: uppercase; padding: 40px 0; font-size: 38px;">Renata Oliveira</h1>
+        <h1 style="font-family: 'Playfair Display', serif; text-align: center; letter-spacing: 10px; text-transform: uppercase; font-size: 38px; padding: 40px 0; margin: 0;">Renata Oliveira</h1>
     </header>
 
-    <nav class="sub-nav" style="text-align: center; margin-bottom: 50px; border-bottom: 1px solid #eee; padding: 20px 0;">
-        <a href="typographyoverview.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">4. Overview</a> | 
-        <a href="fonttypes.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">5. Font Types</a> | 
-        <span style="color: #D470A2; font-weight: bold; text-transform: uppercase; font-size: 11px; margin-left: 15px; letter-spacing: 1px;">6. Typography Article</span>
+    <nav style="border-bottom: 1px solid #eee; padding: 20px 0; text-align: center;">
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 30px;">
+            <li><a href="index.html" style="text-decoration: none; color: #333; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 2px;">Home</a></li>
+            <li><a href="style.html" style="text-decoration: none; color: #333; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 2px;">Style</a></li>
+            <li><a href="travel.html" style="text-decoration: none; color: #333; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 2px;">Travel</a></li>
+            <li><a href="about-me.html" style="text-decoration: none; color: #333; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 2px;">About Me</a></li>
+            <li><a href="resume.html" style="text-decoration: none; color: #333; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 2px;">Resume</a></li>
+        </ul>
     </nav>
 
-    <div class="container">
-        <header>
-            <h1>The Silent Narrator</h1>
-            <p class="author-tag">By Renata Oliveira</p>
-            <p class="sub-header-text">Comparing Typography in Digital Media</p>
-        </header>
-
-        <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 50px;">Typography is often invisible to the average user, yet it dictates how we consume information. Below, I compare how two giants of digital publishing use type to define their brand voice.</p>
-
-        <section>
-            <h2>1. The New York Times: Authority through Serif</h2>
-            <p style="font-size: 12px; color: #999;">Explore: <a href="https://www.nytimes.com" target="_blank" style="color: #D470A2; text-decoration: none;">nytimes.com</a></p>
-            
-            <div class="screenshot-box">
-                <img src="./NEWYORKTIMES.jpeg" alt="New York Times Typography" class="web-img">
-            </div>
-            
-            <div class="analysis-box">
-                <span class="tag">SERIF DOMINANT</span>
-                <p>The NYT uses a custom serif typeface for its headlines. This choice is rooted in <strong>tradition</strong>. The small strokes at the end of the letters mimic the look of traditional print ink, which immediately tells the user: "This is a serious, established news source."</p>
-                <p><strong>The Role of Hierarchy:</strong> They use very bold, large headlines contrasted with much smaller, lighter sub-headers to guide the eye through multiple stories quickly.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Medium: Modern Readability</h2>
-            <p style="font-size: 12px; color: #999;">Explore: <a href="https://www.medium.com" target="_blank" style="color: #D470A2; text-decoration: none;">medium.com</a></p>
-            
-            <div class="screenshot-box">
-                <img src="./MEDIUM.jpeg" alt="Medium Typography" class="web-img">
-            </div>
-            
-            <div class="analysis-box">
-                <span class="tag">USER-CENTRIC SPACING</span>
-                <p>Medium is widely praised by designers for its typography. Unlike the dense layout of a news site, Medium focuses on <strong>Leading</strong> (line spacing) and <strong>White Space</strong>. The lines are spaced widely enough that the eye doesn't get tired while reading a 10-minute article.</p>
-                <p><strong>The Strategy:</strong> The typeface is clean and the line length is limited, which is the "golden rule" for digital readability. It feels calm and personal.</p>
-            </div>
-        </section>
-
-        <section style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 30px;">
-            <h2 style="border: none; padding: 0; text-align: center;">Conclusion</h2>
-            <p style="text-align: center; color: #555;">While the New York Times uses typography to project <strong>authority</strong>, Medium uses it to prioritize <strong>the reading experience</strong>. As a content creator, I’ve learned that the "best" typography isn't the prettiest—it's the one that helps the user achieve their goal without friction.</p>
-        </section>
-
-        <div class="btn-group">
-            <a href="../index.html" class="btn btn-home">Return to Portfolio Home</a>
-        </div>
+    <div class="local-nav">
+        <a href="typographyoverview.html">4. Overview</a>
+        <span class="active-link">5. Font Types Article</span>
+        <a href="fonttypes.html">6. Comparison</a>
     </div>
 
-    <footer style="text-align: center; padding: 80px 40px; color: #bbb; border-top: 1px solid #eee; margin-top: 100px;">
-        <p style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase;">&copy; 2026 RENATA OLIVER &bull; DESIGN THEORY</p>
+    <main class="container">
+        <h2>The Psychology of Type</h2>
+        
+        <p>In digital design, typography is the silent ambassador of your brand. It communicates personality, authority, and tone before a single word is even read. For my personal brand, the choice of type reflects a balance between editorial luxury and modern digital efficiency.</p>
+
+        <div class="highlight-box">
+            "Typography is not just about choosing fonts; it’s about creating a visual voice that resonates with your audience's expectations."
+        </div>
+
+        <h3>The Luxury of the Serif</h3>
+        <p>I use <strong>Playfair Display</strong> for my primary headings. As a Transitional Serif font, it carries a sense of timeless elegance and high-fashion "Vogue-style" sophistication. It tells my audience that they are entering a space of curated, luxury experiences.</p>
+
+        <h3>The Modernity of Sans Serif</h3>
+        <p>For body copy and navigation, I rely on <strong>Montserrat</strong>. This geometric sans-serif font is inspired by urban typography from the early 20th century. It provides the clean, functional "digital explorer" vibe that makes long-form travel articles easy to read on mobile devices.</p>
+
+        <h3>Establishing Hierarchy</h3>
+        <p>By contrasting the ornate nature of Serifs with the minimalist nature of Sans Serifs, I create a clear visual hierarchy. This guides my followers—whether they are looking for makeup tips or travel itineraries—through the content in a way that feels organized and effortless.</p>
+
+        <div style="text-align: center;">
+            <a href="fonttypes.html" class="btn-next">Next: Type Comparison &rarr;</a>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 60px 0; color: #bbb; font-size: 10px; letter-spacing: 2px; border-top: 1px solid #eee;">
+        &copy; 2026 RENATA OLIVER &bull; DESIGN THEORY
     </footer>
 
 </body>

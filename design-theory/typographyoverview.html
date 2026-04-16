@@ -5,78 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typography Overview | Renata Oliveira</title>
     
+    <link rel="stylesheet" href="sitewide.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../sitewide.css">
-    <link rel="stylesheet" href="color-and-type.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Backup Styles to fix the "strange" look immediately */
-        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
-        .container { max-width: 850px; margin: 0 auto; padding: 0 40px; }
-        .sub-nav { text-align: center; margin-bottom: 50px; border-bottom: 1px solid #eee; padding: 20px 0; }
-        .sub-nav a, .sub-nav span { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; }
-        
-        .project-header { text-align: center; margin-top: 40px; margin-bottom: 50px; }
-        .project-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #222; margin-bottom: 10px; }
-        .brand-sub-header { text-transform: uppercase; letter-spacing: 5px; font-size: 11px; color: #D470A2; font-weight: 600; }
+        /* --- RESET & GLOBAL STYLES --- */
+        body { font-family: 'Montserrat', sans-serif; background-color: #ffffff; margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: 60px auto; padding: 0 40px; }
 
-        .analysis-box { background: white; padding: 50px; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border-top: 5px solid #D470A2; margin-bottom: 60px; text-align: left; }
-        .intro-p { margin-bottom: 40px; font-size: 15px; color: #666; line-height: 2; text-align: center; }
+        /* --- FIXING THE MAIN MENU (Matches your screenshot error) --- */
+        nav { background: #fff; padding: 20px 0; border-bottom: 1px solid #eee; text-align: center; }
+        .main-menu { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 30px; }
+        .main-menu a { text-decoration: none; color: #333; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
+        .main-menu a:hover { color: #D470A2; }
         
-        dt { font-weight: bold; color: #D470A2; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
-        dd { margin: 10px 0 25px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; }
+        /* Dropdown styling */
+        .dropdown { position: relative; }
+        .submenu { display: none; position: absolute; background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); list-style: none; padding: 10px; min-width: 150px; text-align: left; z-index: 100; }
+        .dropdown:hover .submenu { display: block; }
 
-        .btn-next { display: inline-block; padding: 16px 35px; background: #D470A2; color: #fff; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: bold; border-radius: 4px; }
+        /* --- LOCAL NAV (4, 5, 6) --- */
+        .local-nav { 
+            text-align: center !important; 
+            padding: 30px 0; 
+            background: #fdf2f6; 
+            margin-bottom: 50px; 
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+        .local-nav a, .local-nav span { 
+            text-decoration: none; 
+            color: #333; 
+            margin: 0 20px; 
+            font-size: 11px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            display: inline-block;
+        }
+        .active-link { color: #D470A2 !important; border-bottom: 2px solid #D470A2; padding-bottom: 5px; }
+
+        /* --- CONTENT BOX --- */
+        .analysis-box { 
+            background: #ffffff; padding: 50px; border-radius: 4px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03); border-top: 5px solid #D470A2; 
+            text-align: left; margin-top: 20px;
+        }
+        .site-header h1 { font-family: 'Playfair Display', serif; text-align: center; letter-spacing: 10px; text-transform: uppercase; font-size: 38px; padding: 40px 0; margin: 0; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; text-align: center; margin-bottom: 5px; }
+        .sub-header { text-align: center; color: #D470A2; text-transform: uppercase; letter-spacing: 4px; font-size: 10px; font-weight: bold; margin-bottom: 40px; }
+
+        dt { font-weight: bold; color: #D470A2; margin-top: 25px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
+        dd { margin: 10px 0 20px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; line-height: 1.8; }
+
+        .btn-next { display: inline-block; padding: 18px 40px; background: #D470A2; color: #fff; text-decoration: none; text-transform: uppercase; font-size: 10px; font-weight: bold; border-radius: 4px; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-    <header class="site-header" style="text-align: center; padding: 40px 0;">
-        <h1 class="pink-brand-name" style="font-family: 'Playfair Display', serif; letter-spacing: 10px; text-transform: uppercase; color: #1a1a1a; font-size: 38px; margin: 0;">Renata Oliveira</h1>
+    <header class="site-header">
+        <h1>Renata Oliveira</h1>
     </header>
 
-    <nav class="sub-nav">
-        <span style="color: #D470A2;">4. Overview</span> | 
-        <a href="fonttypes.html">5. Font Types Article</a> | 
-        <a href="typographyarticle.html">6. Comparison</a>
+    <nav>
+        <ul class="main-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="style.html">Style</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="about-me.html">About Me</a></li>
+            <li class="dropdown">
+                <a href="#" class="menu-label">Portfolio ▼</a> 
+                <ul class="submenu">
+                    <li><a href="resume.html">Full Resume</a></li>
+                    <li><a href="photoshop1.html">Photoshop 1</a></li>
+                    <li><a href="photoshop2.html">Photoshop 2</a></li>
+                    <li><a href="photoshop3.html">Photoshop 3</a></li>
+                    <li><a href="animate.html">Animate Video</a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
 
-    <div class="container">
-        <header class="project-header">
-            <h1>The Art of Typography</h1>
-            <p class="brand-sub-header">The Silent Voice of Branding</p>
-        </header>
-
-        <section class="analysis-box">
-            <p class="intro-p">
-                Typography is the technique of arranging type to make language legible and visually appealing. It is a critical tool for establishing a brand’s hierarchy and personality.
-            </p>
-            
-            <dl>
-                <dt>01. Typeface</dt>
-                <dd>The creative design of the letters (e.g., Playfair Display).</dd>
-                
-                <dt>02. Font</dt>
-                <dd>The specific style or size of that typeface (e.g., Bold, 12pt).</dd>
-                
-                <dt>03. Serif</dt>
-                <dd>Small decorative "feet" at the ends of character lines.</dd>
-                
-                <dt>04. Sans Serif</dt>
-                <dd>Clean typefaces without decorative strokes.</dd>
-            </dl>
-        </section>
-
-        <div style="text-align: center; margin-bottom: 80px;">
-            <a href="fonttypes.html" class="btn-next">Next: Font Types &rarr;</a>
-        </div>
+    <div class="local-nav">
+        <span class="active-link">4. Overview</span>
+        <a href="typographyarticle.html">5. Font Types Article</a>
+        <a href="fonttypes.html">6. Comparison</a>
     </div>
 
-    <footer style="text-align: center; padding: 60px 0; color: #bbb; font-size: 10px; letter-spacing: 2px; border-top: 1px solid #eee;">
-        <p>&copy; 2026 RENATA OLIVER &bull; DESIGN THEORY</p>
+    <main class="container">
+        <h2>The Art of Typography</h2>
+        <p class="sub-header">The Silent Voice of Branding</p>
+        
+        <section class="analysis-box">
+            <dl>
+                <dt>Serif</dt>
+                <dd>Elegant fonts with small "feet." Perfect for high-end luxury headers (e.g., Playfair Display).</dd>
+                
+                <dt>Sans Serif</dt>
+                <dd>Clean, modern fonts without decorative strokes. Best for digital readability (e.g., Montserrat).</dd>
+                
+                <dt>Visual Hierarchy</dt>
+                <dd>Using size and weight to direct the viewer's attention to key messages first.</dd>
+            </dl>
+
+            <div style="text-align: center;">
+                <a href="typographyarticle.html" class="btn-next">Next: Font Types Article &rarr;</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 60px 0; color: #bbb; font-size: 10px; letter-spacing: 2px;">
+        &copy; 2026 RENATA OLIVER &bull; DESIGN THEORY
     </footer>
 
 </body>

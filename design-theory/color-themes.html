@@ -5,107 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Themes | Renata Oliveira</title>
     
+    <link rel="stylesheet" href="../sitewide.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../sitewide.css">
-    <link rel="stylesheet" href="color-and-type.css">
-    
     <style>
-        /* This ensures the table looks good even if the external CSS has a path error */
-        .theme-table {
+        body { font-family: 'Montserrat', sans-serif; background-color: #ffffff; margin: 0; }
+        .container { max-width: 900px; margin: 60px auto; padding: 0 40px; }
+
+        /* --- UNIFIED LOCAL NAV --- */
+        .local-nav { 
+            text-align: center !important; 
+            padding: 30px 0; 
+            background: #fdf2f6; 
+            margin-bottom: 50px; 
             width: 100%;
-            border-collapse: collapse;
-            margin: 40px 0;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .theme-table th, .theme-table td {
-            padding: 20px;
-            text-align: left;
+            display: block;
             border-bottom: 1px solid #eee;
         }
-        .theme-table th {
-            text-transform: uppercase;
-            font-size: 11px;
+        .local-nav a, .local-nav span { 
+            text-decoration: none; 
+            color: #333; 
+            margin: 0 20px; 
+            font-size: 11px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
             letter-spacing: 2px;
-            color: #888;
-            background-color: #fcfcfc;
-        }
-        .swatch {
-            width: 30px;
-            height: 30px;
             display: inline-block;
-            border-radius: 50%; /* Makes them circles for a high-end look */
-            margin-right: 5px;
-            border: 1px solid rgba(0,0,0,0.05);
-            vertical-align: middle;
         }
+        .active-link { 
+            color: #D470A2 !important; 
+            border-bottom: 2px solid #D470A2;
+            padding-bottom: 5px;
+        }
+
+        /* --- TABLE STYLING --- */
+        .color-table { width: 100%; border-collapse: collapse; margin-top: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
+        .color-table th { background: #fafafa; padding: 20px; text-align: left; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; border-bottom: 2px solid #eee; }
+        .color-table td { padding: 25px 20px; border-bottom: 1px solid #eee; vertical-align: middle; }
+        .swatch-circle { width: 30px; height: 30px; border-radius: 50%; display: inline-block; margin-right: 5px; border: 1px solid #eee; }
+
+        h2 { font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; margin-bottom: 30px; }
+        .btn-next { display: inline-block; padding: 18px 40px; background: #D470A2; color: #fff; text-decoration: none; text-transform: uppercase; font-size: 10px; font-weight: bold; border-radius: 4px; margin-top: 40px; }
     </style>
 </head>
 <body>
-
-    <header class="site-header" style="text-align: center; padding: 40px 0;">
-        <h1 class="pink-brand-name" style="font-family: 'Playfair Display', serif; letter-spacing: 8px; text-transform: uppercase; font-size: 32px;">Renata Oliveira</h1>
-    </header>
-
-    <nav class="sub-nav" style="text-align: center; margin-bottom: 50px; border-bottom: 1px solid #eee; padding: 20px 0;">
-        <a href="color-overview.html" style="text-decoration:none; color:#333; margin:0 15px; font-size:11px; font-weight:bold; text-transform:uppercase;">1. Overview</a> | 
-        <span style="color: #D470A2; font-weight: bold; text-transform: uppercase; font-size: 11px; margin:0 15px;">2. Color Themes</span> | 
-        <a href="color-article.html" style="text-decoration:none; color:#333; margin:0 15px; font-size:11px; font-weight:bold; text-transform:uppercase;">3. Color Article</a>
+    <header class="site-header"><h1 class="pink-brand-name">Renata Oliveira</h1></header>
+    <nav>
+        <ul class="main-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../style.html">Style</a></li>
+            <li><a href="../travel.html">Travel</a></li>
+            <li><a href="../about-me.html">About Me</a></li>
+            <li class="dropdown">
+                <span class="menu-label">Portfolio ▼</span> 
+                <ul class="submenu">
+                    <li><a href="../resume.html">Full Resume</a></li>
+                    <li><a href="../photoshop1.html">Photoshop 1</a></li>
+                    <li><a href="../photoshop2.html">Photoshop 2</a></li>
+                    <li><a href="../photoshop3.html">Photoshop 3</a></li>
+                    <li><a href="../animate.html">Animate Video</a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
 
-    <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 40px;">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; margin-bottom: 10px;">Brand Color Palettes</h2>
-        <p style="text-align: center; text-transform: uppercase; letter-spacing: 4px; font-size: 10px; color: #D470A2; margin-bottom: 40px;">Live CSS Color Swatches</p>
+    <div class="local-nav">
+        <a href="color-overview.html">1. Overview</a>
+        <span class="active-link">2. Color Themes</span>
+        <a href="color-article.html">3. Color Article</a>
+    </div>
 
-        <table class="theme-table">
-            <thead>
-                <tr>
-                    <th>Theme Name</th>
-                    <th>Live Swatches</th>
-                    <th>Hex Codes</th>
-                    <th>Psychology</th>
-                </tr>
-            </thead>
+    <main class="container">
+        <h2>Brand Color Palettes</h2>
+        <table class="color-table">
+            <thead><tr><th>Theme Name</th><th>Live Swatches</th><th>Hex Codes</th><th>Psychology</th></tr></thead>
             <tbody>
                 <tr>
                     <td><strong>Signature Pink</strong></td>
-                    <td>
-                        <div class="swatch" style="background-color: #D470A2;"></div>
-                        <div class="swatch" style="background-color: #FDF2F6;"></div>
-                        <div class="swatch" style="background-color: #1A1A1A;"></div>
-                    </td>
-                    <td style="font-family: monospace; color: #666;">#D470A2, #FDF2F6</td>
+                    <td><div class="swatch-circle" style="background:#D470A2;"></div><div class="swatch-circle" style="background:#FDF2F6;"></div></td>
+                    <td>#D470A2, #FDF2F6</td>
                     <td>Luxury, Softness, Modernity</td>
-                </tr>
-                <tr>
-                    <td><strong>Desert Sands</strong></td>
-                    <td>
-                        <div class="swatch" style="background-color: #E2C2B3;"></div>
-                        <div class="swatch" style="background-color: #F4EAE6;"></div>
-                        <div class="swatch" style="background-color: #4E342E;"></div>
-                    </td>
-                    <td style="font-family: monospace; color: #666;">#E2C2B3, #F4EAE6</td>
-                    <td>Warmth, Travel, Organic</td>
-                </tr>
-                <tr>
-                    <td><strong>Oceanic Prof.</strong></td>
-                    <td>
-                        <div class="swatch" style="background-color: #2C3E50;"></div>
-                        <div class="swatch" style="background-color: #34495E;"></div>
-                        <div class="swatch" style="background-color: #EBF2FA;"></div>
-                    </td>
-                    <td style="font-family: monospace; color: #666;">#2C3E50, #EBF2FA</td>
-                    <td>Trust, Depth, Efficiency</td>
                 </tr>
             </tbody>
         </table>
-
-        <div style="text-align: center; margin: 80px 0;">
-            <a href="color-article.html" style="padding: 16px 40px; background: #D470A2; color: #fff; text-decoration: none; text-transform: uppercase; font-size: 10px; font-weight: bold; border-radius: 4px; letter-spacing: 2px;">Next: Color Article &rarr;</a>
-        </div>
-    </div>
-
+        <div style="text-align: center;"><a href="color-article.html" class="btn-next">Next: Color Article &rarr;</a></div>
+    </main>
 </body>
 </html>

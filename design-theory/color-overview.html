@@ -5,116 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Overview | Renata Oliveira</title>
     
+    <link rel="stylesheet" href="../sitewide.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../sitewide.css">
-    <link rel="stylesheet" href="color-and-type.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* BRAND HEADER: DARK & BOLD */
-        .site-header { text-align: center; padding: 40px 0; margin: 0; }
-        .site-header h1 {
-            color: #000000 !important; 
-            font-family: 'Playfair Display', serif !important;
-            letter-spacing: 10px !important;
-            text-transform: uppercase !important;
-            font-size: 38px !important;
-            font-weight: 700 !important; 
-            margin: 0 !important;
-            line-height: 1.2 !important;
+        body { font-family: 'Montserrat', sans-serif; background-color: #ffffff; margin: 0; }
+        .container { max-width: 900px; margin: 60px auto; padding: 0 40px; }
+
+        /* --- UNIFIED LOCAL NAV --- */
+        .local-nav { 
+            text-align: center !important; 
+            padding: 30px 0; 
+            background: #fdf2f6; 
+            margin-bottom: 50px; 
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+        .local-nav a, .local-nav span { 
+            text-decoration: none; 
+            color: #333; 
+            margin: 0 20px; 
+            font-size: 11px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            display: inline-block;
+        }
+        .active-link { 
+            color: #D470A2 !important; 
+            border-bottom: 2px solid #D470A2;
+            padding-bottom: 5px;
         }
 
-        /* PAGE LAYOUT */
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: #ffffff; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 40px; }
-        
-        /* SUB-NAV FIX */
-        .sub-nav { text-align: center; margin-bottom: 50px; border-bottom: 1px solid #eee; padding: 20px 0; }
-        .sub-nav a, .sub-nav span { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; }
-        .active-link { color: #D470A2 !important; }
-
-        /* CONTENT STYLING */
-        .project-header { text-align: center; margin-top: 40px; margin-bottom: 50px; }
-        .project-header h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #222; margin-bottom: 10px; }
-        .brand-sub-header { color: #D470A2; text-transform: uppercase; letter-spacing: 5px; font-size: 11px; font-weight: 600; }
-
-        /* THE ANALYSIS BOX */
+        /* --- CONTENT BOX --- */
         .analysis-box { 
-            background: #ffffff; 
-            padding: 50px; 
-            border-radius: 4px; 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.03); 
-            border-top: 5px solid #D470A2; 
-            margin-bottom: 60px; 
-            text-align: left; 
+            background: #ffffff; padding: 50px; border-radius: 4px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03); border-top: 5px solid #D470A2; 
+            text-align: left;
         }
-        .intro-p { margin-bottom: 40px; font-size: 15px; color: #666; line-height: 2; text-align: center; }
-        
-        dt { font-weight: bold; color: #D470A2; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
-        dd { margin: 10px 0 25px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; margin-bottom: 30px; }
+        dt { font-weight: bold; color: #D470A2; margin-top: 25px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
+        dd { margin: 10px 0 20px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; line-height: 1.8; }
 
         .btn-next { 
-            display: inline-block; 
-            padding: 16px 35px; 
-            background: #D470A2; 
-            color: #fff; 
-            text-decoration: none; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            font-size: 10px; 
-            font-weight: bold; 
-            border-radius: 4px; 
+            display: inline-block; padding: 18px 40px; background: #D470A2; color: #fff; 
+            text-decoration: none; text-transform: uppercase; font-size: 10px; font-weight: bold; 
+            border-radius: 4px; margin-top: 40px; transition: 0.3s;
         }
     </style>
 </head>
 <body>
-
-    <header class="site-header">
-        <h1>Renata Oliveira</h1>
-    </header>
-
-    <nav class="sub-nav">
-        <span class="active-link">1. Overview</span> | 
-        <a href="color-themes.html">2. Color Themes</a> | 
-        <a href="color-article.html">3. Color Article</a>
+    <header class="site-header"><h1 class="pink-brand-name">Renata Oliveira</h1></header>
+    <nav>
+        <ul class="main-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../style.html">Style</a></li>
+            <li><a href="../travel.html">Travel</a></li>
+            <li><a href="../about-me.html">About Me</a></li>
+            <li class="dropdown">
+                <span class="menu-label">Portfolio ▼</span> 
+                <ul class="submenu">
+                    <li><a href="../resume.html">Full Resume</a></li>
+                    <li><a href="../photoshop1.html">Photoshop 1</a></li>
+                    <li><a href="../photoshop2.html">Photoshop 2</a></li>
+                    <li><a href="../photoshop3.html">Photoshop 3</a></li>
+                    <li><a href="../animate.html">Animate Video</a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
 
-    <div class="container">
-        <header class="project-header">
-            <h2>The Power of Color</h2>
-            <p class="brand-sub-header">Strategic Visual Psychology</p>
-        </header>
-
-        <section class="analysis-box">
-            <p class="intro-p">
-                Color is more than just an aesthetic choice; it is a psychological tool used to evoke emotion and drive user behavior. In my branding work, I use color to establish trust, energy, and luxury.
-            </p>
-            
-            <dl>
-                <dt>Hue</dt>
-                <dd>The actual color or name of the family (e.g., Red, Blue).</dd>
-                
-                <dt>Saturation</dt>
-                <dd>The intensity or purity of a color. High saturation is vivid; low is muted.</dd>
-                
-                <dt>Value</dt>
-                <dd>The lightness or darkness of a color (tints and shades).</dd>
-                
-                <dt>Monochromatic</dt>
-                <dd>A scheme using different values of a single hue for a sophisticated look.</dd>
-            </dl>
-        </section>
-
-        <div style="text-align: center; margin-bottom: 80px;">
-            <a href="color-themes.html" class="btn-next">Next: Color Themes &rarr;</a>
-        </div>
+    <div class="local-nav">
+        <span class="active-link">1. Overview</span>
+        <a href="color-themes.html">2. Color Themes</a>
+        <a href="color-article.html">3. Color Article</a>
     </div>
 
-    <footer style="text-align: center; padding: 60px 0; color: #bbb; font-size: 10px; letter-spacing: 2px; border-top: 1px solid #eee;">
-        &copy; 2026 RENATA OLIVER &bull; DESIGN THEORY
-    </footer>
-
+    <main class="container">
+        <h2>The Power of Color</h2>
+        <section class="analysis-box">
+            <dl>
+                <dt>Hue</dt><dd>The family of a color (Red, Blue, etc.).</dd>
+                <dt>Saturation</dt><dd>The purity or intensity of a color.</dd>
+                <dt>Value</dt><dd>The lightness or darkness of a color.</dd>
+            </dl>
+            <div style="text-align: center;"><a href="color-themes.html" class="btn-next">Next: Color Themes &rarr;</a></div>
+        </section>
+    </main>
 </body>
 </html>
