@@ -11,24 +11,21 @@
     
     <link rel="stylesheet" href="sitewide.css">
 </head>
-<body>
+<body class="font-medium">
 
 <header class="site-header">
     <nav aria-label="Main Navigation">
         <ul class="main-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="style.html">Style</a></li>
-            <li><a href="travel.html">Travel</a></li>
-            <li><a href="about-me.html">About Me</a></li>
             
             <li class="dropdown">
                 <span class="menu-label">Portfolio ▼</span> 
                 <ul class="submenu">
-                    <li><a href="resume.html" style="font-weight: bold; border-bottom: 1px solid #eee;">Full Resume</a></li>
+                    <li><a href="resume.html">Full Resume</a></li>
                     <li class="submenu-header">Showcase</li>
                     <li><a href="photoshop1.html">Photoshop 1</a></li>
                     <li><a href="photoshop2.html">Photoshop 2</a></li>
-                    <li><a href="photoshop3.html">Photoshop 3</a></li>
                     <li><a href="animate.html">Animate Video</a></li>
                 </ul>
             </li>
@@ -36,15 +33,28 @@
             <li class="dropdown">
                 <span class="menu-label">Design Theory ▼</span>
                 <ul class="submenu">
-                    <span class="submenu-header">Color Theory</span>
+                    <li class="submenu-header">Color Theory</li>
                     <li><a href="design-theory/color-overview.html">Color Overview</a></li>
                     <li><a href="design-theory/color-themes.html">Color Themes</a></li>
-                    <li><a href="design-theory/color-article.html">Color Article</a></li>
-                    
-                    <span class="submenu-header">Typography</span>
+                    <li class="submenu-header">Typography</li>
                     <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
-                    <li><a href="design-theory/fonttypes.html">Font Types Article</a></li>
-                    <li><a href="design-theory/typographyarticle.html">Typography Article</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <span class="menu-label">Theme ▼</span>
+                <ul class="submenu" style="padding: 15px; min-width: 220px;">
+                    <li>
+                        <strong>Mode:</strong><br>
+                        <button class="theme-btn" onclick="setTheme('light')">Light</button>
+                        <button class="theme-btn" onclick="setTheme('dark')">Dark</button>
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong>Font Size:</strong><br>
+                        <button class="theme-btn" onclick="setFont('small')">Small</button>
+                        <button class="theme-btn" onclick="setFont('medium')">Medium</button>
+                        <button class="theme-btn" onclick="setFont('large')">Large</button>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -52,30 +62,80 @@
 </header>
 
 <main>
-    <h1 class="pink-brand-name" style="font-style: italic;">Renata Oliver</h1>
+    <h1 class="pink-brand-name">Renata Oliver</h1>
     
-    <div class="container" style="max-width: 1100px;">
-        <img src="./bannerpicture.png" alt="Renata Oliver Portfolio Banner" class="main-photo" style="width: 100%; border-radius: 4px;">
+    <div class="container">
+        <img src="./bannerpicture.png" alt="Renata Oliver Portfolio Banner" class="main-photo">
         
         <section class="welcome-section">
-            <h2 style="font-family: 'Playfair Display', serif; letter-spacing: 5px; text-transform: uppercase; margin-top: 40px;">Digital Strategist & Content Creator</h2>
-            <p class="exp-desc" style="text-align: center; max-width: 700px; margin: 20px auto;">
-                I am a passionate Social Media Manager helping brands find their voice 
-                through intentional strategy and high-end visual storytelling.
-            </p>
+            <h2 style="font-family: 'Playfair Display', serif; letter-spacing: 5px; text-transform: uppercase;">Digital Strategist</h2>
+            <p>Intentional strategy and high-end visual storytelling for brands.</p>
+        </section>
+
+        <section class="resume-wrapper">
+            <h3 style="text-align: center; border-bottom: 2px solid #D470A2; padding-bottom: 10px; margin-bottom: 20px; font-size: 14px; text-transform: uppercase; letter-spacing: 2px;">Resume Highlights</h3>
+            
+            <button type="button" class="collapsible">Work Experience <span>+</span></button>
+            <div class="content">
+                <p><strong>Content Creator & Entrepreneur:</strong> Managing high-end luxury travel and beauty content.</p>
+                <p><strong>Restaurant Owner:</strong> Leading operations for "Craft Pizza & Beer".</p>
+                <p><strong>Professional Makeup Artist:</strong> 15 years of industry experience.</p>
+            </div>
+
+            <button type="button" class="collapsible">Education <span>+</span></button>
+            <div class="content">
+                <p>Degrees in Nursing and Web Design from Westchester Community College.</p>
+                <p>Advanced Web Design Certification through Webucator.</p>
+            </div>
+
+            <button type="button" class="collapsible">Key Skills <span>+</span></button>
+            <div class="content">
+                <p>Trilingual: English, Spanish, Portuguese.</p>
+                <p>Social Media Strategy, Photography, and Web Design.</p>
+            </div>
         </section>
     </div>
 </main>
 
 <footer>
     <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100078193936641" target="_blank"><img src="./facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/renataoliveiraofficial" target="_blank"><img src="./instagram.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@renataoliveiraofficial" target="_blank"><img src="./tiktok.png" alt="TikTok"></a>
-        <a href="https://www.pinterest.com/RenataxoliverNY" target="_blank"><img src="./pinterest.png" alt="Pinterest"></a>
+        <a href="https://facebook.com/renataoliveiraofficial" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://instagram.com/renataoliveiraofficial" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+        <a href="https://tiktok.com/@renataoliveiraofficial" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
     </div>
     <p>&copy; 2026 RENATA OLIVER. ALL RIGHTS RESERVED.</p>
 </footer>
+
+<script>
+    // 1. Theme Logic (Mode)
+    function setTheme(mode) {
+        if (mode === 'dark') {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
+    }
+
+    // 2. Theme Logic (Font Size)
+    function setFont(size) {
+        document.body.classList.remove('font-small', 'font-medium', 'font-large');
+        document.body.classList.add('font-' + size);
+    }
+
+    // 3. Collapsible Logic
+    const coll = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
