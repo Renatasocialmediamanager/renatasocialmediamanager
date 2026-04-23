@@ -1,0 +1,31 @@
+/* --- UI POLISHING --- */
+.question label {
+    display: flex !important;
+    align-items: center; /* This centers the radio/checkbox vertically with the text */
+    padding: 15px 20px !important;
+    margin: 10px 0 !important;
+    background: #fff;
+    border: 1px solid #eee;
+    transition: all 0.2s ease;
+}
+
+/* Add a subtle highlight when the user hovers over an answer */
+.question label:hover {
+    border-color: #D470A2 !important;
+    background-color: #fdf2f6 !important;
+}
+
+/* Adjust the input spacing */
+.question input {
+    margin: 0 15px 0 0 !important;
+    transform: scale(1.1); /* Makes the circles/boxes a tiny bit bigger and easier to click */
+}
+input[type="text"] {
+    width: 100%;
+    max-width: 100%; /* Makes it match the width of the radio boxes above */
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    outline: none;
+}

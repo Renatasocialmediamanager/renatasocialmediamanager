@@ -253,3 +253,114 @@ footer {
     letter-spacing: 2px; 
     text-transform: uppercase;
 }
+/* --- 10. MARKETING QUIZ STYLES --- */
+#quiz-container {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+#quiz-container h1 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.intro {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+/* Question List Styling */
+.question {
+    list-style-position: inside;
+    margin-bottom: 50px;
+    padding: 30px;
+    background: #fafafa; /* Very light grey to separate questions */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.q-title {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Radio & Checkbox Labels */
+.question label {
+    display: block;
+    padding: 12px 15px;
+    margin: 8px 0;
+    background: #fff;
+    border: 1px solid #eee;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.question label:hover {
+    background: #fdf2f6; /* Matching your pink brand hover color */
+    border-color: #D470A2;
+}
+
+/* Free Form Input */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #eee;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #D470A2;
+}
+
+/* Submit Button - Matching your Brand */
+#submit-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 40px auto;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#submit-btn:hover {
+    background-color: #D470A2; /* Pink on hover */
+}
+
+/* Results Box */
+.score-box {
+    text-align: center;
+    padding: 40px;
+    background: #fdf2f6;
+    border: 1px solid #D470A2;
+    margin-top: 40px;
+}
+
+.score-box h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #D470A2;
+    margin-bottom: 10px;
+}
