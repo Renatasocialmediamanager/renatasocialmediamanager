@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Your professional font choice */
     background-color: #ffffff;
     color: #1a1a1a;
     transition: background-color 0.3s, color 0.3s;
@@ -25,7 +25,7 @@ body {
 header {
     background-color: #fff;
     border-bottom: 1px solid #f2f2f2;
-    padding: 10px 0;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -35,7 +35,7 @@ header {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     margin: 0;
     padding: 0;
 }
@@ -63,28 +63,30 @@ header {
     transform: translateX(-50%);
     background-color: #fff;
     min-width: 200px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     list-style: none;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
+    border-radius: 4px;
 }
 
 .dropdown:hover .submenu {
     display: block;
 }
 
-/* Clears the confusion in the Theme menu */
+/* Pink labels for categories like "Appearance" or "Font Size" */
 .submenu-header {
     font-size: 9px !important;
     font-weight: 700 !important;
-    color: #D470A2 !important; /* Your signature pink */
+    color: #D470A2 !important; /* Signature brand pink */
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 15px 0 5px 0;
+    padding: 12px 0 5px 0;
     margin-top: 5px;
     border-top: 1px solid #f9f9f9;
 }
 
+/* Removes top border for the first category in a list */
 .submenu li:first-child .submenu-header {
     border-top: none;
     margin-top: 0;
@@ -98,11 +100,11 @@ header {
     letter-spacing: 1.5px;
     color: #444;
     text-decoration: none;
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 
 .submenu-item:hover, .submenu li a:hover {
-    background-color: #fdf2f6; /* Soft pink hover state */
+    background-color: #fdf2f6; /* Soft pink hover */
     color: #D470A2;
 }
 
@@ -118,21 +120,26 @@ header {
 
 /* --- GLOBAL FOOTER --- */
 footer {
-    padding: 60px 0 40px;
+    padding: 80px 0 40px;
     text-align: center;
-    background-color: #fafafa;
-    margin-top: 80px;
+    background-color: #ffffff;
+    margin-top: 100px;
 }
 
 .social-icons img {
     width: 22px;
-    margin: 0 15px;
+    margin: 0 18px;
     transition: opacity 0.3s;
+}
+
+.social-icons a:hover img {
+    opacity: 0.7;
 }
 
 footer p {
     font-size: 10px;
     letter-spacing: 2px;
     color: #999;
-    margin-top: 25px;
+    margin-top: 30px;
+    text-transform: uppercase;
 }
