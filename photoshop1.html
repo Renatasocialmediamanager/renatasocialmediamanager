@@ -3,217 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photoshop Showcase 1 | Renata Oliver</title>
+    <title>Photoshop 1 | Renata Oliveira</title>
     
     <link rel="stylesheet" href="sitewide.css">
     
-    <style>
-        /* FIX FOR MENU OVERLAP */
-        header {
-            position: relative;
-            z-index: 9999; /* Forces the main menu to stay in front of the pink bar */
-        }
-
-        .main-menu {
-            position: relative;
-            z-index: 10000;
-        }
-
-        .submenu {
-            z-index: 10001;
-        }
-
-        /* SECONDARY NAVIGATION (Pink Bar) */
-        .secondary-nav {
-            background-color: #fff0f6; 
-            padding: 20px 0;
-            border-bottom: 1px solid #f8d7da;
-            text-align: center;
-            position: relative;
-            z-index: 1; /* Keep this low so the main menu can drop over it */
-        }
-
-        .sub-project-menu {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .sub-project-menu li a {
-            text-decoration: none;
-            color: #444;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-            padding-bottom: 8px;
-        }
-
-        .sub-project-menu li a:hover {
-            color: #d11c5c;
-        }
-
-        .sub-project-menu li a.active {
-            color: #d11c5c;
-            border-bottom: 2px solid #d11c5c;
-        }
-
-        /* MAIN PROJECT STYLING */
-        .project-container {
-            max-width: 900px;
-            margin: 80px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .main-header {
-            font-family: 'Playfair Display', 'Georgia', serif; 
-            font-weight: 700;
-            font-size: 3.2rem;
-            margin-bottom: 5px;
-            color: #1a1a1a;
-        }
-
-        .sub-header {
-            font-size: 10px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #d11c5c;
-            margin-bottom: 60px;
-            font-weight: 600;
-        }
-
-        .project-image {
-            width: 100%;
-            max-width: 850px;
-            height: auto;
-            display: block;
-            margin: 0 auto 50px auto;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
-            border-radius: 2px;
-        }
-
-        .project-desc {
-            max-width: 650px;
-            margin: 0 auto;
-            text-align: left;
-            line-height: 2.1;
-            color: #555;
-            font-size: 15px;
-        }
-
-        .project-desc h2 {
-            font-family: 'Georgia', serif;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            color: #1a1a1a;
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin-top: 80px;
-            padding: 18px 50px;
-            border: 1px solid #1a1a1a;
-            text-decoration: none;
-            color: #1a1a1a;
-            text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: 3px;
-            transition: all 0.4s ease;
-        }
-
-        .back-btn:hover {
-            background: #1a1a1a;
-            color: #fff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 100px 20px;
-            border-top: 1px solid #f5f5f5;
-            margin-top: 120px;
-        }
-
-        .copyright {
-            color: #ccc;
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-top: 30px;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="font-medium">
 
-<header>
-    <nav aria-label="Main Navigation">
-        <ul class="main-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="style.html">Style</a></li>
-            <li><a href="travel.html">Travel</a></li>
-            <li><a href="about-me.html">About Me</a></li>
-            <li class="dropdown">
-                <a href="#" class="menu-label">Portfolio ▼</a> 
-                <ul class="submenu">
-                    <li><a href="resume.html">Full Resume</a></li>
-                    <li class="submenu-header">Showcase</li>
-                    <li><a href="photoshop1.html">Photoshop 1</a></li>
-                    <li><a href="photoshop2.html">Photoshop 2</a></li>
-                    <li><a href="photoshop3.html">Photoshop 3</a></li>
-                    <li><a href="animate.html">Animate Video</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="menu-label" style="color: #d11c5c;">Design Theory ▼</a>
-                <ul class="submenu">
-                    <li><a href="design-theory/color-overview.html">Color Overview</a></li>
-                    <li><a href="design-theory/color-themes.html">Color Themes</a></li>
-                    <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <span class="menu-label">Portfolio ▼</span> 
+                    <ul class="submenu">
+                        <li><a href="resume.html">Full Resume</a></li>
+                        <li class="submenu-header">Showcase</li>
+                        <li><a href="photoshop1.html">Photoshop 1</a></li>
+                        <li><a href="photoshop2.html">Photoshop 2</a></li>
+                        <li><a href="photoshop3.html">Photoshop 3</a></li>
+                        <li class="quiz-link">
+                            <a href="renata-oliver-marketing-quiz/quiz-mine.html">Marketing Quiz</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Design Theory ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-header">Color Theory</li>
+                        <li><a href="design-theory/color-overview.html">Color Overview</a></li>
+                        <li><a href="design-theory/color-themes.html">Color Themes</a></li>
+                        <li class="submenu-header">Typography</li>
+                        <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Theme ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-item" onclick="setTheme('light')">Light Mode</li>
+                        <li class="submenu-item" onclick="setTheme('dark')">Dark Mode</li>
+                        <li class="submenu-header">Font Size</li>
+                        <li class="submenu-item" onclick="setFont('small')">Small</li>
+                        <li class="submenu-item" onclick="setFont('medium')">Medium</li>
+                        <li class="submenu-item" onclick="setFont('large')">Large</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-<nav class="secondary-nav">
-    <ul class="sub-project-menu">
-        <li><a href="photoshop1.html" class="active">Photoshop 1</a></li>
-        <li><a href="photoshop2.html">Photoshop 2</a></li>
-        <li><a href="photoshop3.html">Photoshop 3</a></li>
-    </ul>
-</nav>
+    <main>
+        <h1 class="pink-brand-name">Renata Oliveira</h1>
+        
+        <div class="container">
+            <section class="welcome-section">
+                <h2 style="font-family: 'Playfair Display', serif; letter-spacing: 5px; text-transform: uppercase;">Photoshop Project 1</h2>
+                <p>Advanced digital compositing and cinematic color grading.</p>
+            </section>
 
-<main class="project-container">
-    <h1 class="main-header">The Art of Typography</h1>
-    <p class="sub-header">THE SILENT VOICE OF BRANDING</p>
-    
-    <img src="pizza1.jpg" alt="Photoshop Pizza Design" class="project-image">
-    
-    <div class="project-desc">
-        <h2>Project Overview: Digital Composition</h2>
-        <p>This project explores the power of <strong>Adobe Photoshop</strong> in high-end commercial design. By focusing on the relationship between typography and imagery, I created a visual that communicates brand authority and aesthetic elegance.</p>
-    </div>
-    
-    <a href="index.html" class="back-btn">Back to Portfolio</a>
-</main>
+            <div class="showcase-gallery" style="display: flex; flex-direction: column; gap: 40px; margin-top: 40px;">
+                <div class="project-item">
+                    <img src="pizza1.jpg" alt="Photoshop Project Detail" class="main-photo" style="margin-bottom: 15px;">
+                    <p style="font-size: 13px; color: #666; text-align: center;"><em>Detailed description of your creative process and the tools used.</em></p>
+                </div>
+                </div>
+        </div>
+    </main>
 
-<footer>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100078193936641" target="_blank"><img src="./facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/renataoliveiraofficial" target="_blank"><img src="./instagram.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@renataoliveiraofficial" target="_blank"><img src="./tiktok.png" alt="TikTok"></a>
-        <a href="https://www.pinterest.com/RenataxoliverNY" target="_blank"><img src="./pinterest.png" alt="Pinterest"></a>
-    </div>
-    <p class="copyright">&copy; 2026 RENATA OLIVER. ALL RIGHTS RESERVED.</p>
-</footer>
+    <footer>
+        <div class="social-icons">
+            <a href="https://instagram.com/renataoliveiraofficial" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://tiktok.com/@renataoliveiraofficial" target="_blank">
+                <img src="tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://facebook.com/renataoliveiraofficial" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+        </div>
+        <p>&copy; 2026 RENATA OLIVEIRA. ALL RIGHTS RESERVED.</p>
+    </footer>
 
+    <script>
+        function setTheme(mode) {
+            if (mode === 'dark') { document.body.classList.add('dark-mode'); } 
+            else { document.body.classList.remove('dark-mode'); }
+        }
+        function setFont(size) {
+            document.body.classList.remove('font-small', 'font-medium', 'font-large');
+            document.body.classList.add('font-' + size);
+        }
+    </script>
 </body>
 </html>
