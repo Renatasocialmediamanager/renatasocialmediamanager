@@ -3,93 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renata Oliver | Portfolio</title>
+    <title>Renata Oliveira | Home</title>
+    
+    <link rel="stylesheet" href="sitewide.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="sitewide.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CENTERED HOME PAGE FIX --- */
+        .home-container {
+            max-width: 1100px; /* Provides room for the gallery while staying centered */
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .pink-brand-name {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 40px !important;       /* Matches Quiz/Photoshop scale */
+            letter-spacing: 12px !important;  /* Elegant, wide luxury spacing */
+            text-transform: uppercase;
+            color: #1a1a1a;
+            margin: 60px 0 40px 0 !important;
+            display: block;
+            width: 100%;
+        }
+
+        .hero-subtitle {
+    font-family: 'Montserrat', sans-serif; 
+    letter-spacing: 3px; 
+    font-size: 11px; 
+    text-transform: uppercase;
+    color: #D470A2 !important; /* This makes the subtitle pink */
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+        }
+
+        /* --- HERO GALLERY --- */
+        .hero-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            margin-bottom: 60px;
+        }
+
+        .hero-gallery img {
+            width: 31%; /* Perfectly fits three images side-by-side */
+            height: auto;
+            border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-gallery img:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Dark Mode adjustments */
+        .dark-mode .pink-brand-name { color: #ffffff; }
+        .dark-mode .hero-subtitle { color: #bbb; }
+    </style>
 </head>
 <body class="font-medium">
 
-<header class="site-header">
-    <nav aria-label="Main Navigation">
-        <ul class="main-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="style.html">Style</a></li>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <span class="menu-label">Portfolio ▼</span> 
+                    <ul class="submenu">
+                        <li><a href="resume.html">Full Resume</a></li>
+                        <li class="submenu-header">Showcase</li>
+                        <li><a href="photoshop1.html">Photoshop 1</a></li>
+                        <li><a href="photoshop2.html">Photoshop 2</a></li>
+                        <li><a href="photoshop3.html">Photoshop 3</a></li>
+                        <li><a href="renata-oliver-marketing-quiz/quiz-mine.html">Marketing Quiz</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Design Theory ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-header">Color Theory</li>
+                        <li><a href="design-theory/color-overview.html">Color Overview</a></li>
+                        <li><a href="design-theory/color-themes.html">Color Themes</a></li>
+                        <li class="submenu-header">Typography</li>
+                        <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Theme ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-header">Appearance</li>
+                        <li class="submenu-item" onclick="setTheme('light')">Light Mode</li>
+                        <li class="submenu-item" onclick="setTheme('dark')">Dark Mode</li>
+                        <li class="submenu-header">Text Size</li>
+                        <li class="submenu-item" onclick="setFont('small')">Small</li>
+                        <li class="submenu-item" onclick="setFont('medium')">Medium</li>
+                        <li class="submenu-item" onclick="setFont('large')">Large</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="home-container">
+            <h1 class="pink-brand-name">Renata Oliveira</h1>
             
-            <li class="dropdown">
-                <span class="menu-label">Portfolio ▼</span> 
-                <ul class="submenu">
-                    <li><a href="resume.html">Full Resume</a></li>
-                    <li class="submenu-header">Showcase</li>
-                    <li><a href="photoshop1.html">Photoshop 1</a></li>
-                    <li><a href="photoshop2.html">Photoshop 2</a></li>
-                    <li style="border-top: 1px solid #fdf2f6; margin-top: 5px; padding-top: 5px;">
-                        <a href="renata-oliver-marketing-quiz/quiz-mine.html" style="color: #D470A2; font-weight: bold;">Marketing Quiz</a>
-                    </li>
-                </ul>
-            </li>
+            <p class="hero-subtitle">
+                Travel & Beauty Influencer | Social Media Manager
+            </p>
 
-            <li class="dropdown">
-                <span class="menu-label">Design Theory ▼</span>
-                <ul class="submenu">
-                    <li class="submenu-header">Color Theory</li>
-                    <li><a href="design-theory/color-overview.html">Color Overview</a></li>
-                    <li><a href="design-theory/color-themes.html">Color Themes</a></li>
-                    <li class="submenu-header">Typography</li>
-                    <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
-                </ul>
-            </li>
+            <div class="hero-gallery">
+                <img src="profile.PNG" alt="Renata Oliveira Influencer Content">
+                <img src="profile.PNG" alt="Renata Oliveira Influencer Content">
+                <img src="profile.PNG" alt="Renata Oliveira Influencer Content">
+            </div>
+        </div>
+    </main>
 
-            <li class="dropdown">
-                <span class="menu-label">Theme ▼</span>
-                <ul class="submenu" style="padding: 15px; min-width: 220px;">
-                    <li>
-                        <strong>Mode:</strong><br>
-                        <button class="theme-btn" onclick="setTheme('light')">Light</button>
-                        <button class="theme-btn" onclick="setTheme('dark')">Dark</button>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong>Font Size:</strong><br>
-                        <button class="theme-btn" onclick="setFont('small')">Small</button>
-                        <button class="theme-btn" onclick="setFont('medium')">Medium</button>
-                        <button class="theme-btn" onclick="setFont('large')">Large</button>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <footer>
+        <div class="social-icons">
+            <a href="https://instagram.com/renataoliveiraofficial" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://tiktok.com/@renataoliveiraofficial" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+        </div>
+        <p>&copy; 2026 RENATA OLIVEIRA. ALL RIGHTS RESERVED.</p>
+    </footer>
 
-<main>
-    <h1 class="pink-brand-name">Renata Oliver</h1>
-    
-    <div class="container">
-        <img src="bannerpicture.png" alt="Renata Oliver Portfolio Banner" class="main-photo">
-        
-        <section class="welcome-section">
-            <h2 style="font-family: 'Playfair Display', serif; letter-spacing: 5px; text-transform: uppercase;">Digital Strategist</h2>
-            <p>Intentional strategy and high-end visual storytelling for brands.</p>
-        </section>
-    </div>
-</main>
-
-<footer>
-    <p>&copy; 2026 RENATA OLIVER. ALL RIGHTS RESERVED.</p>
-</footer>
-
-<script>
-    function setTheme(mode) {
-        if (mode === 'dark') { document.body.classList.add('dark-mode'); } 
-        else { document.body.classList.remove('dark-mode'); }
-    }
-    function setFont(size) {
-        document.body.classList.remove('font-small', 'font-medium', 'font-large');
-        document.body.classList.add('font-' + size);
-    }
-</script>
-
+    <script>
+        function setTheme(mode) {
+            if (mode === 'dark') { document.body.classList.add('dark-mode'); } 
+            else { document.body.classList.remove('dark-mode'); }
+        }
+        function setFont(size) {
+            document.body.classList.remove('font-small', 'font-medium', 'font-large');
+            document.body.classList.add('font-' + size);
+        }
+    </script>
 </body>
 </html>
