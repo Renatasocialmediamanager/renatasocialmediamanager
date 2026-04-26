@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Themes | Renata Oliver</title>
+    
+    <link rel="stylesheet" href="../sitewide.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CRITICAL CONSISTENCY FIX: Brand Name */
+        .pink-brand-name {
+            font-family: 'Playfair Display', serif !important;
+            color: #1a1a1a !important; 
+            text-transform: uppercase !important;
+            letter-spacing: 7px !important; 
+            font-size: 34px !important; 
+            font-weight: 400 !important; 
+            margin: 45px 0 !important;
+            text-align: center;
+            display: block;
+        }
+
+        /* LOCAL NAV (Pink Bar) - Matching Overview Exactly */
+        .color-project-header {
+            background-color: #fdf2f6; 
+            padding: 18px 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            width: 100%;
+        }
+
+        .project-nav {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            list-style: none;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .project-nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .project-nav a.active {
+            border-bottom: 2px solid #D470A2;
+            color: #D470A2;
+            padding-bottom: 5px;
+        }
+
+        /* Table Styling */
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        
+        h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 40px; 
+            text-align: center; 
+            margin: 50px 0 30px 0; 
+            color: #1a1a1a; 
+        }
+
+        .color-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03); 
+            background: #fff;
+        }
+
+        .color-table th { 
+            background: #fafafa; 
+            padding: 20px; 
+            text-align: left; 
+            text-transform: uppercase; 
+            font-size: 11px; 
+            letter-spacing: 2px; 
+            border-bottom: 2px solid #eee; 
+        }
+
+        .color-table td { 
+            padding: 25px 20px; 
+            border-bottom: 1px solid #eee; 
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+
+        .swatch-circle { 
+            width: 30px; 
+            height: 30px; 
+            border-radius: 50%; 
+            display: inline-block; 
+            margin-right: 8px; 
+            border: 1px solid #eee; 
+        }
+
+        .btn-next { 
+            display: inline-block; 
+            padding: 18px 40px; 
+            background: #D470A2; 
+            color: #fff; 
+            text-decoration: none; 
+            text-transform: uppercase; 
+            font-size: 11px; 
+            font-weight: bold; 
+            letter-spacing: 2px;
+            border-radius: 4px; 
+            margin-top: 40px; 
+        }
+    </style>
+</head>
+<body class="font-medium">
+
+<header>
+    <nav aria-label="Main Navigation">
+        <ul class="main-menu">
+            <li><a href="../index.html">HOME</a></li>
+            <li class="dropdown">
+                <span class="menu-label">PORTFOLIO ▼</span> 
+                <ul class="submenu">
+                    <li><a href="../resume.html">Full Resume</a></li>
+                    <li><a href="../photoshop1.html">Photoshop 1</a></li>
+                    <li><a href="../photoshop2.html">Photoshop 2</a></li>
+                    <li><a href="../photoshop3.html">Photoshop 3</a></li>
+                    <li><a href="../renata-oliver-marketing-quiz/quiz-mine.html">Marketing Quiz</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <span class="menu-label">DESIGN THEORY ▼</span>
+                <ul class="submenu">
+                    <li><a href="color-overview.html">Color Overview</a></li>
+                    <li><a href="color-themes.html">Color Themes</a></li>
+                    <li><a href="typographyoverview.html">Typography Overview</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1 class="pink-brand-name">RENATA OLIVER</h1>
+
+    <div class="color-project-header">
+        <ul class="project-nav">
+            <li><a href="color-overview.html">1. OVERVIEW</a></li>
+            <li><a href="color-themes.html" class="active">2. COLOR THEMES</a></li>
+            <li><a href="color-article.html">3. COLOR ARTICLE</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Brand Color Palettes</h2>
+        <table class="color-table">
+            <thead>
+                <tr>
+                    <th>Theme Name</th>
+                    <th>Live Swatches</th>
+                    <th>Hex Codes</th>
+                    <th>Psychology</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Signature Pink</strong></td>
+                    <td>
+                        <div class="swatch-circle" style="background:#D470A2;"></div>
+                        <div class="swatch-circle" style="background:#FDF2F6;"></div>
+                    </td>
+                    <td><code>#D470A2, #FDF2F6</code></td>
+                    <td>Luxury, Softness, Modernity</td>
+                </tr>
+                <tr>
+                    <td><strong>Executive Contrast</strong></td>
+                    <td>
+                        <div class="swatch-circle" style="background:#1A1A1A;"></div>
+                        <div class="swatch-circle" style="background:#FFFFFF;"></div>
+                    </td>
+                    <td><code>#1A1A1A, #FFFFFF</code></td>
+                    <td>Authority, Clarity, Minimalism</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="text-align: center;">
+            <a href="color-article.html" class="btn-next">Next: Color Article &rarr;</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://instagram.com/renataoliveiraofficial" target="_blank"><img src="../instagram.png" alt="Instagram"></a>
+        <a href="https://tiktok.com/@renataoliveiraofficial" target="_blank"><img src="../tiktok.png" alt="TikTok"></a>
+    </div>
+    <p>&copy; 2026 RENATA OLIVER. ALL RIGHTS RESERVED.</p>
+</footer>
+
+</body>
+</html>

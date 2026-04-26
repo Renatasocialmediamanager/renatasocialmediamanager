@@ -5,122 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typography Overview | Renata Oliveira</title>
     
-    <link rel="stylesheet" href="sitewide.css">
+    <link rel="stylesheet" href="../sitewide.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <style>
-        /* --- RESET & GLOBAL STYLES --- */
-        body { font-family: 'Montserrat', sans-serif; background-color: #ffffff; margin: 0; padding: 0; }
-        .container { max-width: 900px; margin: 60px auto; padding: 0 40px; }
-
-        /* --- FIXING THE MAIN MENU (Matches your screenshot error) --- */
-        nav { background: #fff; padding: 20px 0; border-bottom: 1px solid #eee; text-align: center; }
-        .main-menu { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 30px; }
-        .main-menu a { text-decoration: none; color: #333; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
-        .main-menu a:hover { color: #D470A2; }
-        
-        /* Dropdown styling */
-        .dropdown { position: relative; }
-        .submenu { display: none; position: absolute; background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); list-style: none; padding: 10px; min-width: 150px; text-align: left; z-index: 100; }
-        .dropdown:hover .submenu { display: block; }
-
-        /* --- LOCAL NAV (4, 5, 6) --- */
-        .local-nav { 
-            text-align: center !important; 
-            padding: 30px 0; 
-            background: #fdf2f6; 
-            margin-bottom: 50px; 
-            width: 100%;
-            display: block;
-            border-bottom: 1px solid #eee;
-        }
-        .local-nav a, .local-nav span { 
-            text-decoration: none; 
-            color: #333; 
-            margin: 0 20px; 
-            font-size: 11px; 
-            font-weight: 700; 
-            text-transform: uppercase; 
-            letter-spacing: 2px;
-            display: inline-block;
-        }
-        .active-link { color: #D470A2 !important; border-bottom: 2px solid #D470A2; padding-bottom: 5px; }
-
-        /* --- CONTENT BOX --- */
-        .analysis-box { 
-            background: #ffffff; padding: 50px; border-radius: 4px; 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.03); border-top: 5px solid #D470A2; 
-            text-align: left; margin-top: 20px;
-        }
-        .site-header h1 { font-family: 'Playfair Display', serif; text-align: center; letter-spacing: 10px; text-transform: uppercase; font-size: 38px; padding: 40px 0; margin: 0; }
-        h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; text-align: center; margin-bottom: 5px; }
-        .sub-header { text-align: center; color: #D470A2; text-transform: uppercase; letter-spacing: 4px; font-size: 10px; font-weight: bold; margin-bottom: 40px; }
-
-        dt { font-weight: bold; color: #D470A2; margin-top: 25px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
-        dd { margin: 10px 0 20px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; line-height: 1.8; }
-
-        .btn-next { display: inline-block; padding: 18px 40px; background: #D470A2; color: #fff; text-decoration: none; text-transform: uppercase; font-size: 10px; font-weight: bold; border-radius: 4px; margin-top: 40px; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="font-medium">
 
-    <header class="site-header">
-        <h1>Renata Oliveira</h1>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul class="main-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <span class="menu-label">Portfolio ▼</span> 
+                    <ul class="submenu">
+                        <li><a href="../resume.html">Full Resume</a></li>
+                        <li class="submenu-header">Showcase</li>
+                        <li><a href="../photoshop1.html">Photoshop 1</a></li>
+                        <li><a href="../photoshop2.html">Photoshop 2</a></li>
+                        <li><a href="../photoshop3.html">Photoshop 3</a></li>
+                        <li class="quiz-link">
+                            <a href="../renata-oliver-marketing-quiz/quiz-mine.html">Marketing Quiz</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Design Theory ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-header">Color Theory</li>
+                        <li><a href="color-overview.html">Color Overview</a></li>
+                        <li><a href="color-themes.html">Color Themes</a></li>
+                        <li class="submenu-header">Typography</li>
+                        <li><a href="typographyoverview.html">Typography Overview</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Theme ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-item" onclick="setTheme('light')">Light Mode</li>
+                        <li class="submenu-item" onclick="setTheme('dark')">Dark Mode</li>
+                        <li class="submenu-header">Font Size</li>
+                        <li class="submenu-item" onclick="setFont('small')">Small</li>
+                        <li class="submenu-item" onclick="setFont('medium')">Medium</li>
+                        <li class="submenu-item" onclick="setFont('large')">Large</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul class="main-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="style.html">Style</a></li>
-            <li><a href="travel.html">Travel</a></li>
-            <li><a href="about-me.html">About Me</a></li>
-            <li class="dropdown">
-                <a href="#" class="menu-label">Portfolio ▼</a> 
-                <ul class="submenu">
-                    <li><a href="resume.html">Full Resume</a></li>
-                    <li><a href="photoshop1.html">Photoshop 1</a></li>
-                    <li><a href="photoshop2.html">Photoshop 2</a></li>
-                    <li><a href="photoshop3.html">Photoshop 3</a></li>
-                    <li><a href="animate.html">Animate Video</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <main>
+        <h1 class="pink-brand-name">Renata Oliveira</h1>
 
-    <div class="local-nav">
-        <span class="active-link">4. Overview</span>
-        <a href="typographyarticle.html">5. Font Types Article</a>
-        <a href="fonttypes.html">6. Comparison</a>
-    </div>
+        <div class="color-project-header" style="background: #fdf2f6; padding: 20px 0; text-align: center; border-bottom: 1px solid #eee;">
+            <ul style="list-style: none; display: flex; justify-content: center; gap: 30px; text-transform: uppercase; font-size: 11px; font-weight: 600; letter-spacing: 2px;">
+                <li><a href="typographyoverview.html" style="color: #D470A2; text-decoration: underline;">4. Overview</a></li>
+                <li><a href="typographyarticle.html" style="text-decoration: none; color: #333;">5. Font Types Article</a></li>
+                <li><a href="fonttypes.html" style="text-decoration: none; color: #333;">6. Comparison</a></li>
+            </ul>
+        </div>
 
-    <main class="container">
-        <h2>The Art of Typography</h2>
-        <p class="sub-header">The Silent Voice of Branding</p>
-        
-        <section class="analysis-box">
-            <dl>
-                <dt>Serif</dt>
-                <dd>Elegant fonts with small "feet." Perfect for high-end luxury headers (e.g., Playfair Display).</dd>
-                
-                <dt>Sans Serif</dt>
-                <dd>Clean, modern fonts without decorative strokes. Best for digital readability (e.g., Montserrat).</dd>
-                
-                <dt>Visual Hierarchy</dt>
-                <dd>Using size and weight to direct the viewer's attention to key messages first.</dd>
-            </dl>
-
-            <div style="text-align: center;">
-                <a href="typographyarticle.html" class="btn-next">Next: Font Types Article &rarr;</a>
+        <div class="container" style="max-width: 900px; margin: 40px auto; padding: 0 40px;">
+            <div class="project-header">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 40px; text-align: center; margin: 50px 0 10px 0; color: #1a1a1a;">The Art of Typography</h2>
+                <p style="text-align: center; color: #D470A2; text-transform: uppercase; letter-spacing: 4px; font-size: 10px; font-weight: bold; margin-bottom: 40px; font-family: 'Montserrat', sans-serif;">The Silent Voice of Branding</p>
             </div>
-        </section>
+            
+            <section class="analysis-box" style="background: #ffffff; padding: 50px; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border-top: 5px solid #D470A2; margin-top: 20px; text-align: left;">
+                <dl>
+                    <dt style="font-weight: bold; color: #D470A2; margin-top: 25px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-family: 'Montserrat', sans-serif;">Serif</dt>
+                    <dd style="margin: 10px 0 20px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; line-height: 1.8; font-family: 'Montserrat', sans-serif; font-size: 14px;">Elegant fonts with small decorative "feet" at the ends of strokes. Perfect for high-end luxury headers (e.g., Playfair Display).</dd>
+                    
+                    <dt style="font-weight: bold; color: #D470A2; margin-top: 25px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-family: 'Montserrat', sans-serif;">Sans Serif</dt>
+                    <dd style="margin: 10px 0 20px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; line-height: 1.8; font-family: 'Montserrat', sans-serif; font-size: 14px;">Clean, modern fonts without decorative strokes. These provide high digital readability and a contemporary feel (e.g., Montserrat).</dd>
+                    
+                    <dt style="font-weight: bold; color: #D470A2; margin-top: 25px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-family: 'Montserrat', sans-serif;">Visual Hierarchy</dt>
+                    <dd style="margin: 10px 0 20px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; line-height: 1.8; font-family: 'Montserrat', sans-serif; font-size: 14px;">The strategic use of font size, weight, and spacing to direct the viewer's attention to the most important messages first.</dd>
+                </dl>
+
+                <div style="text-align: center;">
+                    <a href="typographyarticle.html" style="display: inline-block; padding: 18px 40px; background: #D470A2; color: #fff; text-decoration: none; text-transform: uppercase; font-size: 11px; font-weight: bold; letter-spacing: 2px; border-radius: 4px; margin-top: 40px;">Next: Font Types Article &rarr;</a>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer style="text-align: center; padding: 60px 0; color: #bbb; font-size: 10px; letter-spacing: 2px;">
-        &copy; 2026 RENATA OLIVER &bull; DESIGN THEORY
+    <footer>
+        <div class="social-icons" style="text-align: center; padding: 40px 0;">
+            <a href="https://instagram.com/renataoliveiraofficial" target="_blank" style="margin: 0 10px;">
+                <img src="../instagram.png" alt="Instagram">
+            </a>
+            <a href="https://tiktok.com/@renataoliveiraofficial" target="_blank" style="margin: 0 10px;">
+                <img src="../tiktok.png" alt="TikTok">
+            </a>
+        </div>
+        <p style="text-align: center;">&copy; 2026 RENATA OLIVEIRA. ALL RIGHTS RESERVED.</p>
     </footer>
 
+    <script>
+        function setTheme(mode) {
+            if (mode === 'dark') { document.body.classList.add('dark-mode'); } 
+            else { document.body.classList.remove('dark-mode'); }
+        }
+        function setFont(size) {
+            document.body.classList.remove('font-small', 'font-medium', 'font-large');
+            document.body.classList.add('font-' + size);
+        }
+    </script>
 </body>
 </html>

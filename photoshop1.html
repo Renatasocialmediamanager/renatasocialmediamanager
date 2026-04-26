@@ -6,6 +6,7 @@
     <title>Photoshop 1 | Renata Oliveira</title>
     
     <link rel="stylesheet" href="sitewide.css">
+    <link rel="stylesheet" href="showcase.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +26,7 @@
                         <li><a href="photoshop1.html">Photoshop 1</a></li>
                         <li><a href="photoshop2.html">Photoshop 2</a></li>
                         <li><a href="photoshop3.html">Photoshop 3</a></li>
-                        <li class="quiz-link">
-                            <a href="renata-oliver-marketing-quiz/quiz-mine.html">Marketing Quiz</a>
-                        </li>
+                        <li><a href="renata-oliver-marketing-quiz/quiz-mine.html">Marketing Quiz</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -43,9 +42,10 @@
                 <li class="dropdown">
                     <span class="menu-label">Theme ▼</span>
                     <ul class="submenu">
+                        <li class="submenu-header">Appearance</li>
                         <li class="submenu-item" onclick="setTheme('light')">Light Mode</li>
                         <li class="submenu-item" onclick="setTheme('dark')">Dark Mode</li>
-                        <li class="submenu-header">Font Size</li>
+                        <li class="submenu-header">Text Size</li>
                         <li class="submenu-item" onclick="setFont('small')">Small</li>
                         <li class="submenu-item" onclick="setFont('medium')">Medium</li>
                         <li class="submenu-item" onclick="setFont('large')">Large</li>
@@ -58,32 +58,26 @@
     <main>
         <h1 class="pink-brand-name">Renata Oliveira</h1>
         
-        <div class="container">
-            <section class="welcome-section">
-                <h2 style="font-family: 'Playfair Display', serif; letter-spacing: 5px; text-transform: uppercase;">Photoshop Project 1</h2>
-                <p>Advanced digital compositing and cinematic color grading.</p>
-            </section>
+        <div class="project-container">
+            <h2 class="project-title">Photoshop Project 1</h2>
+            <span class="tech-stack">Adobe Photoshop | Digital Compositing | Color Grading</span>
 
-            <div class="showcase-gallery" style="display: flex; flex-direction: column; gap: 40px; margin-top: 40px;">
-                <div class="project-item">
-                    <img src="pizza1.jpg" alt="Photoshop Project Detail" class="main-photo" style="margin-bottom: 15px;">
-                    <p style="font-size: 13px; color: #666; text-align: center;"><em>Detailed description of your creative process and the tools used.</em></p>
+            <div class="project-item">
+                <img src="pizza1.jpg" alt="Cinematic Food Photography Composite" class="project-image">
+                
+                <div class="project-desc">
+                    <p><strong>The Brief:</strong> Creating "instagrammable" food content that emphasizes high-end aesthetics and cinematic storytelling.</p>
+                    <br>
+                    <p><strong>The Process:</strong> This project involved advanced digital compositing to enhance texture and lighting. Utilizing "mirror-grade" attention to detail, I applied custom color grading to evoke a warm, luxury atmosphere. The goal was to create a raw yet polished visual that resonates with high-fashion brand standards like Zimmermann or Dior.</p>
                 </div>
-                </div>
+            </div>
         </div>
     </main>
 
     <footer>
         <div class="social-icons">
-            <a href="https://instagram.com/renataoliveiraofficial" target="_blank">
-                <img src="instagram.png" alt="Instagram">
-            </a>
-            <a href="https://tiktok.com/@renataoliveiraofficial" target="_blank">
-                <img src="tiktok.png" alt="TikTok">
-            </a>
-            <a href="https://facebook.com/renataoliveiraofficial" target="_blank">
-                <img src="facebook.png" alt="Facebook">
-            </a>
+            <a href="https://instagram.com/renataoliveiraofficial" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://tiktok.com/@renataoliveiraofficial" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
         </div>
         <p>&copy; 2026 RENATA OLIVEIRA. ALL RIGHTS RESERVED.</p>
     </footer>

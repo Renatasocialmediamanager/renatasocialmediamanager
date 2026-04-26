@@ -3,155 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Resume | Renata Oliver</title>
+    <title>Resume | Renata Oliveira</title>
     
     <link rel="stylesheet" href="sitewide.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-        .resume-container {
-            max-width: 850px;
-            margin: 60px auto;
-            padding: 0 40px;
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
+        /* RESUME SPECIFIC ACCENTS (Keeping the pink you liked) */
+        .resume-wrapper { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        
+        .resume-intro p:first-child {
+            color: #D470A2 !important; 
+            font-weight: 600;
         }
 
-        .resume-section {
-            margin-bottom: 40px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
-
-        .resume-section h2 {
+        .collapsible {
+            background-color: #fff;
+            color: #1a1a1a;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: 1px solid #eee;
+            border-left: 5px solid #D470A2;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.3s;
             font-family: 'Playfair Display', serif;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #1a1a1a;
-            font-size: 1.4rem;
-        }
-
-        .job-entry {
+            letter-spacing: 1px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
         }
 
-        /* NEW PINK ACCENT */
-        .job-title { font-weight: 700; color: #D470A2; } 
-        .job-date { font-size: 0.9rem; color: #888; text-transform: uppercase; }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 20px;
+        .active, .collapsible:hover {
+            background-color: #fdf2f6;
         }
 
-        .skill-item {
-            background: #fafafa;
-            padding: 10px 15px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            /* NEW PINK BORDER */
-            border-left: 3px solid #D470A2;
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+            border-left: 5px solid #fdf2f6;
+            margin-bottom: 20px;
         }
 
-        .back-link {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .back-link a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: 2px;
-            transition: 0.3s;
-        }
-
-        .back-link a:hover {
-            color: #D470A2;
-        }
+        .content p { margin: 15px 0; line-height: 1.6; }
+        .content strong { color: #D470A2; }
     </style>
 </head>
-<body>
+<body class="font-medium">
 
 <header>
     <nav aria-label="Main Navigation">
         <ul class="main-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="style.html">Style</a></li>
-            <li><a href="travel.html">Travel</a></li>
-            <li><a href="about-me.html">About Me</a></li>
             <li class="dropdown">
                 <span class="menu-label">Portfolio ▼</span> 
                 <ul class="submenu">
-                    <li><a href="resume.html" style="color: #D470A2; font-weight: bold;">Full Resume</a></li>
+                    <li><a href="resume.html">Full Resume</a></li>
                     <li class="submenu-header">Showcase</li>
                     <li><a href="photoshop1.html">Photoshop 1</a></li>
                     <li><a href="photoshop2.html">Photoshop 2</a></li>
                     <li><a href="photoshop3.html">Photoshop 3</a></li>
-                    <li><a href="animate.html">Animate Video</a></li>
+                    <li><a href="renata-oliver-marketing-quiz/quiz-mine.html">Marketing Quiz</a></li>
                 </ul>
             </li>
             <li class="dropdown">
                 <span class="menu-label">Design Theory ▼</span>
                 <ul class="submenu">
+                    <li class="submenu-header">Color Theory</li>
                     <li><a href="design-theory/color-overview.html">Color Overview</a></li>
                     <li><a href="design-theory/color-themes.html">Color Themes</a></li>
-                    <li><a href="design-theory/color-article.html">Color Article</a></li>
+                    <li class="submenu-header">Typography</li>
+                    <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <span class="menu-label">Theme ▼</span>
+                <ul class="submenu">
+                    <li class="submenu-item" onclick="setTheme('light')">Light Mode</li>
+                    <li class="submenu-item" onclick="setTheme('dark')">Dark Mode</li>
+                    <li class="submenu-header">Font Size</li>
+                    <li class="submenu-item" onclick="setFont('small')">Small</li>
+                    <li class="submenu-item" onclick="setFont('medium')">Medium</li>
+                    <li class="submenu-item" onclick="setFont('large')">Large</li>
                 </ul>
             </li>
         </ul>
     </nav>
 </header>
 
-<main class="resume-container">
-    <h1 style="font-family: 'Playfair Display', serif; text-align: center; font-size: 3rem; margin-bottom: 10px;">Renata Oliveira</h1>
-    <p style="text-align: center; text-transform: uppercase; letter-spacing: 4px; color: #888; margin-bottom: 60px;">Makeup Professional & Digital Explorer</p>
+<main>
+    <h1 class="pink-brand-name">Renata Oliveira</h1>
 
-    <section class="resume-section">
-        <h2>Professional Experience</h2>
-        
-        <div class="job-entry">
-            <span class="job-title">Travel Influencer & Content Strategist</span>
-            <span class="job-date">2020 — Present</span>
+    <div class="resume-wrapper">
+        <section class="resume-intro" style="text-align: center; margin-bottom: 40px; border-bottom: 1px solid #fdf2f6; padding-bottom: 30px;">
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 11px;">NYU Alumna | Chappaqua, New York</p>
+            <p style="font-size: 16px; margin-top: 15px; font-weight: 300;">Visual Storyteller & Digital Strategist driving growth for Luxury, Medical, and Hospitality Brands</p>
+        </section>
+
+        <button type="button" class="collapsible">Executive Social Media Management <span>+</span></button>
+        <div class="content">
+            <p><strong>Lead Creative Strategist | Westchester Portfolio</strong></p>
+            <p>Directing intentional visual branding for industry leaders:</p>
+            <ul style="font-size: 14px; line-height: 1.8;">
+                <li><strong>Medical:</strong> Dr. Giovanni Angelino, MD</li>
+                <li><strong>Fitness:</strong> Fit.con Gym (Chappaqua)</li>
+                <li><strong>Beauty:</strong> Precious Nails & Spa</li>
+                <li><strong>Hospitality:</strong> Craft Pizza & Beer, Bia American Kitchen, Old Stone Trattoria.</li>
+            </ul>
         </div>
-        <p>Managed digital presence with 1M+ followers. Expert in high-end luxury brand collaborations and Adobe Creative Cloud workflows.</p>
 
-        <div class="job-entry">
-            <span class="job-title">Owner | Craft Pizza & Beer</span>
-            <span class="job-date">Pleasantville, NY</span>
+        <button type="button" class="collapsible">Master Photography (28 Years) <span>+</span></button>
+        <div class="content">
+            <p><strong>NYU Degree in Photography</strong></p>
+            <ul style="font-size: 14px; line-height: 1.8;">
+                <li><strong>Wedding Specialist:</strong> Over a decade of luxury storytelling.</li>
+                <li><strong>Studio & Family:</strong> 28 years of professional portraiture experience.</li>
+                <li><strong>Modern Systems:</strong> Drone videography and AI-assisted production.</li>
+            </ul>
         </div>
-        <p>Directing brand positioning, social media management, and business operations for the Pleasantville location.</p>
-    </section>
 
-    <section class="resume-section">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-item">Social Media Management (15M Monthly Views)</div>
-            <div class="skill-item">Adobe Photoshop, Illustrator, Premiere Pro</div>
-            <div class="skill-item">Web Design & Digital Marketing Strategy</div>
-            <div class="skill-item">Trilingual: English, Spanish, Portuguese</div>
+        <button type="button" class="collapsible">Global Brand Partnerships <span>+</span></button>
+        <div class="content">
+            <p>Representing elite brands through influencer marketing:</p>
+            <p><strong>Luxury & Beauty:</strong> YSL, L’Oréal Paris, Pixi Beauty (2026 Campaign Lead), Dove.</p>
+            <p><strong>Retail & Lifestyle:</strong> Target, Forever 21, welovejetlag.</p>
         </div>
-    </section>
 
-    <div class="back-link">
-        <a href="index.html">&larr; Back to Portfolio</a>
+        <button type="button" class="collapsible">Education <span>+</span></button>
+        <div class="content">
+            <p><strong>New York University (NYU)</strong><br>Degree in Photography.</p>
+            <p><strong>Westchester Community College</strong><br>Degrees in Nursing & Web Design.</p>
+            <p><strong>Current Training:</strong> Web Design Professional Program (Advanced UI/UX).</p>
+        </div>
     </div>
 </main>
 
 <footer>
     <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100078193936641" target="_blank"><img src="./facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/renataoliveiraofficial" target="_blank"><img src="./instagram.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@renataoliveiraofficial" target="_blank"><img src="./tiktok.png" alt="TikTok"></a>
-        <a href="https://www.pinterest.com/RenataxoliverNY" target="_blank"><img src="./pinterest.png" alt="Pinterest"></a>
+        <a href="https://instagram.com/renataoliveiraofficial" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+        <a href="https://tiktok.com/@renataoliveiraofficial" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
     </div>
-    <p style="text-align: center; margin-top: 20px;">&copy; 2026 RENATA OLIVER. ALL RIGHTS RESERVED.</p>
+    <p>&copy; 2026 RENATA OLIVEIRA. ALL RIGHTS RESERVED.</p>
 </footer>
+
+<script>
+    function setTheme(mode) {
+        if (mode === 'dark') { document.body.classList.add('dark-mode'); } 
+        else { document.body.classList.remove('dark-mode'); }
+    }
+    function setFont(size) {
+        document.body.classList.remove('font-small', 'font-medium', 'font-large');
+        document.body.classList.add('font-' + size);
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
 
 </body>
 </html>

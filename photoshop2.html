@@ -3,128 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photoshop Showcase 2 | Renata Oliver</title>
+    <title>Photoshop 2 | Renata Oliveira</title>
     
     <link rel="stylesheet" href="sitewide.css">
+    <link rel="stylesheet" href="showcase.css">
     
-    <style>
-        /* FIX FOR MENU OVERLAP */
-        header {
-            position: relative;
-            z-index: 9999; 
-        }
-        .main-menu { position: relative; z-index: 10000; }
-        .submenu { z-index: 10001; }
-
-        /* SECONDARY NAVIGATION (Pink Bar) */
-        .secondary-nav {
-            background-color: #fff0f6; 
-            padding: 20px 0;
-            border-bottom: 1px solid #f8d7da;
-            text-align: center;
-            position: relative;
-            z-index: 1; 
-        }
-        .sub-project-menu {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin: 0;
-            padding: 0;
-        }
-        .sub-project-menu li a {
-            text-decoration: none;
-            color: #444;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-            padding-bottom: 8px;
-        }
-        .sub-project-menu li a:hover { color: #d11c5c; }
-        .sub-project-menu li a.active {
-            color: #d11c5c;
-            border-bottom: 2px solid #d11c5c;
-        }
-
-        /* PROJECT STYLING */
-        .project-container {
-            max-width: 900px;
-            margin: 80px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-        .main-header {
-            font-family: 'Playfair Display', 'Georgia', serif; 
-            font-weight: 700; font-size: 3.2rem; margin-bottom: 5px; color: #1a1a1a;
-        }
-        .sub-header {
-            font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
-            color: #d11c5c; margin-bottom: 60px; font-weight: 600;
-        }
-        .project-image {
-            width: 100%; max-width: 850px; height: auto; display: block;
-            margin: 0 auto 50px auto; box-shadow: 0 30px 60px rgba(0,0,0,0.08);
-        }
-        .project-desc {
-            max-width: 650px; margin: 0 auto; text-align: left;
-            line-height: 2.1; color: #555; font-size: 15px;
-        }
-        .back-btn {
-            display: inline-block; margin-top: 80px; padding: 18px 50px;
-            border: 1px solid #1a1a1a; text-decoration: none; color: #1a1a1a;
-            text-transform: uppercase; font-size: 11px; letter-spacing: 3px;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="font-medium">
 
-<header>
-    <nav aria-label="Main Navigation">
-        <ul class="main-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="style.html">Style</a></li>
-            <li><a href="travel.html">Travel</a></li>
-            <li><a href="about-me.html">About Me</a></li>
-            <li class="dropdown">
-                <a href="#" class="menu-label">Portfolio ▼</a> 
-                <ul class="submenu">
-                    <li><a href="resume.html">Full Resume</a></li>
-                    <li><a href="photoshop1.html">Photoshop 1</a></li>
-                    <li><a href="photoshop2.html">Photoshop 2</a></li>
-                    <li><a href="photoshop3.html">Photoshop 3</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="menu-label" style="color: #d11c5c;">Design Theory ▼</a>
-                <ul class="submenu">
-                    <li><a href="design-theory/color-overview.html">Color Overview</a></li>
-                    <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <span class="menu-label">Portfolio ▼</span> 
+                    <ul class="submenu">
+                        <li><a href="resume.html">Full Resume</a></li>
+                        <li class="submenu-header">Showcase</li>
+                        <li><a href="photoshop1.html">Photoshop 1</a></li>
+                        <li><a href="photoshop2.html">Photoshop 2</a></li>
+                        <li><a href="photoshop3.html">Photoshop 3</a></li>
+                        <li><a href="renata-oliver-marketing-quiz/quiz-mine.html">Marketing Quiz</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Design Theory ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-header">Color Theory</li>
+                        <li><a href="design-theory/color-overview.html">Color Overview</a></li>
+                        <li><a href="design-theory/color-themes.html">Color Themes</a></li>
+                        <li class="submenu-header">Typography</li>
+                        <li><a href="design-theory/typographyoverview.html">Typography Overview</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Theme ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-header">Appearance</li>
+                        <li class="submenu-item" onclick="setTheme('light')">Light Mode</li>
+                        <li class="submenu-item" onclick="setTheme('dark')">Dark Mode</li>
+                        <li class="submenu-header">Text Size</li>
+                        <li class="submenu-item" onclick="setFont('small')">Small</li>
+                        <li class="submenu-item" onclick="setFont('medium')">Medium</li>
+                        <li class="submenu-item" onclick="setFont('large')">Large</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-<nav class="secondary-nav">
-    <ul class="sub-project-menu">
-        <li><a href="photoshop1.html">Photoshop 1</a></li>
-        <li><a href="photoshop2.html" class="active">Photoshop 2</a></li>
-        <li><a href="photoshop3.html">Photoshop 3</a></li>
-    </ul>
-</nav>
+    <main>
+        <h1 class="pink-brand-name">Renata Oliveira</h1>
+        
+        <div class="project-container">
+            <h2 class="project-title">Photoshop Project 2</h2>
+            <span class="tech-stack">Advanced Retouching | Skin Texture | High-Fashion Aesthetics</span>
 
-<main class="project-container">
-    <h1 class="main-header">Brand Positioning</h1>
-    <p class="sub-header">SOCIAL MEDIA & STRATEGIC DESIGN</p>
-    <img src="project-4.jpg" alt="Branding Project" class="project-image">
-    <div class="project-desc">
-        <p>This project was developed in <strong>Adobe Photoshop</strong> to create a unified marketing visual. The focus was on establishing brand authority through compositional balance and selective color grading.</p>
-    </div>
-    <a href="index.html" class="back-btn">Back to Portfolio</a>
-</main>
+            <div class="project-item">
+                <img src="project-3.jpg" alt="High-End Beauty Retouching Detail" class="project-image">
+                
+                <div class="project-desc">
+                    <p><strong>The Brief:</strong> Creating high-fidelity beauty imagery that meets the standards of global fashion houses.</p>
+                    <br>
+                    <p><strong>The Process:</strong> This showcase focuses on high-end retouching and "mirror-grade" craftsmanship. By balancing unpolished, raw storytelling with professional digital refinement, I developed a visual style that emphasizes natural skin texture while maintaining a cinematic glow. This approach is designed to resonate with high-end, instagrammable audiences and premium brands.</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
+    <footer>
+        <div class="social-icons">
+            <a href="https://instagram.com/renataoliveiraofficial" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://tiktok.com/@renataoliveiraofficial" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+        </div>
+        <p>&copy; 2026 RENATA OLIVEIRA. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        function setTheme(mode) {
+            if (mode === 'dark') { document.body.classList.add('dark-mode'); } 
+            else { document.body.classList.remove('dark-mode'); }
+        }
+        function setFont(size) {
+            document.body.classList.remove('font-small', 'font-medium', 'font-large');
+            document.body.classList.add('font-' + size);
+        }
+    </script>
 </body>
 </html>

@@ -4,83 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Overview | Renata Oliveira</title>
+    
     <link rel="stylesheet" href="../sitewide.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #ffffff; margin: 0; }
-        .container { max-width: 900px; margin: 60px auto; padding: 0 40px; }
-
-        /* LOCAL NAV BAR - CENTERED & COHESIVE */
-        .local-nav { 
-            text-align: center !important; 
-            padding: 25px 0; 
-            background: #fdf2f6; 
-            margin-bottom: 50px; 
-            width: 100%;
-            border-bottom: 1px solid #eee;
-        }
-        .local-nav a, .local-nav span { 
-            text-decoration: none; color: #333; margin: 0 20px; 
-            font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;
-        }
-        .active-link { color: #D470A2 !important; border-bottom: 2px solid #D470A2; padding-bottom: 5px; }
-
-        /* THE ANALYSIS BOX */
-        .analysis-box { 
-            background: #ffffff; padding: 50px; border-radius: 4px; 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.03); border-top: 5px solid #D470A2; 
-            margin-top: 40px; text-align: left;
-        }
-        .project-header h2 { font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; margin-bottom: 10px; }
-
-        dt { font-weight: bold; color: #D470A2; margin-top: 25px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
-        dd { margin: 10px 0 20px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; line-height: 1.8; }
-
-        .btn-next { 
-            display: inline-block; padding: 18px 40px; background: #D470A2; color: #fff; 
-            text-decoration: none; text-transform: uppercase; font-size: 10px; font-weight: bold; 
-            border-radius: 4px; margin-top: 40px; transition: 0.3s;
-        }
-    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="site-header"><h1 class="pink-brand-name">Renata Oliveira</h1></header>
-    <nav>
-        <ul class="main-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../style.html">Style</a></li>
-            <li><a href="../travel.html">Travel</a></li>
-            <li><a href="../about-me.html">About Me</a></li>
-            <li class="dropdown">
-                <span class="menu-label">Portfolio ▼</span> 
-                <ul class="submenu">
-                    <li><a href="../resume.html">Full Resume</a></li>
-                    <li><a href="../photoshop1.html">Photoshop 1</a></li>
-                    <li><a href="../photoshop2.html">Photoshop 2</a></li>
-                    <li><a href="../photoshop3.html">Photoshop 3</a></li>
-                    <li><a href="../animate.html">Animate Video</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+<body class="font-medium">
 
-    <div class="local-nav">
-        <span class="active-link">1. Overview</span> | 
-        <a href="color-themes.html">2. Color Themes</a> | 
-        <a href="color-article.html">3. Color Article</a>
-    </div>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul class="main-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <span class="menu-label">Portfolio ▼</span> 
+                    <ul class="submenu">
+                        <li><a href="../resume.html">Full Resume</a></li>
+                        <li class="submenu-header">Showcase</li>
+                        <li><a href="../photoshop1.html">Photoshop 1</a></li>
+                        <li><a href="../photoshop2.html">Photoshop 2</a></li>
+                        <li><a href="../photoshop3.html">Photoshop 3</a></li>
+                        <li class="quiz-link">
+                            <a href="../renata-oliver-marketing-quiz/quiz-mine.html">Marketing Quiz</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Design Theory ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-header">Color Theory</li>
+                        <li><a href="color-overview.html">Color Overview</a></li>
+                        <li><a href="color-themes.html">Color Themes</a></li>
+                        <li class="submenu-header">Typography</li>
+                        <li><a href="typographyoverview.html">Typography Overview</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Theme ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-item" onclick="setTheme('light')">Light Mode</li>
+                        <li class="submenu-item" onclick="setTheme('dark')">Dark Mode</li>
+                        <li class="submenu-header">Font Size</li>
+                        <li class="submenu-item" onclick="setFont('small')">Small</li>
+                        <li class="submenu-item" onclick="setFont('medium')">Medium</li>
+                        <li class="submenu-item" onclick="setFont('large')">Large</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    <main class="container">
-        <div class="project-header"><h2>The Power of Color</h2></div>
-        <section class="analysis-box">
-            <dl>
-                <dt>Hue</dt><dd>The actual color family.</dd>
-                <dt>Saturation</dt><dd>The intensity or purity of the color.</dd>
-                <dt>Value</dt><dd>The lightness or darkness of a color.</dd>
-            </dl>
-            <div style="text-align: center;"><a href="color-themes.html" class="btn-next">Next: Color Themes &rarr;</a></div>
-        </section>
+    <main>
+        <h1 class="pink-brand-name">Renata Oliveira</h1>
+        
+        <div class="color-project-header" style="background: #fdf2f6; padding: 20px 0; text-align: center; border-bottom: 1px solid #eee;">
+            <ul style="list-style: none; display: flex; justify-content: center; gap: 30px; text-transform: uppercase; font-size: 11px; font-weight: 600; letter-spacing: 2px;">
+                <li><a href="color-overview.html" style="color: #D470A2; text-decoration: underline;">1. Overview</a></li>
+                <li><a href="color-themes.html" style="text-decoration: none; color: #333;">2. Color Themes</a></li>
+                <li><a href="color-article.html" style="text-decoration: none; color: #333;">3. Color Article</a></li>
+            </ul>
+        </div>
+
+        <div class="container" style="max-width: 900px; margin: 40px auto; padding: 0 40px;">
+            <div class="project-header">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 40px; text-align: center; margin: 50px 0 30px 0; color: #1a1a1a;">The Power of Color</h2>
+            </div>
+            
+            <section class="analysis-box" style="background: #ffffff; padding: 50px; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border-top: 5px solid #D470A2; margin-top: 20px; text-align: left;">
+                <dl>
+                    <dt style="font-weight: bold; color: #D470A2; margin-top: 25px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-family: 'Montserrat', sans-serif;">Hue</dt>
+                    <dd style="margin: 10px 0 20px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; line-height: 1.8; font-family: 'Montserrat', sans-serif; font-size: 14px;">The actual color family or the name of the color (e.g., Red, Blue, Pink).</dd>
+                    
+                    <dt style="font-weight: bold; color: #D470A2; margin-top: 25px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-family: 'Montserrat', sans-serif;">Saturation</dt>
+                    <dd style="margin: 10px 0 20px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; line-height: 1.8; font-family: 'Montserrat', sans-serif; font-size: 14px;">The intensity or purity of the color. High saturation is vivid, while low saturation is muted or grayish.</dd>
+                    
+                    <dt style="font-weight: bold; color: #D470A2; margin-top: 25px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-family: 'Montserrat', sans-serif;">Value</dt>
+                    <dd style="margin: 10px 0 20px 0; border-left: 3px solid #fdf2f6; padding-left: 20px; color: #444; line-height: 1.8; font-family: 'Montserrat', sans-serif; font-size: 14px;">The lightness or darkness of a color, ranging from white to black.</dd>
+                </dl>
+                
+                <div style="text-align: center;">
+                    <a href="color-themes.html" style="display: inline-block; padding: 18px 40px; background: #D470A2; color: #fff; text-decoration: none; text-transform: uppercase; font-size: 11px; font-weight: bold; letter-spacing: 2px; border-radius: 4px; margin-top: 40px;">Next: Color Themes &rarr;</a>
+                </div>
+            </section>
+        </div>
     </main>
+
+    <footer>
+        <div class="social-icons" style="text-align: center; padding: 40px 0;">
+            <a href="https://instagram.com/renataoliveiraofficial" target="_blank" style="margin: 0 10px;">
+                <img src="../instagram.png" alt="Instagram">
+            </a>
+            <a href="https://tiktok.com/@renataoliveiraofficial" target="_blank" style="margin: 0 10px;">
+                <img src="../tiktok.png" alt="TikTok">
+            </a>
+        </div>
+        <p style="text-align: center;">&copy; 2026 RENATA OLIVEIRA. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        function setTheme(mode) {
+            if (mode === 'dark') { document.body.classList.add('dark-mode'); } 
+            else { document.body.classList.remove('dark-mode'); }
+        }
+        function setFont(size) {
+            document.body.classList.remove('font-small', 'font-medium', 'font-large');
+            document.body.classList.add('font-' + size);
+        }
+    </script>
 </body>
 </html>

@@ -1,366 +1,138 @@
-/* --- 1. GLOBAL RESET & BASE --- */
-* { 
-    box-sizing: border-box; 
-    margin: 0; 
-    padding: 0; 
-}
-
-html, body {
-    width: 100%;
-    overflow-x: hidden; 
-    background-color: #fff; 
+/* --- GLOBAL BRANDING & TYPOGRAPHY --- */
+body {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
     color: #1a1a1a;
-    line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* --- 2. BRAND HEADER --- */
-h1.pink-brand-name {
-    color: #1a1a1a !important; 
-    text-align: center !important;
+/* Standardized 40px scale for Renata Oliveira branding */
+.pink-brand-name {
     font-family: 'Playfair Display', serif !important;
-    display: block !important;
-    width: 100% !important;
-    letter-spacing: 10px !important;
-    padding: 40px 0 !important;
-    margin: 0 auto !important;
-    font-size: 38px !important;
-    font-weight: 400 !important;
-    text-transform: uppercase !important;
+    font-size: 40px !important;
+    letter-spacing: 12px !important;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 60px 0 40px 0 !important;
+    display: block;
+    font-weight: 400;
 }
 
-/* --- 3. UNIVERSAL NAVIGATION --- */
-nav {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    padding: 25px 0; 
-    border-bottom: 1px solid #eee;
-    position: sticky; 
-    top: 0; 
-    z-index: 2000; 
-    background: #fff;
-    width: 100%;
+/* --- NAVIGATION MENU --- */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.main-menu { 
-    display: flex; 
-    list-style: none; 
-    gap: 35px; 
-}
-
-.menu-label, .main-menu a {
-    text-decoration: none; 
-    color: #333; 
-    font-weight: bold;
-    font-size: 11px; 
-    text-transform: uppercase; 
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.main-menu a:hover, .dropdown:hover .menu-label { 
-    color: #D470A2; 
-}
-
-/* --- 4. DROPDOWN SUBMENU --- */
-.dropdown { position: relative; }
-
-.submenu {
-    display: none; 
-    position: absolute; 
-    top: 100%; 
-    left: 50%; 
-    transform: translateX(-50%);
-    background: white; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    min-width: 240px; 
-    z-index: 3000; 
-    border: 1px solid #eee; 
-    list-style: none; 
-    padding: 15px 0;
-}
-
-.dropdown:hover .submenu { 
-    display: flex; 
-    flex-direction: column; 
-}
-
-.submenu a, .submenu-item { 
-    padding: 10px 20px; 
-    text-align: center; 
-    display: block; 
-    text-decoration: none; 
-    color: #444; 
-    font-size: 11px;
-    cursor: pointer;
-}
-
-.submenu a:hover, .submenu-item:hover { 
-    background: #fdf2f6; 
-    color: #D470A2;
-}
-
-.submenu-header { 
-    display: block; 
-    padding: 15px 20px 5px 20px; 
-    font-weight: bold; 
-    color: #D470A2; 
-    font-size: 10px; 
-    text-transform: uppercase; 
-    text-align: center; 
-    letter-spacing: 2px;
-    border-top: 1px solid #f9f9f9;
-    margin-top: 10px;
-}
-
-/* --- 5. ENHANCED COLLAPSIBLE SECTIONS --- */
-.resume-wrapper {
-    max-width: 850px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.collapsible {
-    background-color: #eeeeee !important; 
-    color: #1a1a1a !important;
-    cursor: pointer;
-    padding: 20px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 11px !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    letter-spacing: 2px !important;
-    margin-bottom: 10px; 
-    transition: 0.3s ease;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
-
-.collapsible:hover { 
-    background-color: #fdf2f6 !important; 
-    color: #D470A2 !important;
-}
-
-.content { 
-    display: none; 
-    padding: 25px; 
-    border: 1px solid #eee; 
-    border-top: none; 
-    text-align: left; 
-    background: #ffffff; 
-    margin-bottom: 20px;
-}
-
-/* --- 6. THEME OVERRIDES --- */
-body.dark-mode { 
-    background-color: #1a1a1a !important; 
-    color: #f4f4f4 !important; 
-}
-
-body.dark-mode nav, body.dark-mode .submenu { 
-    background-color: #222 !important; 
-    border-color: #444 !important; 
-}
-
-body.dark-mode .menu-label, 
-body.dark-mode .main-menu a, 
-body.dark-mode h1.pink-brand-name { 
-    color: #ffffff !important; 
-}
-
-body.dark-mode .collapsible { 
-    background-color: #333 !important; 
-    color: #fff !important; 
-    border-color: #444 !important; 
-}
-
-body.dark-mode .content { 
-    background: #2a2a2a; 
-    color: #ddd; 
-    border-color: #444; 
-}
-
-/* Font Sizing Overrides */
-body.font-small h1.pink-brand-name { font-size: 28px !important; }
-body.font-small .menu-label, body.font-small .main-menu a, body.font-small .collapsible { font-size: 9px !important; }
-
-body.font-large h1.pink-brand-name { font-size: 50px !important; }
-body.font-large .menu-label, body.font-large .main-menu a, body.font-large .collapsible { font-size: 16px !important; }
-body.font-large p, body.font-large div { font-size: 20px !important; }
-
-/* --- 7. LAYOUT CONTAINERS --- */
-.container { 
-    max-width: 1100px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-}
-
-.main-photo { 
-    width: 100%; 
-    height: auto; 
-    display: block; 
-    margin: 40px auto; 
-    border-radius: 4px; 
-}
-
-.welcome-section { 
-    text-align: center; 
-    margin: 60px auto; 
-    max-width: 850px; 
-}
-
-/* --- 8. SOCIAL MEDIA ICONS --- */
-.social-icons {
+.main-menu {
+    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin: 40px 0;
-    padding: 20px 0;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
-.social-icons img {
-    width: 30px !important;
-    height: 30px !important;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.social-icons a:hover img {
-    transform: scale(1.2);
-}
-
-/* Dark Mode Icon Adjustment */
-body.dark-mode .social-icons img {
-    filter: invert(1);
-}
-
-/* --- 9. FOOTER --- */
-footer { 
-    text-align: center; 
-    padding: 40px 20px 80px 20px; 
-    border-top: 1px solid #eee; 
-    margin-top: 60px; 
-    font-size: 10px; 
-    color: #bbb; 
-    letter-spacing: 2px; 
+.main-menu a, .menu-label {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 11px;
+    font-weight: 600;
     text-transform: uppercase;
-}
-/* --- 10. MARKETING QUIZ STYLES --- */
-#quiz-container {
-    max-width: 850px;
-    margin: 60px auto;
-    padding: 0 20px;
-    text-align: left;
-}
-
-#quiz-container h1 {
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 5px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.intro {
-    text-align: center;
-    color: #999;
-    font-size: 12px;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-}
-
-/* Question List Styling */
-.question {
-    list-style-position: inside;
-    margin-bottom: 50px;
-    padding: 30px;
-    background: #fafafa; /* Very light grey to separate questions */
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.q-title {
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    display: block;
-}
-
-/* Radio & Checkbox Labels */
-.question label {
-    display: block;
-    padding: 12px 15px;
-    margin: 8px 0;
-    background: #fff;
-    border: 1px solid #eee;
-    font-size: 12px;
     cursor: pointer;
+}
+
+/* --- DROPDOWN & THEME MENU FIX --- */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    list-style: none;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Clears the confusion in the Theme menu */
+.submenu-header {
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    color: #D470A2 !important; /* Your signature pink */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 15px 0 5px 0;
+    margin-top: 5px;
+    border-top: 1px solid #f9f9f9;
+}
+
+.submenu li:first-child .submenu-header {
+    border-top: none;
+    margin-top: 0;
+}
+
+.submenu-item, .submenu li a {
+    padding: 12px 20px;
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #444;
+    text-decoration: none;
     transition: 0.2s;
 }
 
-.question label:hover {
-    background: #fdf2f6; /* Matching your pink brand hover color */
-    border-color: #D470A2;
-}
-
-/* Free Form Input */
-input[type="text"] {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #eee;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    outline: none;
-}
-
-input[type="text"]:focus {
-    border-color: #D470A2;
-}
-
-/* Submit Button - Matching your Brand */
-#submit-btn {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: 40px auto;
-    background-color: #1a1a1a;
-    color: #fff;
-    border: none;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#submit-btn:hover {
-    background-color: #D470A2; /* Pink on hover */
-}
-
-/* Results Box */
-.score-box {
-    text-align: center;
-    padding: 40px;
-    background: #fdf2f6;
-    border: 1px solid #D470A2;
-    margin-top: 40px;
-}
-
-.score-box h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
+.submenu-item:hover, .submenu li a:hover {
+    background-color: #fdf2f6; /* Soft pink hover state */
     color: #D470A2;
-    margin-bottom: 10px;
+}
+
+/* --- GLOBAL THEMES --- */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .pink-brand-name { color: #ffffff; }
+.dark-mode header, .dark-mode .submenu { background-color: #1a1a1a; border-color: #333; }
+.dark-mode .main-menu a, .dark-mode .menu-label, .dark-mode .submenu-item { color: #eee; }
+
+/* --- GLOBAL FOOTER --- */
+footer {
+    padding: 60px 0 40px;
+    text-align: center;
+    background-color: #fafafa;
+    margin-top: 80px;
+}
+
+.social-icons img {
+    width: 22px;
+    margin: 0 15px;
+    transition: opacity 0.3s;
+}
+
+footer p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #999;
+    margin-top: 25px;
 }

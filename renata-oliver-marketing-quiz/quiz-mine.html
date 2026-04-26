@@ -3,164 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing IQ | Renata Oliver Media</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Marketing Quiz | Renata Oliveira</title>
     
     <link rel="stylesheet" href="../sitewide.css">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
-        /* Quiz-Specific Layout Tweaks */
-        #quiz-container { 
-            max-width: 850px; 
-            margin: 40px auto; 
-            padding: 0 20px; 
-            text-align: left; 
-        }
-        
-        .question { 
-            margin-bottom: 50px !important; 
-            background: #fafafa; 
-            padding: 30px; 
-            border-radius: 4px; 
-            border-left: 5px solid #eee;
-            transition: all 0.3s ease;
+        /* --- BRANDING SCALE FIX --- */
+        .pink-brand-name {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 40px !important;       
+            letter-spacing: 12px !important;  
+            text-transform: uppercase;
+            color: #1a1a1a;
+            text-align: center;
+            margin: 60px 0 40px 0 !important;
+            display: block;
+            font-weight: 400;
         }
 
-        .q-title { 
-            font-weight: bold; 
-            font-size: 14px; 
-            margin-bottom: 25px; 
+        /* --- CLEAN & CLEAR MENU STYLING --- */
+        .submenu {
+            min-width: 180px !important;
+            padding: 10px 0 !important;
+        }
+
+        .submenu-header {
+            font-size: 9px !important;
+            font-weight: 700 !important;
+            color: #D470A2 !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 15px 0 5px 0;
+            text-align: center;
+            border-top: 1px solid #f9f9f9;
+            margin-top: 10px;
+        }
+
+        /* First header shouldn't have a border/margin */
+        .submenu li:first-child .submenu-header {
+            border-top: none;
+            margin-top: 0;
+            padding-top: 5px;
+        }
+
+        .submenu-item {
+            cursor: pointer;
+            padding: 12px 20px;
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #444;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .submenu-item:hover {
+            background-color: #fdf2f6;
+            color: #D470A2;
+        }
+
+        /* --- QUIZ CONTAINER --- */
+        .quiz-container {
+            max-width: 800px; 
+            margin: 0 auto;
+            padding: 0 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .question-block {
+            margin-bottom: 25px;
+            padding: 30px;
+            background: #fff;
+            border-left: 4px solid #fdf2f6;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .option {
             display: block; 
-            letter-spacing: 1px; 
+            margin: 15px 0;
+            cursor: pointer;
+            font-size: 14px;
         }
 
-        .question label { 
-            display: flex !important; 
-            align-items: center; 
-            padding: 15px 20px !important; 
-            margin: 10px 0 !important; 
-            background: #fff; 
-            border: 1px solid #eee; 
-            cursor: pointer; 
-            transition: 0.3s; 
-            font-size: 13px; 
+        .calc-button {
+            display: block;
+            margin: 50px auto;
+            padding: 18px 50px;
+            background-color: #D470A2;
+            color: white;
+            border: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.3s;
         }
 
-        .question label:hover { 
-            background-color: #fdf2f6 !important; 
-            border-color: #D470A2 !important; 
+        #results {
+            text-align: center;
+            padding: 30px;
+            margin-top: 20px;
+            display: none;
+            border-top: 1px solid #eee;
         }
-
-        .question input { margin-right: 15px !important; }
-
-        #submit-btn { 
-            display: block; 
-            width: 100%; 
-            max-width: 350px; 
-            margin: 40px auto; 
-            background: #1a1a1a; 
-            color: #fff; 
-            padding: 22px; 
-            border: none; 
-            text-transform: uppercase; 
-            letter-spacing: 4px; 
-            font-weight: bold; 
-            cursor: pointer; 
-        }
-        
-        #submit-btn:hover { background: #D470A2; }
-
-        .score-box { 
-            text-align: center; 
-            padding: 50px; 
-            background: #fdf2f6; 
-            border: 1px solid #D470A2; 
-            margin: 40px 0 80px 0; 
-        }
-
-        /* Dark Mode Support */
-        body.dark-mode .question { background: #2a2a2a; color: #fff; border-color: #444; }
-        body.dark-mode .question label { background: #333; border-color: #444; color: #eee; }
     </style>
 </head>
 <body class="font-medium">
 
-<header class="site-header">
-    <nav aria-label="Main Navigation">
-        <ul class="main-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../style.html">Style</a></li>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul class="main-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <span class="menu-label">Portfolio ▼</span> 
+                    <ul class="submenu">
+                        <li><a href="../resume.html">Full Resume</a></li>
+                        <li class="submenu-header">Showcase</li>
+                        <li><a href="../photoshop1.html">Photoshop 1</a></li>
+                        <li><a href="../photoshop2.html">Photoshop 2</a></li>
+                        <li><a href="../photoshop3.html">Photoshop 3</a></li>
+                        <li><a href="quiz-mine.html">Marketing Quiz</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Design Theory ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-header">Color Theory</li>
+                        <li><a href="../design-theory/color-overview.html">Color Overview</a></li>
+                        <li><a href="../design-theory/color-themes.html">Color Themes</a></li>
+                        <li class="submenu-header">Typography</li>
+                        <li><a href="../design-theory/typographyoverview.html">Typography Overview</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span class="menu-label">Theme ▼</span>
+                    <ul class="submenu">
+                        <li class="submenu-header">Appearance</li>
+                        <li class="submenu-item" onclick="setTheme('light')">Light Mode</li>
+                        <li class="submenu-item" onclick="setTheme('dark')">Dark Mode</li>
+                        
+                        <li class="submenu-header">Text Size</li>
+                        <li class="submenu-item" onclick="setFont('small')">Small</li>
+                        <li class="submenu-item" onclick="setFont('medium')">Medium</li>
+                        <li class="submenu-item" onclick="setFont('large')">Large</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="pink-brand-name">Renata Oliveira</h1>
+
+        <div class="quiz-container">
+            <div class="quiz-header" style="text-align: center; margin-bottom: 50px;">
+                <h2 style="font-family: 'Playfair Display', serif; text-transform: uppercase; letter-spacing: 3px;">Marketing Strategy Quiz</h2>
+                <p>Test your brand awareness and digital strategy knowledge.</p>
+            </div>
+
+            <form id="marketingQuiz">
+                <div class="question-block">
+                    <p><strong>1. Which platform is best for reaching Gen Z with short-form video?</strong></p>
+                    <label class="option"><input type="radio" name="q1" value="tiktok"> TikTok</label>
+                    <label class="option"><input type="radio" name="q1" value="other"> Facebook</label>
+                    <label class="option"><input type="radio" name="q1" value="other"> LinkedIn</label>
+                </div>
+
+                <div class="question-block">
+                    <p><strong>2. On Instagram, what is unique users vs. total views?</strong></p>
+                    <label class="option"><input type="radio" name="qInsta" value="correct"> Reach (Unique) vs. Impressions (Total)</label>
+                    <label class="option"><input type="radio" name="qInsta" value="wrong"> Impressions (Unique) vs. Reach (Total)</label>
+                </div>
+
+                <div class="question-block">
+                    <p><strong>3. What are the core pillars of a luxury brand aesthetic? (Check all)</strong></p>
+                    <label class="option"><input type="checkbox" name="q2" value="quality"> High-quality imagery</label>
+                    <label class="option"><input type="checkbox" name="q2" value="palette"> Consistent color palette</label>
+                    <label class="option"><input type="checkbox" name="q2" value="space"> Intentional white space</label>
+                </div>
+
+                <div class="question-block">
+                    <p><strong>4. What is the industry term for follower interaction?</strong></p>
+                    <input type="text" id="engagement-term" placeholder="Type answer here..." style="width: 100%; padding: 12px; border: 1px solid #eee; box-sizing: border-box;">
+                </div>
+
+                <button type="button" class="calc-button" onclick="calculateScore()">Calculate Results</button>
+            </form>
+
+            <div id="results"></div>
+        </div>
+    </main>
+
+    <script>
+        function calculateScore() {
+            let score = 0;
+            if (document.querySelector('input[name="q1"]:checked')?.value === "tiktok") score++;
+            if (document.querySelector('input[name="qInsta"]:checked')?.value === "correct") score++;
             
-            <li class="dropdown">
-                <span class="menu-label">Portfolio ▼</span> 
-                <ul class="submenu">
-                    <li><a href="../resume.html">Full Resume</a></li>
-                    <li><a href="../showcase.html">Showcase</a></li>
-                    <li><a href="quiz-mine.html">Marketing Quiz</a></li>
-                </ul>
-            </li>
+            const q2 = document.querySelectorAll('input[name="q2"]:checked');
+            if (q2.length === 3) score++; // Simplified check for all correct checkmarks
 
-            <li class="dropdown">
-                <span class="menu-label">Design Theory ▼</span>
-                <ul class="submenu">
-                    <li><a href="../design-theory/color-overview.html">Color Overview</a></li>
-                    <li><a href="../design-theory/typographyoverview.html">Typography Overview</a></li>
-                </ul>
-            </li>
+            const q4 = document.getElementById('engagement-term').value.toLowerCase().trim();
+            if (q4.includes("engagement")) score++;
 
-            <li class="dropdown">
-                <span class="menu-label">Theme ▼</span>
-                <ul class="submenu" style="padding: 15px; min-width: 220px;">
-                    <li>
-                        <strong>Mode:</strong><br>
-                        <button class="theme-btn" onclick="setTheme('light')">Light</button>
-                        <button class="theme-btn" onclick="setTheme('dark')">Dark</button>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong>Font Size:</strong><br>
-                        <button class="theme-btn" onclick="setFont('small')">Small</button>
-                        <button class="theme-btn" onclick="setFont('medium')">Medium</button>
-                        <button class="theme-btn" onclick="setFont('large')">Large</button>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</header>
+            const res = document.getElementById('results');
+            res.style.display = "block";
+            res.innerHTML = `<h3 style="color: #D470A2;">Score: ${score}/4</h3>
+                             <p style="font-weight: 600;">${score === 4 ? "Perfect! You're a Strategist." : "Nice work! Keep learning."}</p>`;
+        }
 
-<h1 class="pink-brand-name" style="text-align: center; margin-top: 40px;">Renata Oliver</h1>
-<p style="text-align: center; text-transform: uppercase; letter-spacing: 3px; font-size: 11px; color: #999;">Social Media Marketing Health Check</p>
+        function setTheme(mode) {
+            if (mode === 'dark') document.body.classList.add('dark-mode');
+            else document.body.classList.remove('dark-mode');
+        }
 
-<div id="quiz-container">
-    <div id="questions-area"></div>
-    
-    <div class="controls">
-        <button id="submit-btn">Calculate My Results</button>
-    </div>
-
-    <div id="result"></div>
-</div>
-
-<footer>
-    <p style="text-align: center; padding: 40px; color: #bbb; font-size: 10px;">&copy; 2026 RENATA OLIVER. ALL RIGHTS RESERVED.</p>
-</footer>
-
-<script>
-    function setTheme(mode) {
-        if (mode === 'dark') { document.body.classList.add('dark-mode'); } 
-        else { document.body.classList.remove('dark-mode'); }
-    }
-    function setFont(size) {
-        document.body.classList.remove('font-small', 'font-medium', 'font-large');
-        document.body.classList.add('font-' + size);
-    }
-</script>
-
-<script src="quizData.js"></script>
-<script src="script.js"></script>
-
+        function setFont(size) {
+            document.body.classList.remove('font-small', 'font-medium', 'font-large');
+            document.body.classList.add('font-' + size);
+        }
+    </script>
 </body>
 </html>
