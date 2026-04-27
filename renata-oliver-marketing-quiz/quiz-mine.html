@@ -9,108 +9,16 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- BRANDING SCALE FIX --- */
-        .pink-brand-name {
-            font-family: 'Playfair Display', serif !important;
-            font-size: 40px !important;       
-            letter-spacing: 12px !important;  
-            text-transform: uppercase;
-            color: #1a1a1a;
-            text-align: center;
-            margin: 60px 0 40px 0 !important;
-            display: block;
-            font-weight: 400;
-        }
-
-        /* --- CLEAN & CLEAR MENU STYLING --- */
-        .submenu {
-            min-width: 180px !important;
-            padding: 10px 0 !important;
-        }
-
-        .submenu-header {
-            font-size: 9px !important;
-            font-weight: 700 !important;
-            color: #D470A2 !important;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 15px 0 5px 0;
-            text-align: center;
-            border-top: 1px solid #f9f9f9;
-            margin-top: 10px;
-        }
-
-        /* First header shouldn't have a border/margin */
-        .submenu li:first-child .submenu-header {
-            border-top: none;
-            margin-top: 0;
-            padding-top: 5px;
-        }
-
-        .submenu-item {
-            cursor: pointer;
-            padding: 12px 20px;
-            display: block;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #444;
-            transition: all 0.2s ease;
-            text-align: center;
-        }
-
-        .submenu-item:hover {
-            background-color: #fdf2f6;
-            color: #D470A2;
-        }
-
-        /* --- QUIZ CONTAINER --- */
-        .quiz-container {
-            max-width: 800px; 
-            margin: 0 auto;
-            padding: 0 20px;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .question-block {
-            margin-bottom: 25px;
-            padding: 30px;
-            background: #fff;
-            border-left: 4px solid #fdf2f6;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-        }
-
-        .option {
-            display: block; 
-            margin: 15px 0;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .calc-button {
-            display: block;
-            margin: 50px auto;
-            padding: 18px 50px;
-            background-color: #D470A2;
-            color: white;
-            border: none;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        #results {
-            text-align: center;
-            padding: 30px;
-            margin-top: 20px;
-            display: none;
-            border-top: 1px solid #eee;
-        }
+        main { padding: 40px 0; max-width: 900px; margin: 0 auto; text-align: center; }
+        .quiz-intro { margin-bottom: 50px; }
+        #questions-area { text-align: left; margin-top: 30px; }
+        .question { padding: 30px; margin-bottom: 20px; background: #fff; border-left: 6px solid #fdf2f6; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-top: 1px solid #eee; }
+        #submit-btn { background-color: #D470A2; color: white; border: none; padding: 15px 40px; font-family: 'Montserrat', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; margin-top: 40px; }
+        label { display: block; margin: 12px 0; font-size: 14px; color: #444; cursor: pointer; }
+        input[type="text"] { width: 100%; padding: 12px; border: 1px solid #eee; margin-top: 10px; }
     </style>
 </head>
 <body class="font-medium">
@@ -126,7 +34,6 @@
                         <li class="submenu-header">Showcase</li>
                         <li><a href="../photoshop1.html">Photoshop 1</a></li>
                         <li><a href="../photoshop2.html">Photoshop 2</a></li>
-                        <li><a href="../photoshop3.html">Photoshop 3</a></li>
                         <li><a href="quiz-mine.html">Marketing Quiz</a></li>
                     </ul>
                 </li>
@@ -135,7 +42,6 @@
                     <ul class="submenu">
                         <li class="submenu-header">Color Theory</li>
                         <li><a href="../design-theory/color-overview.html">Color Overview</a></li>
-                        <li><a href="../design-theory/color-themes.html">Color Themes</a></li>
                         <li class="submenu-header">Typography</li>
                         <li><a href="../design-theory/typographyoverview.html">Typography Overview</a></li>
                     </ul>
@@ -146,7 +52,6 @@
                         <li class="submenu-header">Appearance</li>
                         <li class="submenu-item" onclick="setTheme('light')">Light Mode</li>
                         <li class="submenu-item" onclick="setTheme('dark')">Dark Mode</li>
-                        
                         <li class="submenu-header">Text Size</li>
                         <li class="submenu-item" onclick="setFont('small')">Small</li>
                         <li class="submenu-item" onclick="setFont('medium')">Medium</li>
@@ -158,74 +63,81 @@
     </header>
 
     <main>
-        <h1 class="pink-brand-name">Renata Oliveira</h1>
-
-        <div class="quiz-container">
-            <div class="quiz-header" style="text-align: center; margin-bottom: 50px;">
-                <h2 style="font-family: 'Playfair Display', serif; text-transform: uppercase; letter-spacing: 3px;">Marketing Strategy Quiz</h2>
-                <p>Test your brand awareness and digital strategy knowledge.</p>
-            </div>
-
-            <form id="marketingQuiz">
-                <div class="question-block">
-                    <p><strong>1. Which platform is best for reaching Gen Z with short-form video?</strong></p>
-                    <label class="option"><input type="radio" name="q1" value="tiktok"> TikTok</label>
-                    <label class="option"><input type="radio" name="q1" value="other"> Facebook</label>
-                    <label class="option"><input type="radio" name="q1" value="other"> LinkedIn</label>
-                </div>
-
-                <div class="question-block">
-                    <p><strong>2. On Instagram, what is unique users vs. total views?</strong></p>
-                    <label class="option"><input type="radio" name="qInsta" value="correct"> Reach (Unique) vs. Impressions (Total)</label>
-                    <label class="option"><input type="radio" name="qInsta" value="wrong"> Impressions (Unique) vs. Reach (Total)</label>
-                </div>
-
-                <div class="question-block">
-                    <p><strong>3. What are the core pillars of a luxury brand aesthetic? (Check all)</strong></p>
-                    <label class="option"><input type="checkbox" name="q2" value="quality"> High-quality imagery</label>
-                    <label class="option"><input type="checkbox" name="q2" value="palette"> Consistent color palette</label>
-                    <label class="option"><input type="checkbox" name="q2" value="space"> Intentional white space</label>
-                </div>
-
-                <div class="question-block">
-                    <p><strong>4. What is the industry term for follower interaction?</strong></p>
-                    <input type="text" id="engagement-term" placeholder="Type answer here..." style="width: 100%; padding: 12px; border: 1px solid #eee; box-sizing: border-box;">
-                </div>
-
-                <button type="button" class="calc-button" onclick="calculateScore()">Calculate Results</button>
-            </form>
-
-            <div id="results"></div>
+        <div class="quiz-intro">
+            <h1 class="pink-brand-name">Renata Oliveira</h1>
+            <h2 style="font-family: 'Playfair Display'; text-transform: uppercase; letter-spacing: 4px; font-size: 22px; margin-top:15px;">Marketing Strategy Quiz</h2>
         </div>
+        <div id="questions-area"></div>
+        <button type="button" id="submit-btn" onclick="submitQuiz()">Calculate Results</button>
+        <div id="result"></div>
     </main>
 
+    <script src="quizData.js"></script>
     <script>
-        function calculateScore() {
-            let score = 0;
-            if (document.querySelector('input[name="q1"]:checked')?.value === "tiktok") score++;
-            if (document.querySelector('input[name="qInsta"]:checked')?.value === "correct") score++;
-            
-            const q2 = document.querySelectorAll('input[name="q2"]:checked');
-            if (q2.length === 3) score++; // Simplified check for all correct checkmarks
+        window.onload = function() {
+            const container = document.getElementById('questions-area');
+            if (typeof quizData !== 'undefined') renderQuiz(quizData, container);
+        };
 
-            const q4 = document.getElementById('engagement-term').value.toLowerCase().trim();
-            if (q4.includes("engagement")) score++;
-
-            const res = document.getElementById('results');
-            res.style.display = "block";
-            res.innerHTML = `<h3 style="color: #D470A2;">Score: ${score}/4</h3>
-                             <p style="font-weight: 600;">${score === 4 ? "Perfect! You're a Strategist." : "Nice work! Keep learning."}</p>`;
+        function renderQuiz(data, container) {
+            container.innerHTML = ""; 
+            const ol = document.createElement('ol');
+            data.questions.forEach((q, index) => {
+                const li = document.createElement('li');
+                li.className = q.type + " question";
+                li.innerHTML = `<p><b>${index + 1}. ${q.question}</b></p>`;
+                const name = `q${index}`;
+                if (q.type === 'single-answer' || q.type === 'multiple-answer') {
+                    const inputType = (q.type === 'single-answer') ? 'radio' : 'checkbox';
+                    q.options.forEach(opt => {
+                        const isCorrect = (q.type === 'single-answer') ? (opt === q.answer) : (q.answers && q.answers.includes(opt));
+                        li.innerHTML += `<label><input type="${inputType}" name="${name}" data-correct="${isCorrect}"> ${opt}</label>`;
+                    });
+                } else if (q.type === 'free-form') {
+                    li.innerHTML += `<input type="text" name="${name}" data-correct-answers="${q.answers.join(',')}" placeholder="Type answer here...">`;
+                }
+                ol.appendChild(li);
+            });
+            container.appendChild(ol);
         }
 
-        function setTheme(mode) {
-            if (mode === 'dark') document.body.classList.add('dark-mode');
-            else document.body.classList.remove('dark-mode');
+        function submitQuiz() {
+            const questions = document.querySelectorAll('.question');
+            const resultArea = document.getElementById('result');
+            let score = 0, allAnswered = true;
+
+            questions.forEach(q => {
+                if (q.classList.contains('single-answer') || q.classList.contains('multiple-answer')) {
+                    if (!q.querySelector('input:checked')) allAnswered = false;
+                } else if (q.classList.contains('free-form')) {
+                    if (q.querySelector('input').value.trim() === "") allAnswered = false;
+                }
+            });
+
+            if (!allAnswered) { alert("Please answer all questions before submitting!"); return; }
+
+            questions.forEach(q => {
+                let correct = false;
+                if (q.classList.contains('single-answer')) {
+                    const sel = q.querySelector('input:checked');
+                    correct = sel && sel.getAttribute('data-correct') === 'true';
+                } else if (q.classList.contains('multiple-answer')) {
+                    const ins = q.querySelectorAll('input');
+                    correct = Array.from(ins).every(i => i.checked === (i.getAttribute('data-correct') === 'true'));
+                } else if (q.classList.contains('free-form')) {
+                    const field = q.querySelector('input'), val = field.value.trim().toLowerCase(), ans = field.getAttribute('data-correct-answers').toLowerCase().split(',');
+                    correct = ans.includes(val);
+                }
+                q.style.borderLeft = correct ? "6px solid #D470A2" : "6px solid #1a1a1a";
+                if (correct) score++;
+            });
+
+            const percent = Math.round((score / questions.length) * 100);
+            resultArea.innerHTML = `<div style="border: 1px solid #D470A2; padding: 20px; margin-top:20px;"><h2 style="color:#D470A2;">Score: ${percent}%</h2></div>`;
         }
 
-        function setFont(size) {
-            document.body.classList.remove('font-small', 'font-medium', 'font-large');
-            document.body.classList.add('font-' + size);
-        }
+        function setTheme(m) { document.body.classList.toggle('dark-mode', m === 'dark'); }
+        function setFont(s) { document.body.classList.remove('font-small', 'font-medium', 'font-large'); document.body.classList.add('font-' + s); }
     </script>
 </body>
 </html>

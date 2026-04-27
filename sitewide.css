@@ -2,13 +2,13 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif; /* Your professional font choice */
+    font-family: 'Montserrat', sans-serif;
     background-color: #ffffff;
     color: #1a1a1a;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, font-size 0.2s;
 }
 
-/* Standardized 40px scale for Renata Oliveira branding */
+/* 40px scale for Renata Oliveira branding */
 .pink-brand-name {
     font-family: 'Playfair Display', serif !important;
     font-size: 40px !important;
@@ -43,17 +43,15 @@ header {
 .main-menu a, .menu-label {
     text-decoration: none;
     color: #1a1a1a;
-    font-size: 11px;
+    font-size: 11px !important;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2px !important;
     cursor: pointer;
 }
 
-/* --- DROPDOWN & THEME MENU FIX --- */
-.dropdown {
-    position: relative;
-}
+/* --- UPDATED DROPDOWN STYLING (MATCHING THE CENTERED LOOK) --- */
+.dropdown { position: relative; }
 
 .submenu {
     display: none;
@@ -61,85 +59,76 @@ header {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #fff;
-    min-width: 200px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background-color: #ffffff !important;
+    min-width: 220px;
+    border: 1px solid #f0f0f0 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
     list-style: none;
-    padding: 15px 0;
+    padding: 20px 0 !important;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
-.dropdown:hover .submenu {
-    display: block;
-}
+.dropdown:hover .submenu { display: block; }
 
-/* Pink labels for categories like "Appearance" or "Font Size" */
+/* Elegant Pink Headers (APPEARANCE, TEXT SIZE, etc.) */
 .submenu-header {
-    font-size: 9px !important;
+    color: #D470A2 !important; 
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 10px !important;
     font-weight: 700 !important;
-    color: #D470A2 !important; /* Signature brand pink */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 12px 0 5px 0;
-    margin-top: 5px;
-    border-top: 1px solid #f9f9f9;
-}
-
-/* Removes top border for the first category in a list */
-.submenu li:first-child .submenu-header {
-    border-top: none;
-    margin-top: 0;
-}
-
-.submenu-item, .submenu li a {
-    padding: 12px 20px;
+    text-transform: uppercase !important;
+    letter-spacing: 2.5px !important;
+    padding: 10px 0 8px 0 !important;
     display: block;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #444;
+    width: 100%;
+}
+
+/* Centered Submenu Items */
+.submenu-item, .submenu li a {
+    padding: 12px 0 !important;
+    display: block;
+    font-size: 13px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    color: #333 !important;
     text-decoration: none;
-    transition: 0.2s ease;
+    transition: all 0.2s ease;
+    width: 100%;
 }
 
 .submenu-item:hover, .submenu li a:hover {
-    background-color: #fdf2f6; /* Soft pink hover */
-    color: #D470A2;
+    background-color: #fdf2f6 !important;
+    color: #D470A2 !important;
 }
 
-/* --- GLOBAL THEMES --- */
-.dark-mode {
-    background-color: #1a1a1a;
-    color: #ffffff;
-}
+/* --- REFINED TEXT SIZING --- */
+body.font-small { font-size: 13px !important; }
+body.font-small p, body.font-small li { font-size: 13px !important; }
 
-.dark-mode .pink-brand-name { color: #ffffff; }
-.dark-mode header, .dark-mode .submenu { background-color: #1a1a1a; border-color: #333; }
-.dark-mode .main-menu a, .dark-mode .menu-label, .dark-mode .submenu-item { color: #eee; }
+body.font-medium { font-size: 15px !important; }
+body.font-medium p, body.font-medium li { font-size: 15px !important; }
+
+body.font-large { font-size: 17px !important; } /* Capped to prevent "too big" feel */
+body.font-large p, body.font-large li { font-size: 17px !important; }
+
+/* --- DARK MODE --- */
+.dark-mode { background-color: #1a1a1a; color: #ffffff; }
+.dark-mode header, .dark-mode .submenu { background-color: #1a1a1a !important; border-color: #333 !important; }
+.dark-mode .main-menu a, .dark-mode .menu-label, .dark-mode .submenu-item { color: #eee !important; }
+.dark-mode .submenu-item:hover { background-color: #252525 !important; }
 
 /* --- GLOBAL FOOTER --- */
 footer {
     padding: 80px 0 40px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: transparent;
     margin-top: 100px;
-}
-
-.social-icons img {
-    width: 22px;
-    margin: 0 18px;
-    transition: opacity 0.3s;
-}
-
-.social-icons a:hover img {
-    opacity: 0.7;
 }
 
 footer p {
     font-size: 10px;
     letter-spacing: 2px;
     color: #999;
-    margin-top: 30px;
     text-transform: uppercase;
 }
