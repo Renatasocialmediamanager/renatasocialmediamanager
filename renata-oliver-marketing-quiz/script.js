@@ -1,31 +1,53 @@
-// This ensures the script runs only after the HTML is fully loaded
+/* --- 1. GLOBAL THEME & FONT LOGIC (For every page) --- */
+function setTheme(mode) {
+    if (mode === 'dark') {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+}
+
+function setFont(size) {
+    document.body.classList.remove('font-small', 'font-medium', 'font-large');
+    document.body.classList.add('font-' + size);
+}
+
+/* --- 2. COLLAPSIBLE RESUME LOGIC (For Home & Resume pages) --- */
+function toggleSection(id) {
+    const section = document.getElementById(id);
+    if (!section) return; // Guard clause
+    
+    if (section.style.display === "block") {
+        section.style.display = "none";
+    } else {
+        section.style.display = "block";
+    }
+}
+
+/* --- 3. QUIZ LOGIC (Specifically for the Marketing Quiz page) --- */
 window.onload = function() {
     console.log("1. Window loaded");
 
     const container = document.getElementById('questions-area');
     const submitBtn = document.getElementById('submit-btn');
 
-    // Check if we can see the data from quizData.js
-    if (typeof quizData === 'undefined') {
-        console.error("2. ERROR: quizData.js not found or not loaded!");
-        return;
-    }
-
-    if (!container) {
-        console.error("2. ERROR: Could not find 'questions-area' in HTML!");
-        return;
-    }
-
-    console.log("3. Data and Container found. Rendering...");
-    renderQuiz(quizData, container);
-
-    if (submitBtn) {
-        submitBtn.onclick = submitQuiz;
+    // Only run Quiz rendering if the quiz container actually exists on this page
+    if (container) {
+        if (typeof quizData === 'undefined') {
+            console.error("2. ERROR: quizData.js not found or not loaded!");
+            return;
+        }
+        console.log("3. Data and Container found. Rendering...");
+        renderQuiz(quizData, container);
+        
+        if (submitBtn) {
+            submitBtn.onclick = submitQuiz;
+        }
     }
 };
 
 function renderQuiz(data, container) {
-    container.innerHTML = ""; // Prevent repeats
+    container.innerHTML = ""; 
     const ol = document.createElement('ol');
 
     data.questions.forEach((q, index) => {
@@ -72,14 +94,18 @@ function submitQuiz() {
             const ans = inputField.getAttribute('data-correct-answers').toLowerCase().split(',');
             correct = ans.includes(val);
         }
+        // Updated to use your signature brand pink
         q.style.borderLeft = correct ? "5px solid #D470A2" : "5px solid #1a1a1a";
         if (correct) score++;
     });
 
     const percent = Math.round((score / questions.length) * 100);
-    document.getElementById('result').innerHTML = `
-        <div class="score-box">
-            <h4>Score: ${percent}%</h4>
-            <p>${percent >= 70 ? "Strategy: Elite" : "Strategy: Needs Optimization"}</p>
-        </div>`;
+    const resultArea = document.getElementById('result');
+    if (resultArea) {
+        resultArea.innerHTML = `
+            <div class="score-box">
+                <h4>Score: ${percent}%</h4>
+                <p>${percent >= 70 ? "Strategy: Elite" : "Strategy: Needs Optimization"}</p>
+            </div>`;
+    }
 }
